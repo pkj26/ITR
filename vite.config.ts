@@ -5,14 +5,9 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
-  
-  // Set base explicitly to '/ITR/' when NOT in AI Studio preview.
-  // AI Studio sets DISABLE_HMR=true, so we use that as a heuristic to serve from '/' locally.
-  const isAIStudio = process.env.DISABLE_HMR === 'true';
-  const basePath = isAIStudio ? '/' : '/ITR/';
 
   return {
-    base: basePath,
+    base: './',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),

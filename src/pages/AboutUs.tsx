@@ -4,10 +4,10 @@ export default function AboutUs() {
   return (
     <main className="flex-grow bg-white py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-8 blur-none">About TaxServe India</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-8 blur-none">About Online ITR Filing</h1>
         <div className="prose prose-slate max-w-none">
           <p className="text-lg text-slate-600 mb-6">
-            TaxServe India was founded with a single mission: to provide the best and most affordable tax, compliance, and legal services to Indians. For over a decade, we have been at the forefront of digital taxation, assisting millions of individuals and thousands of businesses in navigating the complex world of Indian taxation.
+            Online ITR Filing was founded with a single mission: to provide the best and most affordable tax, compliance, and legal services to Indians. For over a decade, we have been at the forefront of digital taxation, assisting millions of individuals and thousands of businesses in navigating the complex world of Indian taxation.
           </p>
           <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Our Vision</h2>
           <p className="text-slate-600 mb-6">

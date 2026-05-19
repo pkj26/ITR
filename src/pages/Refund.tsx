@@ -6,7 +6,7 @@ export default function Refund() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Refund & Cancellation Policy</h1>
         <p><strong>Last Updated:</strong> May 2026</p>
-        <p>At TaxServe India, we believe in complete transparency. Our refund policy ensures a fair process for all parties.</p>
+        <p>At Online ITR Filing, we believe in complete transparency. Our refund policy ensures a fair process for all parties.</p>
         
         <h2>1. Eligibility for Refund</h2>
         <p>A full refund (minus payment gateway charges) will be initiated if a cancellation request is received before our CA experts commence the preparation of your computation or application.</p>

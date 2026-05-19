@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck } from 'lucide-react';
+import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
               {/* Heading */}
               <div className="space-y-4 w-full">
                 <h1 className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-800 leading-[1.1] tracking-tight">
-                  TaxServe ITR Filing
+                  Online ITR Filing
                 </h1>
                 <p className="text-xl sm:text-2xl text-slate-500 font-medium tracking-wide">
                   Seamless online filing by Tax Experts
@@ -121,7 +121,7 @@ export default function Home() {
               <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Trusted</h3>
               <div className="w-12 h-1 bg-[#f2744c] mb-6"></div>
               <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
-                Over 1 Million customers in India choose TaxServe every year for seamless filing.
+                Over 1 Million customers in India choose Online ITR Filing every year for seamless filing.
               </p>
             </div>
 
@@ -156,6 +156,86 @@ export default function Home() {
               <div className="w-12 h-1 bg-[#c9eef1] mb-6"></div>
               <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
                 Our tax software is fully trusted, guaranteeing a smooth and stress-free experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="bg-white py-20 border-b border-slate-100">
+        <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-light text-slate-700 uppercase tracking-widest">
+              What We Do
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#c1ece2] mb-8 relative">
+                <Clock className="w-16 h-16 text-slate-800" strokeWidth={1} />
+                <div className="absolute bottom-2 right-2 bg-white rounded-full p-1 border-2 border-slate-800 shadow-sm">
+                   <CheckCircle2 className="w-5 h-5 text-slate-800" strokeWidth={2} />
+                </div>
+              </div>
+              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Simple Financial<br/>Management</h3>
+              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
+                Enjoy a real-time view on income and expenses for a more accurate overview of your finances.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#fd9b6b] mb-8 relative">
+                <FileCheck className="w-16 h-16 text-slate-800" strokeWidth={1} />
+                <div className="absolute bottom-2 right-2 bg-white rounded-full p-1 border-2 border-slate-800 shadow-sm">
+                   <CheckCircle2 className="w-5 h-5 text-slate-800" strokeWidth={2} />
+                </div>
+              </div>
+              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Easy Tax<br/>Filing</h3>
+              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
+                Designed for everyone, our tax software simplifies tax returns, saving you time and reducing errors.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#ffd32e] mb-8">
+                <Calculator className="w-16 h-16 text-slate-800" strokeWidth={1} />
+              </div>
+              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Automatic And<br/>Accurate<br/>Calculations</h3>
+              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
+                The software calculates your tax immediately, meaning you know exactly how much to set aside.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#e4e5e7] mb-8 relative">
+                <Receipt className="w-16 h-16 text-slate-800" strokeWidth={1} />
+                <Scissors className="w-8 h-8 text-slate-800 absolute bottom-4 -right-1 bg-[#e4e5e7]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Maximise<br/>Deductions</h3>
+              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
+                With our tax-saving tips you can reduce your tax liability which is something most software doesn't provide.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#51cdc4] mb-8">
+                <Headset className="w-16 h-16 text-slate-800" strokeWidth={1} />
+              </div>
+              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Expert<br/>Support</h3>
+              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
+                Our India-based team of former tax professionals are always on hand to help you.
               </p>
             </div>
           </div>
@@ -628,7 +708,7 @@ export default function Home() {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-slate-50 rounded-xl p-6 border border-slate-100">
               <h3 itemProp="name" className="text-lg font-bold text-slate-900 mb-2">How to file ITR online in India?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-slate-600">You can easily file your Income Tax Return (ITR) online in India through the TaxServe platform. Just select your applicable plan, upload your Form 16, and our expert CAs will prepare and e-file your ITR directly with the Income Tax Department to ensure maximum tax refund.</p>
+                <p itemProp="text" className="text-slate-600">You can easily file your Income Tax Return (ITR) online in India through the Online ITR Filing platform. Just select your applicable plan, upload your Form 16, and our expert CAs will prepare and e-file your ITR directly with the Income Tax Department to ensure maximum tax refund.</p>
               </div>
             </div>
 
@@ -652,7 +732,7 @@ export default function Home() {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-slate-50 rounded-xl p-6 border border-slate-100">
               <h3 itemProp="name" className="text-lg font-bold text-slate-900 mb-2">What is required for Private Limited Company Registration in India?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-slate-600">To register a Private Limited Company, you need a minimum of 2 directors and 2 shareholders. Documents required include PAN cards, Aadhaar cards, bank statements of directors, and a utility bill for the registered office address. TaxServe handles the DIN, DSC, name approval, MOA, and AOA drafting process online.</p>
+                <p itemProp="text" className="text-slate-600">To register a Private Limited Company, you need a minimum of 2 directors and 2 shareholders. Documents required include PAN cards, Aadhaar cards, bank statements of directors, and a utility bill for the registered office address. Online ITR Filing handles the DIN, DSC, name approval, MOA, and AOA drafting process online.</p>
               </div>
             </div>
           </div>
@@ -680,7 +760,7 @@ export default function Home() {
               <div className="flex text-amber-400 mb-4">
                 <Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" />
               </div>
-              <p className="text-slate-700 italic mb-6">"I've been using TaxServe since 2016. Their CA team is phenomenal. They spotted deductions I didn't even know existed. Highly professional and deeply knowledgeable."</p>
+              <p className="text-slate-700 italic mb-6">"I've been using Online ITR Filing since 2016. Their CA team is phenomenal. They spotted deductions I didn't even know existed. Highly professional and deeply knowledgeable."</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-lg">RS</div>
                 <div>

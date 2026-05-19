@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
-import { ShieldCheck, Award, MessageCircle, Phone } from 'lucide-react';
+import { HashRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
+import { ShieldCheck, Award, MessageCircle, Phone, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Journey from './pages/Journey';
@@ -12,12 +12,14 @@ import Disclaimer from './pages/Disclaimer';
 function Layout({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const handleWhatsAppRedirect = () => {
     window.open('https://wa.me/919982504000', '_blank');
   };
 
   const scrollToSection = (id: string) => {
+    setIsMobileMenuOpen(false);
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -56,10 +58,20 @@ function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
-              <ShieldCheck className="w-8 h-8 text-amber-400" />
-              <div className="flex flex-col">
-                <span className="text-2xl font-extrabold tracking-tight text-white leading-none">TaxServe India</span>
-                <span className="text-[10px] text-amber-400 font-medium tracking-widest uppercase mt-0.5">Est. 2014</span>
+              <div className="relative flex items-center justify-center w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg shadow-sm">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 8h.01" />
+                </svg>
+                <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-slate-900">
+                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <div className="flex flex-col ml-1">
+                <span className="text-xl font-extrabold tracking-tight text-white leading-none">Online ITR Filing</span>
+                <span className="text-[10px] text-amber-400 font-bold tracking-widest uppercase mt-0.5">.IN</span>
               </div>
             </Link>
             <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
@@ -69,12 +81,30 @@ function Layout({ children }: { children: React.ReactNode }) {
               <button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">Start your Business</button>
             </nav>
             <div className="flex items-center space-x-4">
-              <button onClick={handleWhatsAppRedirect} className="bg-amber-500 text-slate-900 px-6 py-2 rounded-md font-bold hover:bg-amber-400 transition shadow-sm hidden sm:block">
+              <button onClick={handleWhatsAppRedirect} className="bg-amber-500 text-slate-900 px-6 py-2 rounded-md font-bold hover:bg-amber-400 transition shadow-sm hidden md:block">
                 Get Started
+              </button>
+              <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
           </div>
         </div>
+        
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-slate-800 border-t border-slate-700">
+            <nav className="px-4 pt-2 pb-4 space-y-2 flex flex-col">
+              <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Home</Link>
+              <button onClick={() => scrollToSection('itr-filing')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">ITR Filing</button>
+              <button onClick={() => scrollToSection('gst-services')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">GST Services</button>
+              <button onClick={() => scrollToSection('company-registration')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Start your Business</button>
+              <button onClick={handleWhatsAppRedirect} className="w-full text-left bg-amber-500 text-slate-900 px-3 py-2 rounded-md font-bold hover:bg-amber-400 mt-4">
+                Get Started
+              </button>
+            </nav>
+          </div>
+        )}
       </header>
 
       {children}
@@ -113,14 +143,23 @@ function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div>
             <div className="flex items-center gap-2 mb-4">
-               <ShieldCheck className="w-8 h-8 text-amber-400" />
-               <span className="text-2xl font-extrabold tracking-tight text-white leading-none">TaxServe</span>
+              <div className="relative flex items-center justify-center w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-md shadow-sm">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border border-slate-900">
+                  <svg className="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <span className="text-xl font-extrabold tracking-tight text-white leading-none">Online ITR Filing</span>
             </div>
             <p className="text-slate-500 text-xs leading-relaxed">India's most trusted online tax filing platform. We make taxes simple, accurate, and secure for millions of Indians.</p>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs">
-          &copy; {new Date().getFullYear()} TaxServe India. All rights reserved.
+          &copy; {new Date().getFullYear()} Online ITR Filing. All rights reserved. (a sarv.com initiative)
         </div>
       </footer>
 
@@ -148,10 +187,8 @@ function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const baseMode = typeof window !== 'undefined' && window.location.pathname.startsWith('/ITR') ? '/ITR' : '/';
-
   return (
-    <BrowserRouter basename={baseMode}>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -164,6 +201,6 @@ export default function App() {
           <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
