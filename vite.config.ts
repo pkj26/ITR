@@ -6,8 +6,13 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
 
+  // Use '/ITR/' for GitHub Pages deployment. 
+  // If previewing locally and HMR is enabled, use '/'
+  // AI Studio sets DISABLE_HMR=true, so it uses '/'
+  const isAIStudio = process.env.DISABLE_HMR === 'true';
+
   return {
-    base: './',
+    base: isAIStudio ? '/' : '/ITR/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),

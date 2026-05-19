@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
 
@@ -12,57 +13,92 @@ export default function Home() {
   return (
     <main className="flex-grow">
       {/* ClearTax-like Hero Section */}
-      <section className="bg-slate-50 relative py-16 md:py-20 lg:py-24">
+      <section className="bg-slate-50 relative py-16 md:py-20 lg:py-24 overflow-hidden">
         {/* Subtle background color blobs or gradient can go here if needed */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#f8f9fe] to-[#f1f3f9] z-0"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
-            <div className="flex flex-col items-start text-left space-y-8 relative z-10 w-full max-w-2xl">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex flex-col items-start text-left space-y-8 relative z-10 w-full max-w-2xl"
+            >
               
               {/* Top Badge */}
-              <div className="flex items-center bg-white rounded-full p-1 pr-4 shadow-sm border border-slate-100/50 backdrop-blur w-fit">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className="flex items-center bg-white rounded-full p-1 pr-4 shadow-sm border border-slate-100/50 backdrop-blur w-fit"
+              >
                 <span className="bg-[#00d084] text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold tracking-wide">
                   Income Tax e Filing
                 </span>
                 <span className="text-slate-700 font-bold text-xs sm:text-sm ml-3">
                   <span className="text-[#00d084]">₹1766.69 Cr</span> Refund processed last year
                 </span>
-              </div>
+              </motion.div>
               
               {/* Heading */}
               <div className="space-y-4 w-full">
-                <h1 className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-800 leading-[1.1] tracking-tight">
+                <motion.h1 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-800 leading-[1.1] tracking-tight"
+                >
                   Online ITR Filing
-                </h1>
-                <p className="text-xl sm:text-2xl text-slate-500 font-medium tracking-wide">
+                </motion.h1>
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  className="text-xl sm:text-2xl text-slate-500 font-medium tracking-wide"
+                >
                   Seamless online filing by Tax Experts
-                </p>
+                </motion.p>
               </div>
 
               {/* Call to action */}
-              <button 
+              <motion.button 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={handleWhatsAppRedirect} 
                 className="bg-[#2470f7] hover:bg-[#1a5adb] text-white font-semibold py-3.5 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg w-full sm:w-auto"
               >
                 File Now
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
 
             {/* Right Content - Visual/Image */}
             <div className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] flex justify-center lg:justify-end items-end mt-8 lg:mt-0">
               {/* Image of smiling woman */}
-              <div className="absolute inset-0 flex justify-center lg:justify-end items-end overflow-hidden">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="absolute inset-0 flex justify-center lg:justify-end items-end overflow-hidden"
+              >
                  <img 
                     src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
                     alt="Professional Indian Woman Filing Taxes"
                     className="object-cover h-full w-auto max-w-full"
                     style={{ maskImage: 'linear-gradient(to top, transparent, black 10%, black 100%)', WebkitMaskImage: 'linear-gradient(to top, transparent, black 10%, black 100%)' }}
                  />
-              </div>
+              </motion.div>
 
               {/* Floating UI Card */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 sm:left-4 z-20 bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 p-6 w-[280px] hidden sm:block">
+              <motion.div 
+                initial={{ opacity: 0, x: 50, y: '-50%' }}
+                animate={{ opacity: 1, x: 0, y: '-50%' }}
+                transition={{ delay: 0.7, duration: 0.6, type: 'spring', stiffness: 100 }}
+                className="absolute top-1/2 left-0 sm:left-4 z-20 bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 p-6 w-[280px] hidden sm:block"
+              >
                 <div className="text-center mb-6">
                   <span className="text-sm font-semibold text-slate-500 block mb-1">Total Refund</span>
                   <span className="text-4xl font-extrabold text-[#9d2af6] tracking-tight">₹ 1,34,302</span>
@@ -93,7 +129,7 @@ export default function Home() {
                     <span className="font-bold text-[#2470f7] text-[10px] bg-blue-50 px-2 py-1 rounded">SCANNING...</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
