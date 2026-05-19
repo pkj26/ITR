@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home, Percent, PieChart, Landmark, BadgeCheck } from 'lucide-react';
+import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
 
 export default function Home() {
@@ -468,7 +468,7 @@ export default function Home() {
               className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'hra' ? 'border-amber-400 bg-slate-800' : 'border-slate-700'} hover:border-amber-400 hover:bg-slate-800/80 transition group block`}
             >
               <div className={`w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'hra' ? 'text-amber-400 scale-110' : 'text-amber-400 group-hover:scale-110'}`}>
-                <Home className="w-6 h-6" />
+                <HomeIcon className="w-6 h-6" />
               </div>
               <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'hra' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-400'}`}>HRA Calculator</h3>
               <p className="text-sm text-slate-400">Calculate your House Rent Allowance exemption exactly per IT rules.</p>
