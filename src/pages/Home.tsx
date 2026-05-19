@@ -11,20 +11,90 @@ export default function Home() {
 
   return (
     <main className="flex-grow">
-      {/* Simple Hero Section */}
-      <section className="bg-white py-16 md:py-24 border-b border-slate-200 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
-            File Your <span className="text-slate-800 border-b-4 border-amber-400 pb-1">Income Tax Return (ITR)</span> Online in India
-          </h1>
-          <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Expert CA-assisted ITR filing, GST Registration, and Company formation. Join over 1.5 million Indians using our services for maximum tax savings.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-sm md:text-base font-semibold text-slate-700 bg-slate-50 py-4 px-6 rounded-lg inline-flex border border-slate-200 shadow-inner">
-            <div className="flex items-center"><CheckCircle2 className="w-5 h-5 text-green-600 mr-2" /> Maximum Refund</div>
-            <div className="flex items-center"><CheckCircle2 className="w-5 h-5 text-green-600 mr-2" /> CA Assisted Filing</div>
-            <div className="flex items-center"><CheckCircle2 className="w-5 h-5 text-green-600 mr-2" /> 100% Notice Support</div>
+      {/* ClearTax-like Hero Section */}
+      <section className="bg-slate-50 relative py-16 md:py-20 lg:py-24">
+        {/* Subtle background color blobs or gradient can go here if needed */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#f8f9fe] to-[#f1f3f9] z-0"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+            {/* Left Content */}
+            <div className="flex flex-col items-start text-left space-y-8 relative z-10 w-full max-w-2xl">
+              
+              {/* Top Badge */}
+              <div className="flex items-center bg-white rounded-full p-1 pr-4 shadow-sm border border-slate-100/50 backdrop-blur w-fit">
+                <span className="bg-[#00d084] text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold tracking-wide">
+                  Income Tax e Filing
+                </span>
+                <span className="text-slate-700 font-bold text-xs sm:text-sm ml-3">
+                  <span className="text-[#00d084]">₹1766.69 Cr</span> Refund processed last year
+                </span>
+              </div>
+              
+              {/* Heading */}
+              <div className="space-y-4 w-full">
+                <h1 className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-800 leading-[1.1] tracking-tight">
+                  TaxServe ITR Filing
+                </h1>
+                <p className="text-xl sm:text-2xl text-slate-500 font-medium tracking-wide">
+                  Seamless filing powered by AI
+                </p>
+              </div>
+
+              {/* Call to action */}
+              <button 
+                onClick={handleWhatsAppRedirect} 
+                className="bg-[#2470f7] hover:bg-[#1a5adb] text-white font-semibold py-3.5 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg w-full sm:w-auto"
+              >
+                File Now
+              </button>
+            </div>
+
+            {/* Right Content - Visual/Image */}
+            <div className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] flex justify-center lg:justify-end items-end mt-8 lg:mt-0">
+              {/* Image of smiling woman */}
+              <div className="absolute inset-0 flex justify-center lg:justify-end items-end overflow-hidden">
+                 <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
+                    alt="Professional Indian Woman Filing Taxes"
+                    className="object-cover h-full w-auto max-w-full"
+                    style={{ maskImage: 'linear-gradient(to top, transparent, black 10%, black 100%)', WebkitMaskImage: 'linear-gradient(to top, transparent, black 10%, black 100%)' }}
+                 />
+              </div>
+
+              {/* Floating UI Card */}
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 sm:left-4 z-20 bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 p-6 w-[280px] hidden sm:block">
+                <div className="text-center mb-6">
+                  <span className="text-sm font-semibold text-slate-500 block mb-1">Total Refund</span>
+                  <span className="text-4xl font-extrabold text-[#9d2af6] tracking-tight">₹ 1,34,302</span>
+                </div>
+                
+                <div className="bg-slate-50 rounded-xl p-3 flex items-center justify-center gap-2 mb-4">
+                  <span className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-[10px]">🤖</span>
+                  <span className="text-xs font-bold text-slate-700">Auto applying deductions</span>
+                </div>
+
+                <div className="space-y-3">
+                  {[
+                    { label: 'LTCG - Exemption', amount: '₹ 1,50,000' },
+                    { label: 'Standard Deduction', amount: '₹ 40,000' },
+                    { label: 'Current Year Loss\nAdjustments', amount: '₹ 40,000' }
+                  ].map((item, i) => (
+                    <div key={i} className="flex justify-between items-center text-xs">
+                      <span className="text-slate-500 whitespace-pre-line leading-tight">{item.label}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold text-slate-700">{item.amount}</span>
+                        <CheckCircle2 className="w-4 h-4 text-[#00d084] fill-current" />
+                      </div>
+                    </div>
+                  ))}
+                  
+                  <div className="flex justify-between items-center text-xs pt-3 border-t border-slate-100">
+                    <span className="text-slate-500 whitespace-pre-line leading-tight">Brought<br/>Forward Losses</span>
+                    <span className="font-bold text-[#2470f7] text-[10px] bg-blue-50 px-2 py-1 rounded">SCANNING...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
