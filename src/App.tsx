@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ShieldCheck, Award, MessageCircle, Phone, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
@@ -202,19 +203,21 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <HashRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/our-journey" element={<Journey />} />
-          <Route path="/terms-conditions" element={<Terms />} />
-          <Route path="/privacy-policy" element={<Privacy />} />
-          <Route path="/refund-policy" element={<Refund />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </Layout>
-    </HashRouter>
+    <HelmetProvider>
+      <HashRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/our-journey" element={<Journey />} />
+            <Route path="/terms-conditions" element={<Terms />} />
+            <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/refund-policy" element={<Refund />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </Layout>
+      </HashRouter>
+    </HelmetProvider>
   );
 }

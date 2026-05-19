@@ -3,10 +3,12 @@ import { motion } from 'motion/react';
 import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
 import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.png';
+import SEO from '../components/SEO';
 
 export default function Home() {
   const [activeCalculator, setActiveCalculator] = useState<string | null>(null);
   const [isDesktop, setIsDesktop] = useState(true);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
@@ -21,6 +23,10 @@ export default function Home() {
 
   return (
     <main className="flex-grow">
+      <SEO 
+        title="Best Online ITR Filing, GST & Company Registration in India | Online ITR Filing"
+        description="India's leading platform for online ITR filing, GST registration, company incorporation, and CA services. Maximize your tax refund with our expert CAs."
+      />
       {/* ClearTax-like Hero Section */}
       <section className="bg-white relative pt-2 pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-10 overflow-visible">
         <div className="absolute inset-0 bg-white z-0"></div>
@@ -834,29 +840,47 @@ export default function Home() {
             {/* Form */}
             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl relative w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
                <h3 className="text-2xl font-bold text-[#1D3557] mb-6">Request a Callback</h3>
-               <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Our expert will call you shortly."); }}>
-                 <div>
-                   <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
-                   <input type="text" required placeholder="John Doe" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
+               {isFormSubmitted ? (
+                 <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center space-y-4">
+                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto text-green-600">
+                     <CheckCircle2 className="w-8 h-8" />
+                   </div>
+                   <h4 className="text-xl font-bold text-green-800">Thank You!</h4>
+                   <p className="text-green-700 text-sm">
+                     We have received your request. Our expert will call you shortly.
+                   </p>
+                   <button 
+                     onClick={() => setIsFormSubmitted(false)}
+                     className="mt-4 text-green-600 hover:text-green-800 font-semibold text-sm transition"
+                   >
+                     Submit Another Request
+                   </button>
                  </div>
-                 <div>
-                   <label className="block text-sm font-medium text-slate-700 mb-1">Mobile Number</label>
-                   <input type="tel" required placeholder="+91 9876543210" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
-                 </div>
-                 <div>
-                   <label className="block text-sm font-medium text-slate-700 mb-1">Service Required</label>
-                   <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition">
-                     <option>ITR Filing</option>
-                     <option>GST Registration & Filing</option>
-                     <option>Company Registration</option>
-                     <option>Tax Planning Consultation</option>
-                     <option>Other</option>
-                   </select>
-                 </div>
-                 <button type="submit" className="w-full bg-[#1D3557] hover:bg-[#162a45] text-white font-bold py-3 rounded-lg transition-colors mt-2">
-                   Submit Request
-                 </button>
-               </form>
+               ) : (
+                 <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsFormSubmitted(true); }}>
+                   <div>
+                     <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                     <input type="text" required placeholder="John Doe" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
+                   </div>
+                   <div>
+                     <label className="block text-sm font-medium text-slate-700 mb-1">Mobile Number</label>
+                     <input type="tel" required placeholder="+91 9876543210" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
+                   </div>
+                   <div>
+                     <label className="block text-sm font-medium text-slate-700 mb-1">Service Required</label>
+                     <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition">
+                       <option>ITR Filing</option>
+                       <option>GST Registration & Filing</option>
+                       <option>Company Registration</option>
+                       <option>Tax Planning Consultation</option>
+                       <option>Other</option>
+                     </select>
+                   </div>
+                   <button type="submit" className="w-full bg-[#1D3557] hover:bg-[#162a45] text-white font-bold py-3 rounded-lg transition-colors mt-2">
+                     Submit Request
+                   </button>
+                 </form>
+               )}
             </div>
 
           </div>

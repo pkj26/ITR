@@ -1,8 +1,10 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
 export default function Privacy() {
   return (
     <main className="flex-grow bg-white py-16">
+      <SEO title="Privacy Policy | Online ITR Filing" url="https://taxserve.in/#/privacy-policy" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Privacy Policy</h1>
         <p><strong>Last Updated:</strong> May 2026</p>

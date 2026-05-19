@@ -1,8 +1,14 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
 export default function AboutUs() {
   return (
     <main className="flex-grow bg-white py-16">
+      <SEO 
+        title="About Us | Online ITR Filing"
+        description="Learn about Online ITR Filing's mission, vision, and 10+ years of experience providing the best tax, compliance, and legal services to Indians."
+        url="https://taxserve.in/#/about-us"
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-8 blur-none">About Online ITR Filing</h1>
         <div className="prose prose-slate max-w-none">

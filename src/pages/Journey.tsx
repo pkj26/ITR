@@ -1,9 +1,15 @@
 import React from 'react';
 import { Award, TrendingUp, Users, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Journey() {
   return (
-    <main className="flex-grow bg-white py-16 bg-slate-50">
+    <main className="flex-grow bg-slate-50 py-16">
+      <SEO 
+        title="Our 10-Year Journey | Online ITR Filing"
+        description="Discover the 10-year success story of India's most trusted online tax platform. From a vision in 2014 to serving 1.5 million Indians today."
+        url="https://taxserve.in/#/our-journey"
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Our 10-Year Journey</h1>

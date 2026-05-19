@@ -1,8 +1,10 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
 export default function Disclaimer() {
   return (
     <main className="flex-grow bg-white py-16">
+      <SEO title="Disclaimer | Online ITR Filing" url="https://taxserve.in/#/disclaimer" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Disclaimer</h1>
         
