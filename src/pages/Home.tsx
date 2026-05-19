@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
+import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.png';
 
 export default function Home() {
   const [activeCalculator, setActiveCalculator] = useState<string | null>(null);
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleWhatsAppRedirect = () => {
     window.open('https://wa.me/919982504000', '_blank');
@@ -13,14 +22,13 @@ export default function Home() {
   return (
     <main className="flex-grow">
       {/* ClearTax-like Hero Section */}
-      <section className="bg-slate-50 relative py-16 md:py-20 lg:py-24 overflow-hidden">
-        {/* Subtle background color blobs or gradient can go here if needed */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f8f9fe] to-[#f1f3f9] z-0"></div>
+      <section className="bg-white relative pt-2 pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-10 overflow-visible">
+        <div className="absolute inset-0 bg-white z-0"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-4 items-center">
             {/* Left Content */}
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
+              initial={isDesktop ? { opacity: 0, x: -50 } : false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex flex-col items-start text-left space-y-8 relative z-10 w-full max-w-2xl"
@@ -28,7 +36,7 @@ export default function Home() {
               
               {/* Top Badge */}
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+                initial={isDesktop ? { opacity: 0, y: 20 } : false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="flex items-center bg-white rounded-full p-1 pr-4 shadow-sm border border-slate-100/50 backdrop-blur w-fit"
@@ -44,18 +52,18 @@ export default function Home() {
               {/* Heading */}
               <div className="space-y-4 w-full">
                 <motion.h1 
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={isDesktop ? { opacity: 0, y: 20 } : false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
-                  className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-800 leading-[1.1] tracking-tight"
+                  className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-[#1D3557] leading-[1.1] tracking-tight"
                 >
                   Online ITR Filing
                 </motion.h1>
                 <motion.p 
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={isDesktop ? { opacity: 0, y: 20 } : false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
-                  className="text-xl sm:text-2xl text-slate-500 font-medium tracking-wide"
+                  className="text-xl sm:text-2xl text-slate-600 font-medium tracking-wide"
                 >
                   Seamless online filing by Tax Experts
                 </motion.p>
@@ -63,72 +71,32 @@ export default function Home() {
 
               {/* Call to action */}
               <motion.button 
-                initial={{ opacity: 0, y: 20 }}
+                initial={isDesktop ? { opacity: 0, y: 20 } : false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={isDesktop ? { scale: 1.05 } : {}}
+                whileTap={isDesktop ? { scale: 0.95 } : {}}
                 onClick={handleWhatsAppRedirect} 
-                className="bg-[#2470f7] hover:bg-[#1a5adb] text-white font-semibold py-3.5 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg w-full sm:w-auto"
+                className="bg-[#FFB400] hover:bg-[#e6a200] text-[#1D3557] font-bold py-3.5 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg w-full sm:w-auto"
               >
                 File Now
               </motion.button>
             </motion.div>
 
             {/* Right Content - Visual/Image */}
-            <div className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] flex justify-center lg:justify-end items-end mt-8 lg:mt-0">
+            <div className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] hidden lg:flex justify-center lg:justify-end items-end mt-4 lg:mt-0">
               {/* Image of smiling woman */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="absolute inset-0 flex justify-center lg:justify-end items-end overflow-hidden"
+                className="absolute inset-0 flex justify-center lg:justify-end items-end overflow-visible"
               >
                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
+                    src={heroImage} 
                     alt="Professional Indian Woman Filing Taxes"
-                    className="object-cover h-full w-auto max-w-full"
-                    style={{ maskImage: 'linear-gradient(to top, transparent, black 10%, black 100%)', WebkitMaskImage: 'linear-gradient(to top, transparent, black 10%, black 100%)' }}
+                    className="object-contain h-full w-auto max-w-full mix-blend-darken scale-110 origin-bottom right-0 absolute"
                  />
-              </motion.div>
-
-              {/* Floating UI Card */}
-              <motion.div 
-                initial={{ opacity: 0, x: 50, y: '-50%' }}
-                animate={{ opacity: 1, x: 0, y: '-50%' }}
-                transition={{ delay: 0.7, duration: 0.6, type: 'spring', stiffness: 100 }}
-                className="absolute top-1/2 left-0 sm:left-4 z-20 bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] border border-slate-100 p-6 w-[280px] hidden sm:block"
-              >
-                <div className="text-center mb-6">
-                  <span className="text-sm font-semibold text-slate-500 block mb-1">Total Refund</span>
-                  <span className="text-4xl font-extrabold text-[#9d2af6] tracking-tight">₹ 1,34,302</span>
-                </div>
-                
-                <div className="bg-slate-50 rounded-xl p-3 flex items-center justify-center gap-2 mb-4">
-                  <span className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-[10px]">✓</span>
-                  <span className="text-xs font-bold text-slate-700">Maximizing your deductions</span>
-                </div>
-
-                <div className="space-y-3">
-                  {[
-                    { label: 'LTCG - Exemption', amount: '₹ 1,50,000' },
-                    { label: 'Standard Deduction', amount: '₹ 40,000' },
-                    { label: 'Current Year Loss\nAdjustments', amount: '₹ 40,000' }
-                  ].map((item, i) => (
-                    <div key={i} className="flex justify-between items-center text-xs">
-                      <span className="text-slate-500 whitespace-pre-line leading-tight">{item.label}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-slate-700">{item.amount}</span>
-                        <CheckCircle2 className="w-4 h-4 text-[#00d084] fill-current" />
-                      </div>
-                    </div>
-                  ))}
-                  
-                  <div className="flex justify-between items-center text-xs pt-3 border-t border-slate-100">
-                    <span className="text-slate-500 whitespace-pre-line leading-tight">Brought<br/>Forward Losses</span>
-                    <span className="font-bold text-[#2470f7] text-[10px] bg-blue-50 px-2 py-1 rounded">SCANNING...</span>
-                  </div>
-                </div>
               </motion.div>
             </div>
           </div>
@@ -136,9 +104,9 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-slate-50 py-20 relative">
+      <section className="bg-slate-50 py-6 md:py-8 relative hidden md:block">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-3 md:mb-4">
             <h2 className="text-3xl sm:text-4xl font-light text-slate-700 uppercase tracking-widest">
               Why Choose Us?
             </h2>
@@ -199,9 +167,9 @@ export default function Home() {
       </section>
 
       {/* What We Do Section */}
-      <section className="bg-white py-20 border-b border-slate-100">
+      <section className="bg-white py-6 md:py-8 border-b border-slate-100 hidden md:block">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-3 md:mb-4">
             <h2 className="text-3xl sm:text-4xl font-light text-slate-700 uppercase tracking-widest">
               What We Do
             </h2>
@@ -279,9 +247,9 @@ export default function Home() {
       </section>
 
       {/* Pricing Section (ITR Filing) */}
-      <section id="itr-filing" className="py-16 bg-slate-50">
+      <section id="itr-filing" className="py-6 md:py-8 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-4 md:mb-6">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Simple Pricing. No Hidden Fees.</h2>
             <p className="text-slate-600 text-lg">Select the plan that matches your income sources.</p>
           </div>
@@ -392,9 +360,9 @@ export default function Home() {
       </section>
 
       {/* How it Works Section for Trust */}
-      <section className="py-16 bg-white">
+      <section className="py-6 md:py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-3 md:mb-4">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">How our CA-Assisted Filing Works</h2>
             <div className="flex justify-center items-center gap-2 text-green-700 bg-green-50 px-5 py-2.5 rounded-full inline-flex mx-auto border border-green-200 shadow-sm">
               <ShieldCheck className="w-5 h-5 flex-shrink-0" />
@@ -431,9 +399,9 @@ export default function Home() {
       </section>
 
       {/* GST Services Section */}
-      <section id="gst-services" className="py-16 bg-slate-50 border-t border-slate-200">
+      <section id="gst-services" className="py-6 md:py-8 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-4 md:mb-6">
             <div className="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">For Businesses</div>
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Complete GST Solutions</h2>
             <p className="text-slate-600 text-lg">Hassle-free GST Registration and Return Filing by Experts.</p>
@@ -545,9 +513,9 @@ export default function Home() {
       </section>
 
       {/* How it Works Section for GST */}
-      <section className="py-16 bg-white">
+      <section className="py-6 md:py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-3 md:mb-4">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">How our GST Services Work</h2>
             <div className="flex justify-center items-center gap-2 text-indigo-700 bg-indigo-50 px-5 py-2.5 rounded-full inline-flex mx-auto border border-indigo-200 shadow-sm">
               <ShieldCheck className="w-5 h-5 flex-shrink-0" />
@@ -584,9 +552,9 @@ export default function Home() {
       </section>
 
       {/* Company Registration Section */}
-      <section id="company-registration" className="py-16 bg-slate-50 border-t border-slate-200">
+      <section id="company-registration" className="py-6 md:py-8 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-4 md:mb-6">
             <div className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">Startup Services</div>
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Start & Protect Your Business</h2>
             <p className="text-slate-600 text-lg">Register your company and secure your brand with our premium legal team.</p>
@@ -664,9 +632,9 @@ export default function Home() {
       </section>
 
       {/* Free Tax & Financial Tools Section */}
-      <section id="tax-tools" className="py-16 bg-slate-900 text-white border-t-4 border-amber-500">
+      <section id="tax-tools" className="py-6 md:py-8 bg-slate-900 text-white border-t-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-4 md:mb-6">
             <h2 className="text-3xl font-bold mb-4">Free Financial & Tax Tools</h2>
             <p className="text-slate-400 text-lg">Smart calculators to help you plan your taxes, investments, and business.</p>
           </div>
@@ -732,9 +700,9 @@ export default function Home() {
       </section>
 
       {/* SEO FAQ Section */}
-      <section itemScope itemType="https://schema.org/FAQPage" className="py-16 bg-white border-t border-slate-200">
+      <section itemScope itemType="https://schema.org/FAQPage" className="py-6 md:py-8 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-4 md:mb-6">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-slate-600 text-lg">Common questions about online ITR filing, GST registration, and company compliance in India.</p>
           </div>
@@ -776,9 +744,9 @@ export default function Home() {
       </section>
 
       {/* Customer Reviews & Trust Section */}
-      <section className="py-16 bg-slate-50 border-t border-slate-200 relative">
+      <section className="py-6 md:py-8 bg-slate-50 border-t border-slate-200 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-4 md:mb-6">
             <div className="inline-flex items-center justify-center gap-1 mb-4">
               <Star className="w-6 h-6 text-amber-400 fill-amber-400" />
               <Star className="w-6 h-6 text-amber-400 fill-amber-400" />
@@ -839,16 +807,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-600 py-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-500 opacity-50 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-blue-700 opacity-50 blur-3xl"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to file your taxes stress-free?</h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Get connected with a dedicated CA today and ensure you get the maximum tax refund legally possible.</p>
-          <button onClick={handleWhatsAppRedirect} className="bg-white text-blue-600 font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-slate-50 transition transform hover:-translate-y-1">
-            Talk to an Expert Now
-          </button>
+      {/* Enquiry Form & CTA Section */}
+      <section className="bg-[#1D3557] py-12 md:py-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-500/20 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-[#FFB400]/10 blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            
+            {/* CTA Text */}
+            <div className="text-left text-white space-y-6">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-2">Have Questions? Let's Talk!</h2>
+              <p className="text-blue-100 text-lg max-w-xl">
+                Get connected with a dedicated CA today and ensure you get the right advice for your business and personal taxes. Share your details and we will get back to you within 24 hours.
+              </p>
+              
+              <div className="flex gap-4 items-center">
+                <button onClick={handleWhatsAppRedirect} className="bg-[#FFB400] text-[#1D3557] font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-[#e6a200] transition transform hover:-translate-y-1">
+                  Chat on WhatsApp
+                </button>
+                <a href="tel:9982504000" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg backdrop-blur-sm transition border border-white/20">
+                  Call Us
+                </a>
+              </div>
+            </div>
+
+            {/* Form */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl relative w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
+               <h3 className="text-2xl font-bold text-[#1D3557] mb-6">Request a Callback</h3>
+               <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Thank you! Our expert will call you shortly."); }}>
+                 <div>
+                   <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                   <input type="text" required placeholder="John Doe" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
+                 </div>
+                 <div>
+                   <label className="block text-sm font-medium text-slate-700 mb-1">Mobile Number</label>
+                   <input type="tel" required placeholder="+91 9876543210" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
+                 </div>
+                 <div>
+                   <label className="block text-sm font-medium text-slate-700 mb-1">Service Required</label>
+                   <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition">
+                     <option>ITR Filing</option>
+                     <option>GST Registration & Filing</option>
+                     <option>Company Registration</option>
+                     <option>Tax Planning Consultation</option>
+                     <option>Other</option>
+                   </select>
+                 </div>
+                 <button type="submit" className="w-full bg-[#1D3557] hover:bg-[#162a45] text-white font-bold py-3 rounded-lg transition-colors mt-2">
+                   Submit Request
+                 </button>
+               </form>
+            </div>
+
+          </div>
         </div>
       </section>
     </main>

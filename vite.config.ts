@@ -12,7 +12,7 @@ export default defineConfig(({mode}) => {
   const isAIStudio = process.env.DISABLE_HMR === 'true';
 
   return {
-    base: isAIStudio ? '/' : '/ITR/',
+    base: './',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),

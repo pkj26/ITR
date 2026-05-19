@@ -9,10 +9,23 @@ import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
 import Disclaimer from './pages/Disclaimer';
 
+import LiveUsers from './components/LiveUsers';
+
 function Layout({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+    }
+  };
 
   const handleWhatsAppRedirect = () => {
     window.open('https://wa.me/919982504000', '_blank');
@@ -47,16 +60,17 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans relative">
       {/* Top Banner indicating legacy */}
-      <div className="bg-amber-500 text-amber-950 py-1.5 px-4 text-xs sm:text-sm font-semibold text-center mt-0">
-        <span className="flex items-center justify-center gap-2">
-          <Award className="w-4 h-4 hidden sm:block" /> India's Most Trusted Tax Platform | Celebrating 10+ Years of Excellence | ★★★★★ 4.9/5 from 1M+ Users
+      <div className="bg-[#FFB400] text-[#1D3557] py-1.5 px-4 text-xs sm:text-sm font-semibold text-center mt-0">
+        <span className="flex items-center justify-center gap-1 sm:gap-2 flex-wrap">
+          <Award className="w-4 h-4 hidden sm:block" /> India's Most Trusted Tax Platform | 4.9/5 from 1M+ Users 
+          <LiveUsers />
         </span>
       </div>
 
       {/* Navigation - Uses <header> and <nav> for SEO semantics */}
-      <header className="bg-slate-900 text-white shadow-md sticky top-0 z-50">
+      <header className="bg-[#1D3557] text-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-14">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
               <div className="relative flex items-center justify-center w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg shadow-sm">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -69,19 +83,19 @@ function Layout({ children }: { children: React.ReactNode }) {
                   </svg>
                 </div>
               </div>
-              <div className="flex flex-col ml-1">
-                <span className="text-xl font-extrabold tracking-tight text-white leading-none">Online ITR Filing</span>
-                <span className="text-[10px] text-amber-400 font-bold tracking-widest uppercase mt-0.5">.IN</span>
+              <div className="flex flex-col ml-1 max-w-[150px] sm:max-w-none">
+                <span className="text-lg font-extrabold tracking-tight text-white whitespace-nowrap">Online ITR Filing</span>
+                <span className="text-[10px] text-[#FFB400] font-bold tracking-widest uppercase mt-0.5">.IN</span>
               </div>
             </Link>
             <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
-              <Link to="/" className="text-slate-300 hover:text-white font-medium transition">Home</Link>
+              <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white font-medium transition">Home</a>
               <button onClick={() => scrollToSection('itr-filing')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">ITR Filing</button>
               <button onClick={() => scrollToSection('gst-services')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">GST Services</button>
               <button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">Start your Business</button>
             </nav>
             <div className="flex items-center space-x-4">
-              <button onClick={handleWhatsAppRedirect} className="bg-amber-500 text-slate-900 px-6 py-2 rounded-md font-bold hover:bg-amber-400 transition shadow-sm hidden md:block">
+              <button onClick={handleWhatsAppRedirect} className="bg-[#FFB400] text-[#1D3557] px-6 py-2 rounded-md font-bold hover:bg-[#e6a200] transition shadow-sm hidden md:block">
                 Get Started
               </button>
               <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -93,13 +107,13 @@ function Layout({ children }: { children: React.ReactNode }) {
         
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-slate-800 border-t border-slate-700">
+          <div className="md:hidden bg-[#162a45] border-t border-[rgba(255,255,255,0.1)]">
             <nav className="px-4 pt-2 pb-4 space-y-2 flex flex-col">
-              <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Home</Link>
+              <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Home</a>
               <button onClick={() => scrollToSection('itr-filing')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">ITR Filing</button>
               <button onClick={() => scrollToSection('gst-services')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">GST Services</button>
               <button onClick={() => scrollToSection('company-registration')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Start your Business</button>
-              <button onClick={handleWhatsAppRedirect} className="w-full text-left bg-amber-500 text-slate-900 px-3 py-2 rounded-md font-bold hover:bg-amber-400 mt-4">
+              <button onClick={handleWhatsAppRedirect} className="w-full text-center bg-[#FFB400] text-[#1D3557] px-3 py-2 rounded-md font-bold hover:bg-[#e6a200] mt-4">
                 Get Started
               </button>
             </nav>
@@ -110,44 +124,44 @@ function Layout({ children }: { children: React.ReactNode }) {
       {children}
 
       {/* Footer Area for SEO links */}
-      <footer className="bg-slate-900 py-12 border-t mt-auto border-slate-800 text-slate-400 text-sm">
+      <footer className="bg-[#1D3557] py-8 border-t mt-auto border-[rgba(255,255,255,0.1)] text-[#EAECEF] text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about-us" className="hover:text-amber-400 transition">About Us</Link></li>
-              <li><Link to="/our-journey" className="hover:text-amber-400 transition">Our 10-Year Journey</Link></li>
-              <li><Link to="/terms-conditions" className="hover:text-amber-400 transition">Terms & Conditions</Link></li>
-              <li><Link to="/privacy-policy" className="hover:text-amber-400 transition">Privacy Policy</Link></li>
-              <li><Link to="/refund-policy" className="hover:text-amber-400 transition">Refund Policy</Link></li>
-              <li><Link to="/disclaimer" className="hover:text-amber-400 transition">Disclaimer</Link></li>
+              <li><Link to="/about-us" className="hover:text-[#FFB400] transition">About Us</Link></li>
+              <li><Link to="/our-journey" className="hover:text-[#FFB400] transition">Our 10-Year Journey</Link></li>
+              <li><Link to="/terms-conditions" className="hover:text-[#FFB400] transition">Terms & Conditions</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-[#FFB400] transition">Privacy Policy</Link></li>
+              <li><Link to="/refund-policy" className="hover:text-[#FFB400] transition">Refund Policy</Link></li>
+              <li><Link to="/disclaimer" className="hover:text-[#FFB400] transition">Disclaimer</Link></li>
             </ul>
           </div>
           <div>
              <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Services</h3>
              <ul className="space-y-2">
-              <li><button onClick={() => scrollToSection('itr-filing')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">File ITR Online</button></li>
-              <li><button onClick={() => scrollToSection('gst-services')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">GST Registration & Filing</button></li>
-              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">Private Limited Company</button></li>
-              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">LLP Registration</button></li>
-              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">Trademark Search</button></li>
+              <li><button onClick={() => scrollToSection('itr-filing')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">File ITR Online</button></li>
+              <li><button onClick={() => scrollToSection('gst-services')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">GST Registration & Filing</button></li>
+              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">Private Limited Company</button></li>
+              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">LLP Registration</button></li>
+              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">Trademark Search</button></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Contact</h3>
              <ul className="space-y-2">
-              <li><a href="tel:9982504000" className="hover:text-amber-400 transition">+91 9982504000</a></li>
+              <li><a href="tel:9982504000" className="hover:text-[#FFB400] transition">+91 9982504000</a></li>
               <li>support@taxserve.in</li>
               <li>Mon - Sat, 10 AM - 7 PM</li>
             </ul>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="relative flex items-center justify-center w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-md shadow-sm">
+              <div className="relative flex items-center justify-center w-8 h-8 bg-[#FFB400] rounded-md shadow-sm">
                 <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
-                <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border border-slate-900">
+                <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border border-[#1D3557]">
                   <svg className="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
                   </svg>
@@ -158,7 +172,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <p className="text-slate-500 text-xs leading-relaxed">India's most trusted online tax filing platform. We make taxes simple, accurate, and secure for millions of Indians.</p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-8 border-t border-[rgba(255,255,255,0.1)] text-center text-xs">
           &copy; {new Date().getFullYear()} Online ITR Filing. All rights reserved. (a sarv.com initiative)
         </div>
       </footer>
