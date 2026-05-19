@@ -61,7 +61,7 @@ export default function Home() {
                   initial={isDesktop ? { opacity: 0, y: 20 } : false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
-                  className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-[#1D3557] leading-[1.1] tracking-tight"
+                  className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-900 leading-[1.1] tracking-tight"
                 >
                   Online ITR Filing
                 </motion.h1>
@@ -121,15 +121,15 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
             {/* Card 1: Trusted */}
             <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
-              <div className="w-40 h-40 rounded-full bg-[#f2744c] flex flex-col items-center justify-center text-white mb-8 border-4 border-white shadow-[0_0_0_2px_#f2744c_inset] overflow-hidden relative">
-                <div className="absolute inset-0 bg-[#f2744c]"></div>
+              <div className="w-40 h-40 rounded-full bg-[#f2744c] flex flex-col items-center justify-center text-white mb-8 border-4 border-white shadow-[0_0_0_2px_#51cdc4_inset] overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#ffcc00]"></div>
                 <div className="relative z-10 flex flex-col items-center mt-2">
                   <Users className="w-16 h-16 mb-1 text-black" strokeWidth={1.5} />
                   <span className="text-2xl font-black text-black">1M+</span>
                 </div>
               </div>
               <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Trusted</h3>
-              <div className="w-12 h-1 bg-[#f2744c] mb-6"></div>
+              <div className="w-12 h-1 bg-[#c9eef1] mb-6"></div>
               <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
                 Over 1 Million customers in India choose Online ITR Filing every year for seamless filing.
               </p>
@@ -137,15 +137,15 @@ export default function Home() {
 
             {/* Card 2: Experience */}
             <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
-              <div className="w-40 h-40 rounded-full bg-[#ffcc00] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#ffcc00_inset] overflow-hidden relative">
-                <div className="absolute inset-0 bg-[#ffcc00]"></div>
+              <div className="w-40 h-40 rounded-full bg-[#c1ece2] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#51cdc4_inset] overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#fd9b6b]"></div>
                 <div className="relative z-10 flex flex-col items-center mt-2">
                   <FileText className="w-14 h-14 mb-2 text-black" strokeWidth={1.5} />
                   <span className="text-2xl font-black text-black">500,000+</span>
                 </div>
               </div>
               <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Experience</h3>
-              <div className="w-12 h-1 bg-[#ffcc00] mb-6"></div>
+              <div className="w-12 h-1 bg-[#ffd32e] mb-6"></div>
               <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
                 We've helped users submit more than 500,000 tax returns accurately.
               </p>
@@ -153,8 +153,8 @@ export default function Home() {
 
             {/* Card 3: Recognised */}
             <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
-              <div className="w-40 h-40 rounded-full bg-[#c9eef1] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#c9eef1_inset] overflow-hidden relative">
-                 <div className="absolute inset-0 bg-[#c9eef1]"></div>
+              <div className="w-40 h-40 rounded-full bg-[#e4e5e7] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#51cdc4_inset] overflow-hidden relative">
+                 <div className="absolute inset-0 bg-[#51cdc4]"></div>
                  <div className="relative z-10 flex flex-col items-center justify-center h-full">
                     <div className="flex items-center justify-center bg-transparent mt-2">
                       <ShieldCheck className="w-8 h-8 mr-1 text-black" fill="black" stroke="white" strokeWidth={1} />
@@ -163,7 +163,7 @@ export default function Home() {
                  </div>
               </div>
               <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Recognised</h3>
-              <div className="w-12 h-1 bg-[#c9eef1] mb-6"></div>
+              <div className="w-12 h-1 bg-[#f2744c] mb-6"></div>
               <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
                 Our tax software is fully trusted, guaranteeing a smooth and stress-free experience.
               </p>
@@ -184,7 +184,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
             {/* Card 1 */}
             <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#c1ece2] mb-8 relative">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#ffcc00] mb-8 relative">
                 <Clock className="w-16 h-16 text-slate-800" strokeWidth={1} />
                 <div className="absolute bottom-2 right-2 bg-white rounded-full p-1 border-2 border-slate-800 shadow-sm">
                    <CheckCircle2 className="w-5 h-5 text-slate-800" strokeWidth={2} />
@@ -199,7 +199,7 @@ export default function Home() {
 
             {/* Card 2 */}
             <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#fd9b6b] mb-8 relative">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#c9eef1] mb-8 relative">
                 <FileCheck className="w-16 h-16 text-slate-800" strokeWidth={1} />
                 <div className="absolute bottom-2 right-2 bg-white rounded-full p-1 border-2 border-slate-800 shadow-sm">
                    <CheckCircle2 className="w-5 h-5 text-slate-800" strokeWidth={2} />
@@ -214,7 +214,7 @@ export default function Home() {
 
             {/* Card 3 */}
             <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#ffd32e] mb-8">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#c1ece2] mb-8">
                 <Calculator className="w-16 h-16 text-slate-800" strokeWidth={1} />
               </div>
               <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Automatic And<br/>Accurate<br/>Calculations</h3>
@@ -226,9 +226,9 @@ export default function Home() {
 
             {/* Card 4 */}
             <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#e4e5e7] mb-8 relative">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#fd9b6b] mb-8 relative">
                 <Receipt className="w-16 h-16 text-slate-800" strokeWidth={1} />
-                <Scissors className="w-8 h-8 text-slate-800 absolute bottom-4 -right-1 bg-[#e4e5e7]" strokeWidth={1.5} />
+                <Scissors className="w-8 h-8 text-slate-800 absolute bottom-4 -right-1 bg-[#ffd32e]" strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Maximise<br/>Deductions</h3>
               <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
@@ -239,7 +239,7 @@ export default function Home() {
 
             {/* Card 5 */}
             <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#51cdc4] mb-8">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#e4e5e7] mb-8">
                 <Headset className="w-16 h-16 text-slate-800" strokeWidth={1} />
               </div>
               <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Expert<br/>Support</h3>
@@ -273,7 +273,7 @@ export default function Home() {
               </div>
               <div className="mb-6">
                 <span className="text-3xl font-bold text-slate-900">₹499</span>
-                <span className="text-slate-400 text-sm line-through ml-2">₹999</span>
+                <span className="text-slate-500 text-sm line-through ml-2">₹999</span>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start">
@@ -308,7 +308,7 @@ export default function Home() {
               </div>
               <div className="mb-6">
                 <span className="text-3xl font-bold text-slate-900">₹1,499</span>
-                <span className="text-slate-400 text-sm line-through ml-2">₹2,499</span>
+                <span className="text-slate-500 text-sm line-through ml-2">₹2,499</span>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start">
@@ -340,7 +340,7 @@ export default function Home() {
               </div>
               <div className="mb-6">
                 <span className="text-3xl font-bold text-slate-900">₹2,499</span>
-                <span className="text-slate-400 text-sm line-through ml-2">₹3,999</span>
+                <span className="text-slate-500 text-sm line-through ml-2">₹3,999</span>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start">
@@ -370,7 +370,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-3 md:mb-4">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">How our CA-Assisted Filing Works</h2>
-            <div className="flex justify-center items-center gap-2 text-green-700 bg-green-50 px-5 py-2.5 rounded-full inline-flex mx-auto border border-green-200 shadow-sm">
+            <div className="flex justify-center items-center gap-2 text-blue-700 bg-blue-50 px-5 py-2.5 rounded-full inline-flex mx-auto border border-blue-200 shadow-sm">
               <ShieldCheck className="w-5 h-5 flex-shrink-0" />
               <span className="font-semibold text-sm md:text-base">100% Secure & Trusted. Govt. Authorized CA Experts. Your Data is Guaranteed Safe.</span>
             </div>
@@ -585,9 +585,9 @@ export default function Home() {
                 <span className="text-slate-500 text-sm ml-2">+ Govt Fees</span>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">DIN & DSC for 2 Directors</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Drafting of MOA & AOA</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">PAN, TAN & Bank Account Setup</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">DIN & DSC for 2 Directors</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Drafting of MOA & AOA</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">PAN, TAN & Bank Account Setup</span></li>
               </ul>
               <button onClick={handleWhatsAppRedirect} className="w-full bg-teal-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700 transition shadow-md">Get Started</button>
             </div>
@@ -606,9 +606,9 @@ export default function Home() {
                 <span className="text-slate-500 text-sm ml-2">+ Govt Fees</span>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">DIN & DSC for 2 Partners</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">LLP Agreement Drafting</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Certificate of Incorporation</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">DIN & DSC for 2 Partners</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">LLP Agreement Drafting</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Certificate of Incorporation</span></li>
               </ul>
               <button onClick={handleWhatsAppRedirect} className="w-full bg-teal-50 text-teal-700 font-bold py-3 rounded-lg hover:bg-teal-600 hover:text-white transition">Get Started</button>
             </div>
@@ -627,9 +627,9 @@ export default function Home() {
                 <span className="text-slate-500 text-sm ml-2">+ Govt Fees</span>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Comprehensive Name Search</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Application Filing (TM-A)</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Use ™ Symbol Instantly</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Comprehensive Name Search</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Application Filing (TM-A)</span></li>
+                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Use ™ Symbol Instantly</span></li>
               </ul>
               <button onClick={handleWhatsAppRedirect} className="w-full bg-teal-50 text-teal-700 font-bold py-3 rounded-lg hover:bg-teal-600 hover:text-white transition">Get Started</button>
             </div>
@@ -638,57 +638,57 @@ export default function Home() {
       </section>
 
       {/* Free Tax & Financial Tools Section */}
-      <section id="tax-tools" className="py-6 md:py-8 bg-slate-900 text-white border-t-4 border-amber-500">
+      <section id="tax-tools" className="py-12 md:py-16 bg-slate-900 text-white border-t-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4 md:mb-6">
             <h2 className="text-3xl font-bold mb-4">Free Financial & Tax Tools</h2>
-            <p className="text-slate-400 text-lg">Smart calculators to help you plan your taxes, investments, and business.</p>
+            <p className="text-slate-500 text-lg">Smart calculators to help you plan your taxes, investments, and business.</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <button 
               onClick={() => setActiveCalculator(activeCalculator === 'income-tax' ? null : 'income-tax')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'income-tax' ? 'border-amber-400 bg-slate-800' : 'border-slate-700'} hover:border-amber-400 hover:bg-slate-800/80 transition group block`}
+              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'income-tax' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
             >
-              <div className={`w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'income-tax' ? 'text-amber-400 scale-110' : 'text-amber-400 group-hover:scale-110'}`}>
+              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'income-tax' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
                 <Calculator className="w-6 h-6" />
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'income-tax' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-400'}`}>Income Tax Calculator</h3>
-              <p className="text-sm text-slate-400">Compare Old vs New regime and find out which saves you more tax.</p>
+              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'income-tax' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>Income Tax Calculator</h3>
+              <p className="text-sm text-slate-500">Compare Old vs New regime and find out which saves you more tax.</p>
             </button>
 
             <button 
               onClick={() => setActiveCalculator(activeCalculator === 'hra' ? null : 'hra')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'hra' ? 'border-amber-400 bg-slate-800' : 'border-slate-700'} hover:border-amber-400 hover:bg-slate-800/80 transition group block`}
+              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'hra' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
             >
-              <div className={`w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'hra' ? 'text-amber-400 scale-110' : 'text-amber-400 group-hover:scale-110'}`}>
+              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'hra' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
                 <HomeIcon className="w-6 h-6" />
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'hra' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-400'}`}>HRA Calculator</h3>
-              <p className="text-sm text-slate-400">Calculate your House Rent Allowance exemption exactly per IT rules.</p>
+              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'hra' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>HRA Calculator</h3>
+              <p className="text-sm text-slate-500">Calculate your House Rent Allowance exemption exactly per IT rules.</p>
             </button>
 
             <button 
               onClick={() => setActiveCalculator(activeCalculator === 'gst' ? null : 'gst')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'gst' ? 'border-amber-400 bg-slate-800' : 'border-slate-700'} hover:border-amber-400 hover:bg-slate-800/80 transition group block`}
+              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'gst' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
             >
-              <div className={`w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'gst' ? 'text-amber-400 scale-110' : 'text-amber-400 group-hover:scale-110'}`}>
+              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'gst' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
                 <Percent className="w-6 h-6" />
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'gst' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-400'}`}>GST Calculator</h3>
-              <p className="text-sm text-slate-400">Easily calculate GST inclusive and exclusive prices for your invoices.</p>
+              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'gst' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>GST Calculator</h3>
+              <p className="text-sm text-slate-500">Easily calculate GST inclusive and exclusive prices for your invoices.</p>
             </button>
 
             <button 
               onClick={() => setActiveCalculator(activeCalculator === 'sip' ? null : 'sip')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'sip' ? 'border-amber-400 bg-slate-800' : 'border-slate-700'} hover:border-amber-400 hover:bg-slate-800/80 transition group block`}
+              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'sip' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
             >
-              <div className={`w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'sip' ? 'text-amber-400 scale-110' : 'text-amber-400 group-hover:scale-110'}`}>
+              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'sip' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
                 <PieChart className="w-6 h-6" />
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'sip' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-400'}`}>SIP Calculator</h3>
-              <p className="text-sm text-slate-400">Plan your wealth creation through compounding over the long term.</p>
+              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'sip' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>SIP Calculator</h3>
+              <p className="text-sm text-slate-500">Plan your wealth creation through compounding over the long term.</p>
             </button>
 
           </div>
@@ -706,7 +706,7 @@ export default function Home() {
       </section>
 
       {/* SEO FAQ Section */}
-      <section itemScope itemType="https://schema.org/FAQPage" className="py-6 md:py-8 bg-white border-t border-slate-200">
+      <section itemScope itemType="https://schema.org/FAQPage" className="py-6 md:py-8 bg-white border-t-4 border-amber-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4 md:mb-6">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
@@ -750,15 +750,15 @@ export default function Home() {
       </section>
 
       {/* Customer Reviews & Trust Section */}
-      <section className="py-6 md:py-8 bg-slate-50 border-t border-slate-200 relative">
+      <section className="py-6 md:py-8 bg-slate-50 border-t-4 border-amber-500 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4 md:mb-6">
             <div className="inline-flex items-center justify-center gap-1 mb-4">
-              <Star className="w-6 h-6 text-amber-400 fill-amber-400" />
-              <Star className="w-6 h-6 text-amber-400 fill-amber-400" />
-              <Star className="w-6 h-6 text-amber-400 fill-amber-400" />
-              <Star className="w-6 h-6 text-amber-400 fill-amber-400" />
-              <Star className="w-6 h-6 text-amber-400 fill-amber-400" />
+              <Star className="w-6 h-6 text-amber-700 fill-amber-400" />
+              <Star className="w-6 h-6 text-amber-700 fill-amber-400" />
+              <Star className="w-6 h-6 text-amber-700 fill-amber-400" />
+              <Star className="w-6 h-6 text-amber-700 fill-amber-400" />
+              <Star className="w-6 h-6 text-amber-700 fill-amber-400" />
             </div>
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Trusted by Millions of Indians</h2>
             <p className="text-slate-600 text-lg">For over a decade, we've been helping individuals and businesses stay compliant.</p>
@@ -767,12 +767,12 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Review 1 */}
             <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-              <div className="flex text-amber-400 mb-4">
+              <div className="flex text-amber-700 mb-4">
                 <Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" />
               </div>
               <p className="text-slate-700 italic mb-6">"I've been using Online ITR Filing since 2016. Their CA team is phenomenal. They spotted deductions I didn't even know existed. Highly professional and deeply knowledgeable."</p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-lg">RS</div>
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-lg">RS</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Rahul Sharma</h4>
                   <p className="text-xs text-slate-500">IT Professional, Bangalore</p>
@@ -782,12 +782,12 @@ export default function Home() {
 
             {/* Review 2 */}
             <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-              <div className="flex text-amber-400 mb-4">
+              <div className="flex text-amber-700 mb-4">
                 <Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" />
               </div>
               <p className="text-slate-700 italic mb-6">"As a stock trader, calculating Capital Gains is a nightmare. The CA handled my entire portfolio perfectly directly from my broker statements. Total peace of mind."</p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold text-lg">AP</div>
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-lg">AP</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Ankit Patel</h4>
                   <p className="text-xs text-slate-500">Stock Trader, Mumbai</p>
@@ -797,12 +797,12 @@ export default function Home() {
 
             {/* Review 3 */}
             <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-              <div className="flex text-amber-400 mb-4">
+              <div className="flex text-amber-700 mb-4">
                 <Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" />
               </div>
               <p className="text-slate-700 italic mb-6">"Handed over our firm's GST filing to them 3 years ago and never looked back. 100% compliance, zero penalties, and the support team is always reachable via phone."</p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-lg">MD</div>
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-lg">MD</div>
                 <div>
                   <h4 className="font-bold text-slate-900">Meera Das</h4>
                   <p className="text-xs text-slate-500">Agency Owner, Delhi</p>
@@ -814,21 +814,21 @@ export default function Home() {
       </section>
 
       {/* Enquiry Form & CTA Section */}
-      <section className="bg-[#1D3557] py-12 md:py-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-500/20 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-[#FFB400]/10 blur-3xl"></div>
+      <section className="bg-green-700 py-12 md:py-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-amber-500/20 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-slate-900/10 blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             
             {/* CTA Text */}
             <div className="text-left text-white space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold mb-2">Have Questions? Let's Talk!</h2>
-              <p className="text-blue-100 text-lg max-w-xl">
+              <p className="text-green-100 text-lg max-w-xl">
                 Get connected with a dedicated CA today and ensure you get the right advice for your business and personal taxes. Share your details and we will get back to you within 24 hours.
               </p>
               
               <div className="flex gap-4 items-center">
-                <button onClick={handleWhatsAppRedirect} className="bg-[#FFB400] text-[#1D3557] font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-[#e6a200] transition transform hover:-translate-y-1">
+                <button onClick={handleWhatsAppRedirect} className="bg-white text-amber-700 font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-slate-50 transition transform hover:-translate-y-1">
                   Chat on WhatsApp
                 </button>
                 <a href="tel:9982504000" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg backdrop-blur-sm transition border border-white/20">
@@ -839,19 +839,19 @@ export default function Home() {
 
             {/* Form */}
             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl relative w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
-               <h3 className="text-2xl font-bold text-[#1D3557] mb-6">Request a Callback</h3>
+               <h3 className="text-2xl font-bold text-slate-900 mb-6">Request a Callback</h3>
                {isFormSubmitted ? (
-                 <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center space-y-4">
-                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto text-green-600">
+                 <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 text-center space-y-4">
+                   <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto text-amber-600">
                      <CheckCircle2 className="w-8 h-8" />
                    </div>
-                   <h4 className="text-xl font-bold text-green-800">Thank You!</h4>
-                   <p className="text-green-700 text-sm">
+                   <h4 className="text-xl font-bold text-amber-800">Thank You!</h4>
+                   <p className="text-amber-700 text-sm">
                      We have received your request. Our expert will call you shortly.
                    </p>
                    <button 
                      onClick={() => setIsFormSubmitted(false)}
-                     className="mt-4 text-green-600 hover:text-green-800 font-semibold text-sm transition"
+                     className="mt-4 text-amber-600 hover:text-amber-800 font-semibold text-sm transition"
                    >
                      Submit Another Request
                    </button>
@@ -860,15 +860,15 @@ export default function Home() {
                  <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsFormSubmitted(true); }}>
                    <div>
                      <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
-                     <input type="text" required placeholder="John Doe" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
+                     <input type="text" required placeholder="John Doe" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" />
                    </div>
                    <div>
                      <label className="block text-sm font-medium text-slate-700 mb-1">Mobile Number</label>
-                     <input type="tel" required placeholder="+91 9876543210" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition" />
+                     <input type="tel" required placeholder="+91 9876543210" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition" />
                    </div>
                    <div>
                      <label className="block text-sm font-medium text-slate-700 mb-1">Service Required</label>
-                     <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-[#FFB400] outline-none transition">
+                     <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition">
                        <option>ITR Filing</option>
                        <option>GST Registration & Filing</option>
                        <option>Company Registration</option>

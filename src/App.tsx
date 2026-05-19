@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { ShieldCheck, Award, MessageCircle, Phone, Menu, X } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Award, MessageCircle, Phone, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Journey from './pages/Journey';
@@ -75,14 +75,8 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
               <div className="relative flex items-center justify-center w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg shadow-sm">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 8h.01" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
-                <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-slate-900">
-                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
               </div>
               <div className="flex flex-col ml-1 max-w-[150px] sm:max-w-none">
                 <span className="text-lg font-extrabold tracking-tight text-white whitespace-nowrap">Online ITR Filing</span>
@@ -159,21 +153,16 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="relative flex items-center justify-center w-8 h-8 bg-[#FFB400] rounded-md shadow-sm">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                <svg className="w-5 h-5 text-[#1D3557]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
-                <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border border-[#1D3557]">
-                  <svg className="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
               </div>
               <span className="text-xl font-extrabold tracking-tight text-white leading-none">Online ITR Filing</span>
             </div>
             <p className="text-slate-500 text-xs leading-relaxed">India's most trusted online tax filing platform. We make taxes simple, accurate, and secure for millions of Indians.</p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-8 border-t border-[rgba(255,255,255,0.1)] text-center text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-8 border-t border-gray-200 text-center text-xs text-gray-500">
           &copy; {new Date().getFullYear()} Online ITR Filing. All rights reserved. (a sarv.com initiative)
         </div>
       </footer>

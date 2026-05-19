@@ -20,7 +20,7 @@ export default function SEO({
   const defaultSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "AccountingService",
-    "name": "TaxServe India",
+    "name": "Online ITR Filing",
     "description": "Expert online ITR filing, GST return, and company registration services in India.",
     "url": "https://taxserve.in",
     "areaServed": "IN",

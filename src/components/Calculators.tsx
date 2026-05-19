@@ -39,7 +39,7 @@ export function GSTCalculator() {
             type="number" 
             value={amount} 
             onChange={(e) => setAmount(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+            className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
           />
         </div>
         <div>
@@ -47,7 +47,7 @@ export function GSTCalculator() {
           <select 
             value={rate} 
             onChange={(e) => setRate(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 appearance-none"
+            className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 appearance-none"
           >
             <option value={3}>3%</option>
             <option value={5}>5%</option>
@@ -106,7 +106,7 @@ export function SIPCalculator() {
             type="number" 
             value={investment} 
             onChange={(e) => setInvestment(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+            className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
           />
         </div>
         <div>
@@ -115,7 +115,7 @@ export function SIPCalculator() {
             type="number" 
             value={returnRate} 
             onChange={(e) => setReturnRate(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+            className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
           />
         </div>
         <div>
@@ -124,7 +124,7 @@ export function SIPCalculator() {
             type="number" 
             value={years} 
             onChange={(e) => setYears(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+            className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
           />
         </div>
       </div>
@@ -182,19 +182,19 @@ export function HRACalculator() {
       <div className="grid md:grid-cols-2 gap-5 mb-6">
         <div>
           <label className="block text-sm font-medium text-slate-400 mb-2">Basic Salary (Monthly)</label>
-          <input type="number" value={basic} onChange={(e) => setBasic(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+          <input type="number" value={basic} onChange={(e) => setBasic(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
         </div>
         <div>
           <label className="block text-sm font-medium text-slate-400 mb-2">DA (Monthly)</label>
-          <input type="number" value={da} onChange={(e) => setDa(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+          <input type="number" value={da} onChange={(e) => setDa(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
         </div>
         <div>
           <label className="block text-sm font-medium text-slate-400 mb-2">HRA Received (Monthly)</label>
-          <input type="number" value={hra} onChange={(e) => setHra(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+          <input type="number" value={hra} onChange={(e) => setHra(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
         </div>
         <div>
           <label className="block text-sm font-medium text-slate-400 mb-2">Rent Paid (Monthly)</label>
-          <input type="number" value={rent} onChange={(e) => setRent(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+          <input type="number" value={rent} onChange={(e) => setRent(Number(e.target.value))} className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
         </div>
       </div>
 
@@ -274,7 +274,7 @@ export function IncomeTaxCalculator() {
             type="number" 
             value={income} 
             onChange={(e) => setIncome(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+            className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
           />
         </div>
         <div>
@@ -283,7 +283,7 @@ export function IncomeTaxCalculator() {
             type="number" 
             value={deductions} 
             onChange={(e) => setDeductions(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+            className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 min-h-[48px] text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
           />
         </div>
       </div>
