@@ -14,6 +14,23 @@ export default function App() {
     window.open('https://wa.me/919982504000', '_blank');
   };
 
+  const scrollToSection = (id: string) => {
+    const scrollTo = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - 64;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    };
+
+    if (window.location.hash !== '#/' && window.location.hash !== '') {
+      window.location.hash = '/';
+      setTimeout(scrollTo, 100);
+    } else {
+      scrollTo();
+    }
+  };
+
   return (
     <HashRouter>
       <div className="min-h-screen bg-slate-50 flex flex-col font-sans relative">
@@ -37,9 +54,9 @@ export default function App() {
               </Link>
               <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
                 <Link to="/" className="text-slate-300 hover:text-white font-medium transition">Home</Link>
-                <a href="/#itr-filing" className="text-slate-300 hover:text-white font-medium transition">ITR Filing</a>
-                <a href="/#gst-services" className="text-slate-300 hover:text-white font-medium transition">GST Services</a>
-                <a href="/#company-registration" className="text-slate-300 hover:text-white font-medium transition">Start your Business</a>
+                <button onClick={() => scrollToSection('itr-filing')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">ITR Filing</button>
+                <button onClick={() => scrollToSection('gst-services')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">GST Services</button>
+                <button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">Start your Business</button>
               </nav>
               <div className="flex items-center space-x-4">
                 <button onClick={handleWhatsAppRedirect} className="bg-amber-500 text-slate-900 px-6 py-2 rounded-md font-bold hover:bg-amber-400 transition shadow-sm hidden sm:block">
@@ -77,11 +94,11 @@ export default function App() {
             <div>
                <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Services</h3>
                <ul className="space-y-2">
-                <li><a href="/#itr-filing" className="hover:text-amber-400 transition">File ITR Online</a></li>
-                <li><a href="/#gst-services" className="hover:text-amber-400 transition">GST Registration & Filing</a></li>
-                <li><a href="/#company-registration" className="hover:text-amber-400 transition">Private Limited Company</a></li>
-                <li><a href="/#company-registration" className="hover:text-amber-400 transition">LLP Registration</a></li>
-                <li><a href="/#company-registration" className="hover:text-amber-400 transition">Trademark Search</a></li>
+                <li><button onClick={() => scrollToSection('itr-filing')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">File ITR Online</button></li>
+                <li><button onClick={() => scrollToSection('gst-services')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">GST Registration & Filing</button></li>
+                <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">Private Limited Company</button></li>
+                <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">LLP Registration</button></li>
+                <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-amber-400 transition cursor-pointer text-left w-full">Trademark Search</button></li>
               </ul>
             </div>
             <div>
