@@ -36,7 +36,7 @@ export default function Home() {
                   TaxServe ITR Filing
                 </h1>
                 <p className="text-xl sm:text-2xl text-slate-500 font-medium tracking-wide">
-                  Seamless filing powered by AI
+                  Seamless online filing by Tax Experts
                 </p>
               </div>
 
@@ -69,8 +69,8 @@ export default function Home() {
                 </div>
                 
                 <div className="bg-slate-50 rounded-xl p-3 flex items-center justify-center gap-2 mb-4">
-                  <span className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-[10px]">🤖</span>
-                  <span className="text-xs font-bold text-slate-700">Auto applying deductions</span>
+                  <span className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-[10px]">✓</span>
+                  <span className="text-xs font-bold text-slate-700">Maximizing your deductions</span>
                 </div>
 
                 <div className="space-y-3">
@@ -99,29 +99,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10 Years Trust / Stats Banner */}
-      <section className="bg-slate-900 py-12 border-b-4 border-amber-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-slate-700 md:divide-x-2">
-            <div className="flex flex-col items-center">
-              <Users className="w-8 h-8 text-amber-400 mb-3" />
-              <span className="text-3xl font-bold text-white">1.5M+</span>
-              <span className="text-slate-400 text-sm mt-1 uppercase tracking-wider font-semibold">Happy Users</span>
+      {/* Why Choose Us Section */}
+      <section className="bg-slate-50 py-20 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-light text-slate-700 uppercase tracking-widest">
+              Why Choose Us?
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
+            {/* Card 1: Trusted */}
+            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
+              <div className="w-40 h-40 rounded-full bg-[#f2744c] flex flex-col items-center justify-center text-white mb-8 border-4 border-white shadow-[0_0_0_2px_#f2744c_inset] overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#f2744c]"></div>
+                <div className="relative z-10 flex flex-col items-center mt-2">
+                  <Users className="w-16 h-16 mb-1 text-black" strokeWidth={1.5} />
+                  <span className="text-2xl font-black text-black">1M+</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Trusted</h3>
+              <div className="w-12 h-1 bg-[#f2744c] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
+                Over 1 Million customers in India choose TaxServe every year for seamless filing.
+              </p>
             </div>
-            <div className="flex flex-col items-center">
-              <Award className="w-8 h-8 text-amber-400 mb-3" />
-              <span className="text-3xl font-bold text-white">10+ Years</span>
-              <span className="text-slate-400 text-sm mt-1 uppercase tracking-wider font-semibold">Of Excellence</span>
+
+            {/* Card 2: Experience */}
+            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
+              <div className="w-40 h-40 rounded-full bg-[#ffcc00] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#ffcc00_inset] overflow-hidden relative">
+                <div className="absolute inset-0 bg-[#ffcc00]"></div>
+                <div className="relative z-10 flex flex-col items-center mt-2">
+                  <FileText className="w-14 h-14 mb-2 text-black" strokeWidth={1.5} />
+                  <span className="text-2xl font-black text-black">500,000+</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Experience</h3>
+              <div className="w-12 h-1 bg-[#ffcc00] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
+                We've helped users submit more than 500,000 tax returns accurately.
+              </p>
             </div>
-            <div className="flex flex-col items-center">
-              <Briefcase className="w-8 h-8 text-amber-400 mb-3" />
-              <span className="text-3xl font-bold text-white">500+</span>
-              <span className="text-slate-400 text-sm mt-1 uppercase tracking-wider font-semibold">Expert CAs</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Star className="w-8 h-8 text-amber-400 mb-3" />
-              <span className="text-3xl font-bold text-white">4.9/5</span>
-              <span className="text-slate-400 text-sm mt-1 uppercase tracking-wider font-semibold">Average Rating</span>
+
+            {/* Card 3: Recognised */}
+            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
+              <div className="w-40 h-40 rounded-full bg-[#c9eef1] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#c9eef1_inset] overflow-hidden relative">
+                 <div className="absolute inset-0 bg-[#c9eef1]"></div>
+                 <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                    <div className="flex items-center justify-center bg-transparent mt-2">
+                      <ShieldCheck className="w-8 h-8 mr-1 text-black" fill="black" stroke="white" strokeWidth={1} />
+                      <span className="font-bold text-xl leading-tight text-black">Govt<br />Auth</span>
+                    </div>
+                 </div>
+              </div>
+              <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Recognised</h3>
+              <div className="w-12 h-1 bg-[#c9eef1] mb-6"></div>
+              <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
+                Our tax software is fully trusted, guaranteeing a smooth and stress-free experience.
+              </p>
             </div>
           </div>
         </div>
