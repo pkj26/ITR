@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
@@ -17,8 +18,9 @@ export default function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleWhatsAppRedirect = () => {
-    window.open('https://wa.me/919982504000', '_blank');
+  const handleWhatsAppRedirect = (planName?: string) => {
+    const text = encodeURIComponent(planName ? `Hi, I am interested in the ${planName} plan. Please help me proceed.` : 'Hi, I need assistance with tax filing.');
+    window.open(`https://wa.me/919982504000?text=${text}`, '_blank');
   };
 
   return (
@@ -28,16 +30,16 @@ export default function Home() {
         description="India's leading platform for online ITR filing, GST registration, company incorporation, and CA services. Maximize your tax refund with our expert CAs."
       />
       {/* ClearTax-like Hero Section */}
-      <section className="bg-white relative pt-2 pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-10 overflow-visible">
+      <section className="bg-white relative pb-6 md:pb-8 lg:pb-10 overflow-visible">
         <div className="absolute inset-0 bg-white z-0"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-4 items-center">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-4 items-center">
             {/* Left Content */}
             <motion.div 
               initial={isDesktop ? { opacity: 0, x: -50 } : false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col items-start text-left space-y-8 relative z-10 w-full max-w-2xl"
+              className="flex flex-col items-start text-left space-y-6 md:space-y-8 relative z-10 w-full max-w-2xl pt-2 md:pt-6 lg:pt-8"
             >
               
               {/* Top Badge */}
@@ -82,26 +84,25 @@ export default function Home() {
                 transition={{ delay: 0.6, duration: 0.5 }}
                 whileHover={isDesktop ? { scale: 1.05 } : {}}
                 whileTap={isDesktop ? { scale: 0.95 } : {}}
-                onClick={handleWhatsAppRedirect} 
-                className="bg-[#FFB400] hover:bg-[#e6a200] text-[#1D3557] font-bold py-3.5 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg w-full sm:w-auto"
+                onClick={() => handleWhatsAppRedirect('Expert Consultation (Hero)')} className="bg-[#FFB400] hover:bg-[#e6a200] text-[#1D3557] font-bold py-3.5 px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-lg w-full sm:w-auto"
               >
                 File Now
               </motion.button>
             </motion.div>
 
             {/* Right Content - Visual/Image */}
-            <div className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] hidden lg:flex justify-center lg:justify-end items-end mt-4 lg:mt-0">
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] hidden sm:flex justify-center md:justify-end items-end mt-4 md:mt-0 lg:pt-6">
               {/* Image of smiling woman */}
               <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="absolute inset-0 flex justify-center lg:justify-end items-end overflow-visible"
+                className="absolute inset-0 flex justify-center md:justify-end items-end overflow-visible origin-bottom"
               >
                  <img 
                     src={heroImage} 
                     alt="Professional Indian Woman Filing Taxes"
-                    className="object-contain h-full w-auto max-w-full mix-blend-darken scale-110 origin-bottom right-0 absolute"
+                    className="object-contain h-full w-auto max-w-full mix-blend-darken scale-125 sm:scale-[1.2] md:scale-125 lg:scale-[1.3] origin-bottom right-0 absolute"
                  />
               </motion.div>
             </div>
@@ -289,7 +290,7 @@ export default function Home() {
                   <span className="text-slate-600 text-sm">Claim HRA, 80C & other deductions</span>
                 </li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-blue-50 text-blue-700 font-bold py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <button onClick={() => handleWhatsAppRedirect('Salaried ITR')} className="w-full bg-blue-50 text-blue-700 font-bold py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
                 Buy Now
               </button>
             </div>
@@ -324,7 +325,7 @@ export default function Home() {
                   <span className="text-slate-600 text-sm">Cryptocurrency & VDA Tax computation</span>
                 </li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition shadow-md">
+              <button onClick={() => handleWhatsAppRedirect('Capital Gains / Crypto')} className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition shadow-md">
                 Buy Now
               </button>
             </div>
@@ -356,7 +357,7 @@ export default function Home() {
                   <span className="text-slate-600 text-sm">Small businesses (Section 44AD)</span>
                 </li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-blue-50 text-blue-700 font-bold py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
+              <button onClick={() => handleWhatsAppRedirect('Business & Profession')} className="w-full bg-blue-50 text-blue-700 font-bold py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
                 Buy Now
               </button>
             </div>
@@ -401,6 +402,13 @@ export default function Home() {
               <p className="text-sm text-slate-600">After approval, we file it accurately to ensure maximum tax savings.</p>
             </div>
           </div>
+          <div className="mt-12 text-center flex flex-col items-center">
+             <p className="text-slate-500 mb-6">Need a custom plan for business or capital gains?</p>
+             <Link to="/pricing" className="inline-flex items-center gap-2 bg-[#1D3557] hover:bg-[#162a45] text-white font-bold py-3 px-8 rounded-full transition shadow-lg hover:-translate-y-1 transform">
+               View All Pricing & Plans
+               <svg fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+             </Link>
+          </div>
         </div>
       </section>
 
@@ -442,7 +450,7 @@ export default function Home() {
                   <span className="text-slate-600 text-sm">Dedicated Expert Support</span>
                 </li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-indigo-50 text-indigo-700 font-bold py-3 rounded-lg hover:bg-indigo-600 hover:text-white transition">
+              <button onClick={() => handleWhatsAppRedirect('GST Registration')} className="w-full bg-indigo-50 text-indigo-700 font-bold py-3 rounded-lg hover:bg-indigo-600 hover:text-white transition">
                 Get Registered
               </button>
             </div>
@@ -477,7 +485,7 @@ export default function Home() {
                   <span className="text-slate-600 text-sm">GSTR-2A/2B match & advice</span>
                 </li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition shadow-md">
+              <button onClick={() => handleWhatsAppRedirect('GST Return Filing')} className="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition shadow-md">
                 Buy Now
               </button>
             </div>
@@ -509,7 +517,7 @@ export default function Home() {
                   <span className="text-slate-600 text-sm">Compliance alert reminders</span>
                 </li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-indigo-50 text-indigo-700 font-bold py-3 rounded-lg hover:bg-indigo-600 hover:text-white transition">
+              <button onClick={() => handleWhatsAppRedirect('Nil GST Return')} className="w-full bg-indigo-50 text-indigo-700 font-bold py-3 rounded-lg hover:bg-indigo-600 hover:text-white transition">
                 Buy Now
               </button>
             </div>
@@ -589,7 +597,7 @@ export default function Home() {
                 <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Drafting of MOA & AOA</span></li>
                 <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">PAN, TAN & Bank Account Setup</span></li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-teal-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700 transition shadow-md">Get Started</button>
+              <button onClick={() => handleWhatsAppRedirect('Pvt Ltd Company Registration')} className="w-full bg-teal-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700 transition shadow-md">Get Started</button>
             </div>
 
             {/* Plan 2: LLP */}
@@ -610,7 +618,7 @@ export default function Home() {
                 <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">LLP Agreement Drafting</span></li>
                 <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Certificate of Incorporation</span></li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-teal-50 text-teal-700 font-bold py-3 rounded-lg hover:bg-teal-600 hover:text-white transition">Get Started</button>
+              <button onClick={() => handleWhatsAppRedirect('LLP Registration')} className="w-full bg-teal-50 text-teal-700 font-bold py-3 rounded-lg hover:bg-teal-600 hover:text-white transition">Get Started</button>
             </div>
 
             {/* Plan 3: Trademark */}
@@ -631,7 +639,7 @@ export default function Home() {
                 <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Application Filing (TM-A)</span></li>
                 <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" /><span className="text-slate-600 text-sm">Use ™ Symbol Instantly</span></li>
               </ul>
-              <button onClick={handleWhatsAppRedirect} className="w-full bg-teal-50 text-teal-700 font-bold py-3 rounded-lg hover:bg-teal-600 hover:text-white transition">Get Started</button>
+              <button onClick={() => handleWhatsAppRedirect('Trademark Registration')} className="w-full bg-teal-50 text-teal-700 font-bold py-3 rounded-lg hover:bg-teal-600 hover:text-white transition">Get Started</button>
             </div>
           </div>
         </div>
@@ -814,24 +822,24 @@ export default function Home() {
       </section>
 
       {/* Enquiry Form & CTA Section */}
-      <section className="bg-green-700 py-12 md:py-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-amber-500/20 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-slate-900/10 blur-3xl"></div>
+      <section className="bg-[#1D3557] py-12 md:py-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-[#FFB400]/20 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-blue-400/10 blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             
             {/* CTA Text */}
             <div className="text-left text-white space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold mb-2">Have Questions? Let's Talk!</h2>
-              <p className="text-green-100 text-lg max-w-xl">
+              <p className="text-slate-300 text-lg max-w-xl">
                 Get connected with a dedicated CA today and ensure you get the right advice for your business and personal taxes. Share your details and we will get back to you within 24 hours.
               </p>
               
               <div className="flex gap-4 items-center">
-                <button onClick={handleWhatsAppRedirect} className="bg-white text-amber-700 font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-slate-50 transition transform hover:-translate-y-1">
+                <button onClick={() => handleWhatsAppRedirect('General Enquiry')} className="bg-[#FFB400] text-[#1D3557] font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-[#e6a200] transition transform hover:-translate-y-1">
                   Chat on WhatsApp
                 </button>
-                <a href="tel:9982504000" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg backdrop-blur-sm transition border border-white/20">
+                <a href="tel:9982504000" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg backdrop-blur-sm transition border border-white/20">
                   Call Us
                 </a>
               </div>

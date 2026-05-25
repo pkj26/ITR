@@ -10,6 +10,8 @@ import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
 import Disclaimer from './pages/Disclaimer';
 
+import Pricing from './pages/Pricing';
+
 import LiveUsers from './components/LiveUsers';
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -85,6 +87,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             </Link>
             <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white font-medium transition">Home</a>
+              <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white font-medium transition">Pricing</Link>
               <button onClick={() => scrollToSection('itr-filing')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">ITR Filing</button>
               <button onClick={() => scrollToSection('gst-services')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">GST Services</button>
               <button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">Start your Business</button>
@@ -105,6 +108,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="md:hidden bg-[#162a45] border-t border-[rgba(255,255,255,0.1)]">
             <nav className="px-4 pt-2 pb-4 space-y-2 flex flex-col">
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Home</a>
+              <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Pricing</Link>
               <button onClick={() => scrollToSection('itr-filing')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">ITR Filing</button>
               <button onClick={() => scrollToSection('gst-services')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">GST Services</button>
               <button onClick={() => scrollToSection('company-registration')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Start your Business</button>
@@ -125,6 +129,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about-us" className="hover:text-[#FFB400] transition">About Us</Link></li>
+              <li><Link to="/pricing" className="hover:text-[#FFB400] transition">Pricing & Plans</Link></li>
               <li><Link to="/our-journey" className="hover:text-[#FFB400] transition">Our 10-Year Journey</Link></li>
               <li><Link to="/terms-conditions" className="hover:text-[#FFB400] transition">Terms & Conditions</Link></li>
               <li><Link to="/privacy-policy" className="hover:text-[#FFB400] transition">Privacy Policy</Link></li>
@@ -197,6 +202,7 @@ export default function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/our-journey" element={<Journey />} />
             <Route path="/terms-conditions" element={<Terms />} />
