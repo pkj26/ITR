@@ -151,7 +151,7 @@ export default function Pricing() {
       <SEO 
         title="Pricing & Tax Plans - Online ITR Filing" 
         description="Transparent and affordable pricing for CA-assisted Income Tax Filing, GST Returns, and Business Registration in India." 
-        url="https://taxserve.in/#/pricing"
+        url="https://karseva.in/#/pricing"
       />
       
       {/* Hero Section */}

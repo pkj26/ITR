@@ -76,13 +76,15 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex justify-between items-center h-14">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
               <div className="relative flex items-center justify-center w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg shadow-sm">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
               </div>
               <div className="flex flex-col ml-1 max-w-[150px] sm:max-w-none">
-                <span className="text-lg font-extrabold tracking-tight text-white whitespace-nowrap">Online ITR Filing</span>
-                <span className="text-[10px] text-[#FFB400] font-bold tracking-widest uppercase mt-0.5">.IN</span>
+                <span className="text-xl font-black tracking-tight text-white whitespace-nowrap flex items-center leading-none">
+                  Kar<span className="text-[#FFB400]">Seva</span><span className="text-[11px] text-amber-400 font-extrabold ml-0.5">.in</span>
+                </span>
+                <span className="text-[9px] text-slate-300 font-bold tracking-wider uppercase mt-0.5">Online Tax & CA Services</span>
               </div>
             </Link>
             <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
@@ -151,24 +153,26 @@ function Layout({ children }: { children: React.ReactNode }) {
             <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Contact</h3>
              <ul className="space-y-2">
               <li><a href="tel:9982504000" className="hover:text-[#FFB400] transition">+91 9982504000</a></li>
-              <li>support@taxserve.in</li>
+              <li>support@karseva.in</li>
               <li>Mon - Sat, 10 AM - 7 PM</li>
             </ul>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="relative flex items-center justify-center w-8 h-8 bg-[#FFB400] rounded-md shadow-sm">
-                <svg className="w-5 h-5 text-[#1D3557]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                <svg className="w-5 h-5 text-[#1D3557]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
               </div>
-              <span className="text-xl font-extrabold tracking-tight text-white leading-none">Online ITR Filing</span>
+              <span className="text-xl font-black tracking-tight text-white leading-none">
+                Kar<span className="text-[#FFB400]">Seva</span><span className="text-[12px] text-amber-400 font-extrabold ml-0.5">.in</span>
+              </span>
             </div>
-            <p className="text-slate-500 text-xs leading-relaxed">India's most trusted online tax filing platform. We make taxes simple, accurate, and secure for millions of Indians.</p>
+            <p className="text-slate-500 text-xs leading-relaxed">India's most trusted online tax filing and CA services platform. We make taxes simple, accurate, and secure for millions of Indians.</p>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-8 border-t border-gray-200 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} Online ITR Filing. All rights reserved. (a sarv.com initiative)
+          &copy; {new Date().getFullYear()} KarSeva.in. All rights reserved. (a sarv.com initiative)
         </div>
       </footer>
 

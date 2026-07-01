@@ -12,8 +12,8 @@ interface SEOProps {
 export default function SEO({ 
   title = "Best Online ITR Filing, GST & Company Registration in India | Online ITR Filing", 
   description = "Expert online ITR filing, GST registration, company incorporation, and legal services in India. E-file your income tax returns with India's top CA experts.",
-  keywords = "ITR filing online, online CA services, file ITR India, GST registration online, GST return filing, company incorporation India, legal services India, trademark registration, best CA in India, tax consultant, income tax e-filing, ITR 1 filing, ITR 2 filing, ITR 4 filing, private limited company registration, GST return filing online, CA near me, income tax return online, tax saving advisor, tax experts India, e-file taxes, company registration near me, patent and trademark, Sarv tax platform, TaxServe",
-  url = "https://taxserve.in",
+  keywords = "ITR filing online, online CA services, file ITR India, GST registration online, GST return filing, company incorporation India, legal services India, trademark registration, best CA in India, tax consultant, income tax e-filing, ITR 1 filing, ITR 2 filing, ITR 4 filing, private limited company registration, GST return filing online, CA near me, income tax return online, tax saving advisor, tax experts India, e-file taxes, company registration near me, patent and trademark, Sarv tax platform, KarSeva",
+  url = "https://karseva.in",
   schema
 }: SEOProps) {
   
@@ -23,13 +23,13 @@ export default function SEO({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://taxserve.in/#organization",
+        "@id": "https://karseva.in/#organization",
         "name": "Online ITR Filing",
-        "alternateName": "TaxServe India",
-        "url": "https://taxserve.in",
+        "alternateName": "KarSeva India",
+        "url": "https://karseva.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://taxserve.in/logo.png",
+          "url": "https://karseva.in/logo.png",
           "caption": "Online ITR Filing Logo"
         },
         "foundingDate": "2014",
@@ -51,26 +51,26 @@ export default function SEO({
       },
       {
         "@type": "WebSite",
-        "@id": "https://taxserve.in/#website",
-        "url": "https://taxserve.in",
+        "@id": "https://karseva.in/#website",
+        "url": "https://karseva.in",
         "name": "Online ITR Filing",
         "description": "E-file your Income Tax Returns and manage GST compliance easily with CA-assisted tax filing.",
         "publisher": {
-          "@id": "https://taxserve.in/#organization"
+          "@id": "https://karseva.in/#organization"
         },
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://taxserve.in/#/pricing?q={search_term_string}",
+          "target": "https://karseva.in/#/pricing?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "AccountingService",
-        "@id": "https://taxserve.in/#service",
+        "@id": "https://karseva.in/#service",
         "name": "Online ITR Filing CA Services",
-        "image": "https://taxserve.in/hero-illustration.png",
+        "image": "https://karseva.in/hero-illustration.png",
         "description": "India's leading platform for online ITR filing, GST return, and company registration services in India.",
-        "url": "https://taxserve.in",
+        "url": "https://karseva.in",
         "telephone": "+91-99825-04000",
         "priceRange": "INR ₹499 - ₹7999",
         "address": {
@@ -109,7 +109,7 @@ export default function SEO({
       },
       {
         "@type": "FAQPage",
-        "@id": "https://taxserve.in/#faq",
+        "@id": "https://karseva.in/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -161,14 +161,14 @@ export default function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="Online ITR Filing" />
-      <meta property="og:image" content="https://taxserve.in/logo.png" />
+      <meta property="og:image" content="https://karseva.in/logo.png" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://taxserve.in/logo.png" />
+      <meta name="twitter:image" content="https://karseva.in/logo.png" />
 
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />

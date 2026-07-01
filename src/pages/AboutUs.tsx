@@ -7,7 +7,7 @@ export default function AboutUs() {
       <SEO 
         title="About Us | Online ITR Filing"
         description="Learn about Online ITR Filing's mission, vision, and 10+ years of experience providing the best tax, compliance, and legal services to Indians."
-        url="https://taxserve.in/#/about-us"
+        url="https://karseva.in/#/about-us"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-8 blur-none">About Online ITR Filing</h1>

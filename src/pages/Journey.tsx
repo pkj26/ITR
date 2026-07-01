@@ -8,7 +8,7 @@ export default function Journey() {
       <SEO 
         title="Our 10-Year Journey | Online ITR Filing"
         description="Discover the 10-year success story of India's most trusted online tax platform. From a vision in 2014 to serving 1.5 million Indians today."
-        url="https://taxserve.in/#/our-journey"
+        url="https://karseva.in/#/our-journey"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">

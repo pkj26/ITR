@@ -26,9 +26,9 @@ export default function Home() {
   return (
     <main className="flex-grow">
       <SEO 
-        title="Best Online ITR Filing, GST & Company Registration in India | Online ITR Filing"
+        title="Best Online ITR Filing, GST & Company Registration in India | KarSeva"
         description="India's leading platform for online ITR filing, GST registration, company incorporation, and CA services. Maximize your tax refund with our expert CAs."
-        url="https://taxserve.in/#/"
+        url="https://karseva.in/#/"
       />
       {/* ClearTax-like Hero Section */}
       <section className="bg-white relative pb-6 md:pb-8 lg:pb-10 overflow-visible">
