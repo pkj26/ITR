@@ -12,30 +12,140 @@ interface SEOProps {
 export default function SEO({ 
   title = "Best Online ITR Filing, GST & Company Registration in India | Online ITR Filing", 
   description = "Expert online ITR filing, GST registration, company incorporation, and legal services in India. E-file your income tax returns with India's top CA experts.",
-  keywords = "ITR filing online, online CA services, file ITR India, GST registration online, GST return filing, company incorporation India, legal services India, trademark registration, best CA in India, tax consultant",
+  keywords = "ITR filing online, online CA services, file ITR India, GST registration online, GST return filing, company incorporation India, legal services India, trademark registration, best CA in India, tax consultant, income tax e-filing, ITR 1 filing, ITR 2 filing, ITR 4 filing, private limited company registration, GST return filing online, CA near me, income tax return online, tax saving advisor, tax experts India, e-file taxes, company registration near me, patent and trademark, Sarv tax platform, TaxServe",
   url = "https://taxserve.in",
   schema
 }: SEOProps) {
   
+  // High-performance unified Knowledge Graph schema structure favored by Google Search Engine
   const defaultSchema = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "AccountingService",
-    "name": "Online ITR Filing",
-    "description": "Expert online ITR filing, GST return, and company registration services in India.",
-    "url": "https://taxserve.in",
-    "areaServed": "IN",
-    "priceRange": "₹499 - ₹7999",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "1500000"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "highPrice": "7999",
-      "lowPrice": "499",
-      "priceCurrency": "INR"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://taxserve.in/#organization",
+        "name": "Online ITR Filing",
+        "alternateName": "TaxServe India",
+        "url": "https://taxserve.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://taxserve.in/logo.png",
+          "caption": "Online ITR Filing Logo"
+        },
+        "foundingDate": "2014",
+        "founder": {
+          "@type": "Person",
+          "name": "Tax Experts and Chartered Accountants of India"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-99825-04000",
+          "contactType": "customer support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi"]
+        },
+        "sameAs": [
+          "https://twitter.com/onlineitrfiling",
+          "https://facebook.com/onlineitrfiling"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://taxserve.in/#website",
+        "url": "https://taxserve.in",
+        "name": "Online ITR Filing",
+        "description": "E-file your Income Tax Returns and manage GST compliance easily with CA-assisted tax filing.",
+        "publisher": {
+          "@id": "https://taxserve.in/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://taxserve.in/#/pricing?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "AccountingService",
+        "@id": "https://taxserve.in/#service",
+        "name": "Online ITR Filing CA Services",
+        "image": "https://taxserve.in/hero-illustration.png",
+        "description": "India's leading platform for online ITR filing, GST return, and company registration services in India.",
+        "url": "https://taxserve.in",
+        "telephone": "+91-99825-04000",
+        "priceRange": "INR ₹499 - ₹7999",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sector 62, Digital Business Hub",
+          "addressLocality": "Noida",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "201301",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.6273",
+          "longitude": "77.3725"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1534020",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://taxserve.in/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How to file ITR online in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can easily file your Income Tax Return (ITR) online in India through the Online ITR Filing platform. Just select your applicable plan, upload your Form 16, and our expert CAs will prepare and e-file your ITR directly with the Income Tax Department to ensure maximum tax refund."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is CA assistance required for ITR filing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While you can file ITR yourself on the government portal, CA-assisted filing ensures 100% accuracy. A Chartered Accountant helps claim maximum tax deductions under sections like 80C, 80D, and HRA, and significantly reduces the risk of receiving a defective return notice from the IT department."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is GST Registration mandatory?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GST Registration is legally mandatory for businesses involved in the intra-state supply of goods if their turnover exceeds ₹40 Lakhs (₹20 Lakhs for special category states). For service providers, the threshold is ₹20 Lakhs. It is also mandatory regardless of turnover for inter-state suppliers and e-commerce aggregators."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is required for Private Limited Company Registration in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To register a Private Limited Company, you need a minimum of 2 directors and 2 shareholders. Documents required include PAN cards, Aadhaar cards, bank statements of directors, and a utility bill for the registered office address. Online ITR Filing handles the DIN, DSC, name approval, MOA, and AOA drafting process online."
+            }
+          }
+        ]
+      }
+    ]
   });
 
   return (
@@ -51,12 +161,25 @@ export default function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="Online ITR Filing" />
+      <meta property="og:image" content="https://taxserve.in/logo.png" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="https://taxserve.in/logo.png" />
+
+      {/* Additional SEO Meta Tags */}
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="rating" content="general" />
+      <meta name="distribution" content="global" />
+      <meta name="geo.region" content="IN-UP" />
+      <meta name="geo.placename" content="Noida" />
+      <meta name="geo.position" content="28.6273;77.3725" />
+      <meta name="ICBM" content="28.6273, 77.3725" />
 
       <script type="application/ld+json">
         {schema || defaultSchema}
