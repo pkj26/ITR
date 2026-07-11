@@ -80,7 +80,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14">
             <Link to="/" className="flex-shrink-0" onClick={handleHomeClick}>
-              <KarSevaLogo size={38} showText={true} variant="light" />
+              <KarSevaLogo size={48} showText={true} variant="light" />
             </Link>
             <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white font-medium transition">Home</a>
@@ -120,48 +120,53 @@ function Layout({ children }: { children: React.ReactNode }) {
       {children}
 
       {/* Footer Area for SEO links */}
-      <footer className="bg-[#1D3557] py-8 border-t mt-auto border-[rgba(255,255,255,0.1)] text-[#EAECEF] text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <footer className="bg-[#1D3557] py-12 border-t mt-auto border-[rgba(255,255,255,0.1)] text-[#EAECEF] text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           <div>
-            <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h3>
-            <ul className="space-y-2">
-              <li><Link to="/about-us" className="hover:text-[#FFB400] transition">About Us</Link></li>
-              <li><Link to="/pricing" className="hover:text-[#FFB400] transition">Pricing & Plans</Link></li>
-              <li><Link to="/our-journey" className="hover:text-[#FFB400] transition">Our 10-Year Journey</Link></li>
-              <li><Link to="/terms-conditions" className="hover:text-[#FFB400] transition">Terms & Conditions</Link></li>
-              <li><Link to="/privacy-policy" className="hover:text-[#FFB400] transition">Privacy Policy</Link></li>
-              <li><Link to="/refund-policy" className="hover:text-[#FFB400] transition">Refund Policy</Link></li>
-              <li><Link to="/disclaimer" className="hover:text-[#FFB400] transition">Disclaimer</Link></li>
+            <h3 className="text-white font-extrabold mb-5 uppercase text-sm tracking-wider border-b border-white/10 pb-2">Company</h3>
+            <ul className="space-y-3">
+              <li><Link to="/about-us" className="text-slate-300 hover:text-[#FFB400] text-sm transition">About Us</Link></li>
+              <li><Link to="/pricing" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Pricing & Plans</Link></li>
+              <li><Link to="/our-journey" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Our 10-Year Journey</Link></li>
+              <li><Link to="/terms-conditions" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Terms & Conditions</Link></li>
+              <li><Link to="/privacy-policy" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Privacy Policy</Link></li>
+              <li><Link to="/refund-policy" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Refund Policy</Link></li>
+              <li><Link to="/disclaimer" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Disclaimer</Link></li>
             </ul>
           </div>
           <div>
-             <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Services</h3>
-             <ul className="space-y-2">
-              <li><button onClick={() => scrollToSection('itr-filing')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">File ITR Online</button></li>
-              <li><button onClick={() => scrollToSection('gst-services')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">GST Registration & Filing</button></li>
-              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">Private Limited Company</button></li>
-              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">LLP Registration</button></li>
-              <li><button onClick={() => scrollToSection('company-registration')} className="hover:text-[#FFB400] transition cursor-pointer text-left w-full">Trademark Search</button></li>
+            <h3 className="text-white font-extrabold mb-5 uppercase text-sm tracking-wider border-b border-white/10 pb-2">Services</h3>
+            <ul className="space-y-3">
+              <li><button onClick={() => scrollToSection('itr-filing')} className="text-slate-300 hover:text-[#FFB400] text-sm transition cursor-pointer text-left w-full">File ITR Online</button></li>
+              <li><button onClick={() => scrollToSection('gst-services')} className="text-slate-300 hover:text-[#FFB400] text-sm transition cursor-pointer text-left w-full">GST Registration & Filing</button></li>
+              <li><button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-[#FFB400] text-sm transition cursor-pointer text-left w-full">Private Limited Company</button></li>
+              <li><button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-[#FFB400] text-sm transition cursor-pointer text-left w-full">LLP Registration</button></li>
+              <li><button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-[#FFB400] text-sm transition cursor-pointer text-left w-full">Trademark Search</button></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Contact</h3>
-             <ul className="space-y-2">
-              <li><a href="tel:9783699635" className="hover:text-[#FFB400] transition">+91 9783699635</a></li>
-              <li><a href="tel:9521555557" className="hover:text-[#FFB400] transition">+91 9521555557</a></li>
-              <li><a href="mailto:Karsevaa2026@gmail.com" className="hover:text-[#FFB400] transition">Karsevaa2026@gmail.com</a></li>
-              <li className="text-slate-400">Mon - Sat, 10 AM - 7 PM</li>
+            <h3 className="text-white font-extrabold mb-5 uppercase text-sm tracking-wider border-b border-white/10 pb-2">Contact Us</h3>
+            <ul className="space-y-3">
+              <li><a href="tel:9783699635" className="text-slate-300 hover:text-[#FFB400] text-sm font-medium transition block">+91 9783699635</a></li>
+              <li><a href="tel:9521555557" className="text-slate-300 hover:text-[#FFB400] text-sm font-medium transition block">+91 9521555557</a></li>
+              <li><a href="mailto:Karsevaa2026@gmail.com" className="text-slate-300 hover:text-[#FFB400] text-sm transition block">Karsevaa2026@gmail.com</a></li>
+              <li className="text-slate-400 text-xs">Mon - Sat, 10 AM - 7 PM</li>
+              <li className="text-slate-400 text-xs border-t border-white/10 pt-3 mt-3 leading-relaxed">
+                F51 Alankar Plaza, Vidyadhar Nagar, Jaipur, Rajasthan 302039
+              </li>
             </ul>
           </div>
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <KarSevaLogo size={32} showText={true} variant="light" />
+          <div className="flex flex-col justify-start space-y-4">
+            <div className="flex items-center gap-2">
+              <KarSevaLogo size={84} showText={true} variant="light" />
             </div>
-            <p className="text-slate-500 text-xs leading-relaxed">India's most trusted online tax filing and CA services platform. We make taxes simple, accurate, and secure for millions of Indians.</p>
+            <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
+              India's most trusted online tax filing and CA services platform. We make taxes simple, accurate, and secure for millions of Indians.
+            </p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-8 border-t border-gray-200 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} KarSeva.in. All rights reserved. (a sarv.com initiative)
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-8 border-t border-slate-700/50 text-center text-xs text-slate-400">
+          © 2026 KarSeva.in. All rights reserved only
         </div>
       </footer>
 

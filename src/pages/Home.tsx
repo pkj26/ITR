@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset } from 'lucide-react';
+import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset, MapPin, Mail, Phone, ExternalLink, Settings, Eye } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
 import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.png';
 import SEO from '../components/SEO';
+import KarSevaPromoVideo from '../components/KarSevaPromoVideo';
 
 export default function Home() {
   const [activeCalculator, setActiveCalculator] = useState<string | null>(null);
@@ -823,6 +824,143 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 5-Second Promo & Google Analytics Section */}
+      <section className="bg-slate-100 py-16 border-t border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="text-[#E8891A] font-bold text-xs uppercase tracking-widest bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200">
+              EXPLORE KARSEVA
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+              A 5-Second Introduction to KarSeva
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-2">
+              Watch our rapid 5-second cinematic motion card loop below to understand why over 1 million Indians trust KarSeva.in with their taxes.
+            </p>
+          </div>
+
+          {/* Interactive 5-Sec Video Promo Card */}
+          <div className="max-w-4xl mx-auto">
+            <KarSevaPromoVideo />
+          </div>
+
+        </div>
+      </section>
+
+      {/* Office Address & Interactive Google Map Section */}
+      <section id="contact-us" className="bg-white py-16 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left side: Styled Address and Contact details */}
+            <div className="lg:col-span-5 space-y-8">
+              <div>
+                <span className="text-[#1D3557] font-bold text-xs uppercase tracking-widest bg-slate-100 px-3 py-1.5 rounded-full">
+                  OUR OFFICE LOCATION
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+                  Visit Our Headquarters
+                </h2>
+                <p className="text-slate-600 text-sm mt-2 leading-relaxed">
+                  Have document-related queries or need face-to-face CA consultation? Drop by our office in Jaipur. Our support experts and tax planners are ready to assist you.
+                </p>
+              </div>
+
+              {/* Specific Contact Points */}
+              <div className="space-y-4">
+                {/* Physical Address */}
+                <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-[#E8891A] shrink-0">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm">Corporate Office Address</h4>
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                      F51 Alankar Plaza, Vidyadhar Nagar,<br />
+                      Jaipur, Rajasthan, India - 302039
+                    </p>
+                  </div>
+                </div>
+
+                {/* Direct Phone Numbers */}
+                <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm">Call Support Desk</h4>
+                    <p className="text-xs text-slate-600 mt-1 font-semibold text-slate-700">
+                      +91 9783699635 &nbsp;|&nbsp; +91 9521555557
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Support */}
+                <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm">Email Inquiries</h4>
+                    <p className="text-xs text-slate-600 mt-1 font-semibold text-slate-700">
+                      Karsevaa2026@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                {/* Timings */}
+                <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 shrink-0">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm">Office Timings</h4>
+                    <p className="text-xs text-slate-600 mt-1">
+                      Monday to Saturday: 10:00 AM – 07:00 PM (IST)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA link to open in external maps */}
+              <a 
+                href="https://maps.google.com/?q=F51+alankar+plaza+vidhaydhar+nagar+Jaipur+Rajasthan+302039" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#1D3557] hover:bg-[#162a45] text-white px-6 py-3 rounded-full font-bold text-sm shadow-md transition transform hover:-translate-y-0.5"
+              >
+                Get Directions on Google Maps <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Right side: Interactive Google Map Iframe with premium frame */}
+            <div className="lg:col-span-7">
+              <div className="relative bg-slate-100 rounded-2xl p-2.5 shadow-xl border border-slate-200">
+                <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-800 shadow border border-slate-200/50 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  Jaipur Headquarters
+                </div>
+                
+                {/* Embedded Map pointing to user's address */}
+                <iframe
+                  title="KarSeva Jaipur Office Map Location"
+                  src="https://maps.google.com/maps?q=F51%20alankar%20plaza%20vidhaydhar%20nagar%20Jaipur%20Rajasthan%20302039&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-[420px] rounded-xl border-0 relative z-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
