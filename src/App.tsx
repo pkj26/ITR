@@ -11,8 +11,8 @@ import Refund from './pages/Refund';
 import Disclaimer from './pages/Disclaimer';
 
 import Pricing from './pages/Pricing';
-
 import LiveUsers from './components/LiveUsers';
+import KarSevaLogo from './components/KarSevaLogo';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
@@ -30,8 +30,13 @@ function Layout({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const handleWhatsAppRedirect = () => {
-    window.open('https://wa.me/919982504000', '_blank');
+  const handleWhatsAppRedirect = (serviceName?: any) => {
+    let text = "Hello KarSeva! I'm interested in your professional tax and business compliance services. Please guide me on how to get started.";
+    if (typeof serviceName === 'string' && serviceName) {
+      text = `Hello KarSeva! I want to inquire about your "${serviceName}" services. Please share the details and required documents to get started.`;
+    }
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/919783699635?text=${encodedText}`, '_blank');
   };
 
   const scrollToSection = (id: string) => {
@@ -74,18 +79,8 @@ function Layout({ children }: { children: React.ReactNode }) {
       <header className="bg-[#1D3557] text-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14">
-            <Link to="/" className="flex-shrink-0 flex items-center gap-2">
-              <div className="relative flex items-center justify-center w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg shadow-sm">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              </div>
-              <div className="flex flex-col ml-1 max-w-[150px] sm:max-w-none">
-                <span className="text-xl font-black tracking-tight text-white whitespace-nowrap flex items-center leading-none">
-                  Kar<span className="text-[#FFB400]">Seva</span><span className="text-[11px] text-amber-400 font-extrabold ml-0.5">.in</span>
-                </span>
-                <span className="text-[9px] text-slate-300 font-bold tracking-wider uppercase mt-0.5">Online Tax & CA Services</span>
-              </div>
+            <Link to="/" className="flex-shrink-0" onClick={handleHomeClick}>
+              <KarSevaLogo size={38} showText={true} variant="light" />
             </Link>
             <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white font-medium transition">Home</a>
@@ -152,21 +147,15 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Contact</h3>
              <ul className="space-y-2">
-              <li><a href="tel:9982504000" className="hover:text-[#FFB400] transition">+91 9982504000</a></li>
-              <li>support@karseva.in</li>
-              <li>Mon - Sat, 10 AM - 7 PM</li>
+              <li><a href="tel:9783699635" className="hover:text-[#FFB400] transition">+91 9783699635</a></li>
+              <li><a href="tel:9521555557" className="hover:text-[#FFB400] transition">+91 9521555557</a></li>
+              <li><a href="mailto:Karsevaa2026@gmail.com" className="hover:text-[#FFB400] transition">Karsevaa2026@gmail.com</a></li>
+              <li className="text-slate-400">Mon - Sat, 10 AM - 7 PM</li>
             </ul>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="relative flex items-center justify-center w-8 h-8 bg-[#FFB400] rounded-md shadow-sm">
-                <svg className="w-5 h-5 text-[#1D3557]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              </div>
-              <span className="text-xl font-black tracking-tight text-white leading-none">
-                Kar<span className="text-[#FFB400]">Seva</span><span className="text-[12px] text-amber-400 font-extrabold ml-0.5">.in</span>
-              </span>
+              <KarSevaLogo size={32} showText={true} variant="light" />
             </div>
             <p className="text-slate-500 text-xs leading-relaxed">India's most trusted online tax filing and CA services platform. We make taxes simple, accurate, and secure for millions of Indians.</p>
           </div>
@@ -179,7 +168,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       {/* Floating WhatsApp and Call Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
         <a
-          href="tel:9982504000"
+          href="tel:9783699635"
           className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 hover:scale-110 transition-transform flex items-center justify-center"
           aria-label="Call Us"
         >

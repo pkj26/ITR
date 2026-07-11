@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 export default function SEO({ 
-  title = "Best Online ITR Filing, GST & Company Registration in India | Online ITR Filing", 
+  title = "Best Online ITR Filing, GST & Company Registration in India | KarSeva", 
   description = "Expert online ITR filing, GST registration, company incorporation, and legal services in India. E-file your income tax returns with India's top CA experts.",
   keywords = "ITR filing online, online CA services, file ITR India, GST registration online, GST return filing, company incorporation India, legal services India, trademark registration, best CA in India, tax consultant, income tax e-filing, ITR 1 filing, ITR 2 filing, ITR 4 filing, private limited company registration, GST return filing online, CA near me, income tax return online, tax saving advisor, tax experts India, e-file taxes, company registration near me, patent and trademark, Sarv tax platform, KarSeva",
   url = "https://karseva.in",
@@ -24,13 +24,13 @@ export default function SEO({
       {
         "@type": "Organization",
         "@id": "https://karseva.in/#organization",
-        "name": "Online ITR Filing",
+        "name": "KarSeva",
         "alternateName": "KarSeva India",
         "url": "https://karseva.in",
         "logo": {
           "@type": "ImageObject",
           "url": "https://karseva.in/logo.png",
-          "caption": "Online ITR Filing Logo"
+          "caption": "KarSeva Logo"
         },
         "foundingDate": "2014",
         "founder": {
@@ -39,7 +39,7 @@ export default function SEO({
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+91-99825-04000",
+          "telephone": "+91-97836-99635",
           "contactType": "customer support",
           "areaServed": "IN",
           "availableLanguage": ["English", "Hindi"]
@@ -53,7 +53,7 @@ export default function SEO({
         "@type": "WebSite",
         "@id": "https://karseva.in/#website",
         "url": "https://karseva.in",
-        "name": "Online ITR Filing",
+        "name": "KarSeva",
         "description": "E-file your Income Tax Returns and manage GST compliance easily with CA-assisted tax filing.",
         "publisher": {
           "@id": "https://karseva.in/#organization"
@@ -67,11 +67,11 @@ export default function SEO({
       {
         "@type": "AccountingService",
         "@id": "https://karseva.in/#service",
-        "name": "Online ITR Filing CA Services",
+        "name": "KarSeva CA Services",
         "image": "https://karseva.in/hero-illustration.png",
         "description": "India's leading platform for online ITR filing, GST return, and company registration services in India.",
         "url": "https://karseva.in",
-        "telephone": "+91-99825-04000",
+        "telephone": "+91-97836-99635",
         "priceRange": "INR ₹499 - ₹7999",
         "address": {
           "@type": "PostalAddress",
@@ -116,7 +116,7 @@ export default function SEO({
             "name": "How to file ITR online in India?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can easily file your Income Tax Return (ITR) online in India through the Online ITR Filing platform. Just select your applicable plan, upload your Form 16, and our expert CAs will prepare and e-file your ITR directly with the Income Tax Department to ensure maximum tax refund."
+              "text": "You can easily file your Income Tax Return (ITR) online in India through the KarSeva platform. Just select your applicable plan, upload your Form 16, and our expert CAs will prepare and e-file your ITR directly with the Income Tax Department to ensure maximum tax refund."
             }
           },
           {
@@ -140,7 +140,7 @@ export default function SEO({
             "name": "What is required for Private Limited Company Registration in India?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "To register a Private Limited Company, you need a minimum of 2 directors and 2 shareholders. Documents required include PAN cards, Aadhaar cards, bank statements of directors, and a utility bill for the registered office address. Online ITR Filing handles the DIN, DSC, name approval, MOA, and AOA drafting process online."
+              "text": "To register a Private Limited Company, you need a minimum of 2 directors and 2 shareholders. Documents required include PAN cards, Aadhaar cards, bank statements of directors, and a utility bill for the registered office address. KarSeva handles the DIN, DSC, name approval, MOA, and AOA drafting process online."
             }
           }
         ]
@@ -160,7 +160,7 @@ export default function SEO({
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:site_name" content="Online ITR Filing" />
+      <meta property="og:site_name" content="KarSeva" />
       <meta property="og:image" content="https://karseva.in/logo.png" />
 
       {/* Twitter */}

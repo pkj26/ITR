@@ -19,8 +19,12 @@ export default function Home() {
   }, []);
 
   const handleWhatsAppRedirect = (planName?: string) => {
-    const text = encodeURIComponent(planName ? `Hi, I am interested in the ${planName} plan. Please help me proceed.` : 'Hi, I need assistance with tax filing.');
-    window.open(`https://wa.me/919982504000?text=${text}`, '_blank');
+    const text = encodeURIComponent(
+      planName 
+        ? `Hello KarSeva! I'm interested in your "${planName}" plan. Please guide me through the steps, required documents, and payment.` 
+        : 'Hello KarSeva! I am looking for online tax filing and business compliance assistance. Please connect me with a tax expert.'
+    );
+    window.open(`https://wa.me/919783699635?text=${text}`, '_blank');
   };
 
   return (
@@ -66,7 +70,7 @@ export default function Home() {
                   transition={{ delay: 0.4, duration: 0.5 }}
                   className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-900 leading-[1.1] tracking-tight"
                 >
-                  Online ITR Filing
+                  KarSeva.in
                 </motion.h1>
                 <motion.p 
                   initial={isDesktop ? { opacity: 0, y: 20 } : false}
@@ -133,7 +137,7 @@ export default function Home() {
               <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Trusted</h3>
               <div className="w-12 h-1 bg-[#c9eef1] mb-6"></div>
               <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
-                Over 1 Million customers in India choose Online ITR Filing every year for seamless filing.
+                Over 1 Million customers in India choose KarSeva every year for seamless filing.
               </p>
             </div>
 
@@ -469,7 +473,7 @@ export default function Home() {
                 <p className="text-slate-500 text-sm mt-2 h-10">Monthly / Quarterly filing of GSTR-1 & GSTR-3B.</p>
               </div>
               <div className="mb-6">
-                <span className="text-3xl font-bold text-slate-900">₹4,999</span>
+                <span className="text-3xl font-bold text-slate-900">₹7,999</span>
                 <span className="text-slate-500 text-sm ml-2">/ year</span>
               </div>
                <ul className="space-y-3 mb-8 flex-grow">
@@ -727,7 +731,7 @@ export default function Home() {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-slate-50 rounded-xl p-6 border border-slate-100">
               <h3 itemProp="name" className="text-lg font-bold text-slate-900 mb-2">How to file ITR online in India?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-slate-600">You can easily file your Income Tax Return (ITR) online in India through the Online ITR Filing platform. Just select your applicable plan, upload your Form 16, and our expert CAs will prepare and e-file your ITR directly with the Income Tax Department to ensure maximum tax refund.</p>
+                <p itemProp="text" className="text-slate-600">You can easily file your Income Tax Return (ITR) online in India through the KarSeva platform. Just select your applicable plan, upload your Form 16, and our expert CAs will prepare and e-file your ITR directly with the Income Tax Department to ensure maximum tax refund.</p>
               </div>
             </div>
 
@@ -751,7 +755,7 @@ export default function Home() {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-slate-50 rounded-xl p-6 border border-slate-100">
               <h3 itemProp="name" className="text-lg font-bold text-slate-900 mb-2">What is required for Private Limited Company Registration in India?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-slate-600">To register a Private Limited Company, you need a minimum of 2 directors and 2 shareholders. Documents required include PAN cards, Aadhaar cards, bank statements of directors, and a utility bill for the registered office address. Online ITR Filing handles the DIN, DSC, name approval, MOA, and AOA drafting process online.</p>
+                <p itemProp="text" className="text-slate-600">To register a Private Limited Company, you need a minimum of 2 directors and 2 shareholders. Documents required include PAN cards, Aadhaar cards, bank statements of directors, and a utility bill for the registered office address. KarSeva handles the DIN, DSC, name approval, MOA, and AOA drafting process online.</p>
               </div>
             </div>
           </div>
@@ -779,7 +783,7 @@ export default function Home() {
               <div className="flex text-amber-700 mb-4">
                 <Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" /><Star className="w-4 h-4 fill-amber-400" />
               </div>
-              <p className="text-slate-700 italic mb-6">"I've been using Online ITR Filing since 2016. Their CA team is phenomenal. They spotted deductions I didn't even know existed. Highly professional and deeply knowledgeable."</p>
+              <p className="text-slate-700 italic mb-6">"I've been using KarSeva since 2016. Their CA team is phenomenal. They spotted deductions I didn't even know existed. Highly professional and deeply knowledgeable."</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-lg">RS</div>
                 <div>
@@ -840,7 +844,7 @@ export default function Home() {
                 <button onClick={() => handleWhatsAppRedirect('General Enquiry')} className="bg-[#FFB400] text-[#1D3557] font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-[#e6a200] transition transform hover:-translate-y-1">
                   Chat on WhatsApp
                 </button>
-                <a href="tel:9982504000" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg backdrop-blur-sm transition border border-white/20">
+                <a href="tel:9783699635" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg backdrop-blur-sm transition border border-white/20">
                   Call Us
                 </a>
               </div>

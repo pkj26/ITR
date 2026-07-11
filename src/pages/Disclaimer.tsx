@@ -4,12 +4,12 @@ import SEO from '../components/SEO';
 export default function Disclaimer() {
   return (
     <main className="flex-grow bg-white py-16">
-      <SEO title="Disclaimer | Online ITR Filing" url="https://karseva.in/#/disclaimer" />
+      <SEO title="Disclaimer | KarSeva" url="https://karseva.in/#/disclaimer" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Disclaimer</h1>
         
         <p>
-          Online ITR Filing is a private platform connecting taxpayers with chartered accountants and legal professionals. We are <strong>not</strong> an official website of the Income Tax Department of India, nor are we affiliated directly with the Government of India.
+          KarSeva is a private platform connecting taxpayers with chartered accountants and legal professionals. We are <strong>not</strong> an official website of the Income Tax Department of India, nor are we affiliated directly with the Government of India.
         </p>
         
         <p>
@@ -17,7 +17,7 @@ export default function Disclaimer() {
         </p>
 
         <p>
-          By using our services, you acknowledge that final approval and processing of tax returns, refunds, and company registrations rest solely with the respective government bodies (CBDT, CBIC, MCA, etc.), and Online ITR Filing cannot guarantee a specific timeframe or outcome for government processes.
+          By using our services, you acknowledge that final approval and processing of tax returns, refunds, and company registrations rest solely with the respective government bodies (CBDT, CBIC, MCA, etc.), and KarSeva cannot guarantee a specific timeframe or outcome for government processes.
         </p>
       </div>
     </main>

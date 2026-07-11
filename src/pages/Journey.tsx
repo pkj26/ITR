@@ -6,7 +6,7 @@ export default function Journey() {
   return (
     <main className="flex-grow bg-slate-50 py-16">
       <SEO 
-        title="Our 10-Year Journey | Online ITR Filing"
+        title="Our 10-Year Journey | KarSeva"
         description="Discover the 10-year success story of India's most trusted online tax platform. From a vision in 2014 to serving 1.5 million Indians today."
         url="https://karseva.in/#/our-journey"
       />

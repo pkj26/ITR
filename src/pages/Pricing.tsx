@@ -140,8 +140,8 @@ export default function Pricing() {
   }, []);
 
   const handleWhatsApp = (planName: string) => {
-    const text = encodeURIComponent(`Hi, I am interested in the ${planName} plan. Please help me proceed.`);
-    window.open(`https://wa.me/919982504000?text=${text}`, '_blank');
+    const text = encodeURIComponent(`Hello KarSeva! I'm interested in your "${planName}" plan. Please guide me through the steps, required documents, and payment.`);
+    window.open(`https://wa.me/919783699635?text=${text}`, '_blank');
   };
 
   const plans = activeTab === 'salaried' ? plansSalaried : plansBusiness;
@@ -149,7 +149,7 @@ export default function Pricing() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans pb-20">
       <SEO 
-        title="Pricing & Tax Plans - Online ITR Filing" 
+        title="Pricing & Tax Plans - KarSeva" 
         description="Transparent and affordable pricing for CA-assisted Income Tax Filing, GST Returns, and Business Registration in India." 
         url="https://karseva.in/#/pricing"
       />
