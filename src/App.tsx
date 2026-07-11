@@ -9,6 +9,7 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
 import Disclaimer from './pages/Disclaimer';
+import SEOLandingPage from './pages/SEOLandingPage';
 
 import Pricing from './pages/Pricing';
 import LiveUsers from './components/LiveUsers';
@@ -207,6 +208,7 @@ export default function App() {
             <Route path="/privacy-policy" element={<Privacy />} />
             <Route path="/refund-policy" element={<Refund />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/:slug" element={<SEOLandingPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Layout>
