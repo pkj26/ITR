@@ -60,7 +60,7 @@ export default function SEO({
         },
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://karseva.in/#/pricing?q={search_term_string}",
+          "target": "https://karseva.in/pricing?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },

@@ -61,7 +61,7 @@ export default function SEOLandingPage() {
         title={pageData.metaTitle}
         description={pageData.metaDescription}
         keywords={`${pageData.pageTitle}, KarSeva, tax consultant, GST registration, ITR filing, business registration`}
-        url={`https://karseva.in/#/${pageData.slug}`}
+        url={`https://karseva.in/${pageData.slug}`}
         schema={faqSchema}
       />
 

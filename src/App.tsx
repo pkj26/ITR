@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { CheckCircle2, ShieldCheck, Award, MessageCircle, Phone, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
@@ -197,7 +197,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <HelmetProvider>
-      <HashRouter>
+      <BrowserRouter>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -212,7 +212,7 @@ export default function App() {
             <Route path="*" element={<Home />} />
           </Routes>
         </Layout>
-      </HashRouter>
+      </BrowserRouter>
     </HelmetProvider>
   );
 }
