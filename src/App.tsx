@@ -10,6 +10,8 @@ import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
 import Disclaimer from './pages/Disclaimer';
 import SEOLandingPage from './pages/SEOLandingPage';
+import BlogListing from './pages/BlogListing';
+import BlogDetail from './pages/BlogDetail';
 
 import Pricing from './pages/Pricing';
 import LiveUsers from './components/LiveUsers';
@@ -86,6 +88,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <nav className="hidden md:flex space-x-8" aria-label="Main Navigation">
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white font-medium transition">Home</a>
               <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white font-medium transition">Pricing</Link>
+              <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white font-medium transition">Tax Blog</Link>
               <button onClick={() => scrollToSection('itr-filing')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">ITR Filing</button>
               <button onClick={() => scrollToSection('gst-services')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">GST Services</button>
               <button onClick={() => scrollToSection('company-registration')} className="text-slate-300 hover:text-white font-medium transition cursor-pointer">Start your Business</button>
@@ -107,6 +110,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <nav className="px-4 pt-2 pb-4 space-y-2 flex flex-col">
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Home</a>
               <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Pricing</Link>
+              <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Tax Blog</Link>
               <button onClick={() => scrollToSection('itr-filing')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">ITR Filing</button>
               <button onClick={() => scrollToSection('gst-services')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">GST Services</button>
               <button onClick={() => scrollToSection('company-registration')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Start your Business</button>
@@ -128,6 +132,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <ul className="space-y-3">
               <li><Link to="/about-us" className="text-slate-300 hover:text-[#FFB400] text-sm transition">About Us</Link></li>
               <li><Link to="/pricing" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Pricing & Plans</Link></li>
+              <li><Link to="/blog" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Tax & Business Blog</Link></li>
               <li><Link to="/our-journey" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Our 10-Year Journey</Link></li>
               <li><Link to="/terms-conditions" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Terms & Conditions</Link></li>
               <li><Link to="/privacy-policy" className="text-slate-300 hover:text-[#FFB400] text-sm transition">Privacy Policy</Link></li>
@@ -208,6 +213,8 @@ export default function App() {
             <Route path="/privacy-policy" element={<Privacy />} />
             <Route path="/refund-policy" element={<Refund />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/blog" element={<BlogListing />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/:slug" element={<SEOLandingPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
