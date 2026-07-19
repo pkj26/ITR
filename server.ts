@@ -1,10 +1,14 @@
 import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
+import compression from "compression";
 
 async function startServer() {
   const app = express();
   const PORT = 3000;
+
+  // Enable text compression for all responses (HTML, CSS, JS, SVG, XML, JSON, etc.)
+  app.use(compression());
 
   // API health route (first to avoid conflict)
   app.get("/api/health", (req, res) => {
@@ -19,9 +23,20 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    // Serve static files in production
+    // Serve static files in production with aggressive caching
     const distPath = path.join(process.cwd(), "dist");
-    app.use(express.static(distPath));
+    app.use(express.static(distPath, {
+      maxAge: '1y',
+      immutable: true,
+      setHeaders: (res, filePath) => {
+        // Only cache hashed assets forever. HTML, XML, JSON, TXT should not be cached forever.
+        if (filePath.endsWith('.html') || filePath.endsWith('.xml') || filePath.endsWith('.txt') || filePath.endsWith('.json')) {
+          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        } else {
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        }
+      }
+    }));
     
     // Redirect all remaining routes to index.html for React Router to handle
     app.get("*", (req, res) => {

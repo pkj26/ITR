@@ -1,19 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { CheckCircle2, ShieldCheck, Award, MessageCircle, Phone, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Journey from './pages/Journey';
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
-import Refund from './pages/Refund';
-import Disclaimer from './pages/Disclaimer';
-import SEOLandingPage from './pages/SEOLandingPage';
-import BlogListing from './pages/BlogListing';
-import BlogDetail from './pages/BlogDetail';
 
-import Pricing from './pages/Pricing';
+// Lazy load secondary pages to optimize initial bundle size & load speed
+const AboutUs = lazy(() => import('./pages/AboutUs'));
+const Journey = lazy(() => import('./pages/Journey'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Refund = lazy(() => import('./pages/Refund'));
+const Disclaimer = lazy(() => import('./pages/Disclaimer'));
+const SEOLandingPage = lazy(() => import('./pages/SEOLandingPage'));
+const BlogListing = lazy(() => import('./pages/BlogListing'));
+const BlogDetail = lazy(() => import('./pages/BlogDetail'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+
 import LiveUsers from './components/LiveUsers';
 import KarSevaLogo from './components/KarSevaLogo';
 
@@ -204,20 +206,27 @@ export default function App() {
     <HelmetProvider>
       <BrowserRouter>
         <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/our-journey" element={<Journey />} />
-            <Route path="/terms-conditions" element={<Terms />} />
-            <Route path="/privacy-policy" element={<Privacy />} />
-            <Route path="/refund-policy" element={<Refund />} />
-            <Route path="/disclaimer" element={<Disclaimer />} />
-            <Route path="/blog" element={<BlogListing />} />
-            <Route path="/blog/:slug" element={<BlogDetail />} />
-            <Route path="/:slug" element={<SEOLandingPage />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
+          <Suspense fallback={
+            <div className="flex-grow flex flex-col items-center justify-center py-24 min-h-[60vh] bg-slate-50">
+              <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#1D3557] mb-4"></div>
+              <p className="text-slate-500 text-sm font-medium animate-pulse">Loading secure platform...</p>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/our-journey" element={<Journey />} />
+              <Route path="/terms-conditions" element={<Terms />} />
+              <Route path="/privacy-policy" element={<Privacy />} />
+              <Route path="/refund-policy" element={<Refund />} />
+              <Route path="/disclaimer" element={<Disclaimer />} />
+              <Route path="/blog" element={<BlogListing />} />
+              <Route path="/blog/:slug" element={<BlogDetail />} />
+              <Route path="/:slug" element={<SEOLandingPage />} />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Suspense>
         </Layout>
       </BrowserRouter>
     </HelmetProvider>

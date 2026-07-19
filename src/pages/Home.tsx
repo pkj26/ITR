@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset, MapPin, Mail, Phone, ExternalLink, Settings, Eye } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
-import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.png';
+import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.webp';
 import SEO from '../components/SEO';
 import KarSevaPromoVideo from '../components/KarSevaPromoVideo';
 
@@ -108,6 +108,10 @@ export default function Home() {
                  <img 
                     src={heroImage} 
                     alt="Professional Indian Woman Filing Taxes"
+                    fetchPriority="high"
+                    decoding="async"
+                    width="450"
+                    height="550"
                     className="object-contain h-full w-auto max-w-full mix-blend-darken scale-125 sm:scale-[1.2] md:scale-125 lg:scale-[1.3] origin-bottom right-0 absolute"
                  />
               </motion.div>
