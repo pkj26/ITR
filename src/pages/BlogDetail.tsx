@@ -160,14 +160,19 @@ export default function BlogDetail() {
                       </ul>
                     );
                   case 'note':
+                    const isDisclaimer = typeof section.text === 'string' && (
+                      section.text.toLowerCase().includes('disclaimer') || 
+                      section.text.toLowerCase().includes('general information') || 
+                      section.text.toLowerCase().includes('tax advice')
+                    );
                     return (
                       <div 
                         key={idx} 
-                        className="bg-blue-50/70 border-l-4 border-blue-600 rounded-r-lg p-5 my-8 text-slate-700 text-sm md:text-base leading-relaxed"
+                        className={`${isDisclaimer ? 'bg-amber-50/50 border-amber-500 text-slate-600' : 'bg-blue-50/70 border-blue-600 text-slate-700'} border-l-4 rounded-r-lg p-5 my-8 text-sm md:text-base leading-relaxed`}
                       >
-                        <p className="font-bold text-blue-900 mb-1 flex items-center gap-1.5">
-                          <ShieldCheck className="w-5 h-5 text-blue-700" />
-                          Expert Recommendation:
+                        <p className={`font-bold ${isDisclaimer ? 'text-amber-900' : 'text-blue-900'} mb-1 flex items-center gap-1.5`}>
+                          <ShieldCheck className={`w-5 h-5 ${isDisclaimer ? 'text-amber-600' : 'text-blue-700'}`} />
+                          {isDisclaimer ? 'Important Disclaimer:' : 'Expert Recommendation:'}
                         </p>
                         {section.text}
                       </div>
