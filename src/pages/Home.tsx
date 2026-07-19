@@ -97,7 +97,7 @@ export default function Home() {
             </motion.div>
 
             {/* Right Content - Visual/Image */}
-            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] hidden sm:flex justify-center md:justify-end items-end mt-4 md:mt-0 lg:pt-6">
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] flex justify-center md:justify-end items-end mt-4 md:mt-0 lg:pt-6">
               {/* Image of smiling woman */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -112,7 +112,7 @@ export default function Home() {
                     decoding="async"
                     width="450"
                     height="550"
-                    className="object-contain h-full w-auto max-w-full mix-blend-darken scale-125 sm:scale-[1.2] md:scale-125 lg:scale-[1.3] origin-bottom right-0 absolute"
+                    className="object-contain h-full w-auto max-w-full mix-blend-darken scale-110 sm:scale-[1.2] md:scale-125 lg:scale-[1.3] origin-bottom absolute left-0 right-0 mx-auto sm:left-auto sm:right-0 sm:mx-0"
                  />
               </motion.div>
             </div>
