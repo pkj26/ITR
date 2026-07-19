@@ -21,18 +21,44 @@ export default function SEOLandingPage() {
     return <Home />;
   }
 
-  // Generate dynamic FAQ schema
-  const faqSchema = JSON.stringify({
+  // Generate unified Service and FAQPage schema in Google's preferred @graph format
+  const combinedSchema = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": pageData.faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `https://karseva.in/${pageData.slug}#service`,
+        "name": pageData.pageTitle,
+        "description": pageData.metaDescription,
+        "provider": {
+          "@type": "Organization",
+          "name": "KarSeva",
+          "url": "https://karseva.in",
+          "logo": "https://karseva.in/logo.png"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "category": pageData.pageTitle.toLowerCase().includes("gst") 
+          ? "Tax Compliance" 
+          : pageData.pageTitle.toLowerCase().includes("company") || pageData.pageTitle.toLowerCase().includes("registration")
+          ? "Business Setup" 
+          : "Tax Consultation"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `https://karseva.in/${pageData.slug}#faq`,
+        "mainEntity": pageData.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
       }
-    }))
+    ]
   });
 
   // Dynamic organic interlinking: Get 3 other related SEO pages
@@ -62,7 +88,7 @@ export default function SEOLandingPage() {
         description={pageData.metaDescription}
         keywords={`${pageData.pageTitle}, KarSeva, tax consultant, GST registration, ITR filing, business registration`}
         url={`https://karseva.in/${pageData.slug}`}
-        schema={faqSchema}
+        schema={combinedSchema}
       />
 
       {/* Hero Banner Area */}

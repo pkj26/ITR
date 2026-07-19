@@ -146,12 +146,47 @@ export default function Pricing() {
 
   const plans = activeTab === 'salaried' ? plansSalaried : plansBusiness;
 
+  const pricingSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "KarSeva CA-Assisted ITR and GST Filing Plans",
+        "description": "Compare transparent and affordable pricing for CA-assisted Income Tax Return (ITR) filing, GST return filing, and company registration in India.",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "499",
+          "highPrice": "4999",
+          "offerCount": "6"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "KarSeva",
+          "url": "https://karseva.in"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      }
+    ]
+  });
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans pb-20">
       <SEO 
         title="Affordable Online ITR Filing & GST Pricing | KarSeva" 
         description="Compare transparent and affordable pricing for CA-assisted Income Tax Return (ITR) filing, GST return filing, and company registration in India." 
         url="https://karseva.in/pricing"
+        schema={pricingSchema}
       />
       
       {/* Hero Section */}
