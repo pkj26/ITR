@@ -6,13 +6,13 @@ export default function Journey() {
   return (
     <main className="flex-grow bg-slate-50 py-16">
       <SEO 
-        title="Our 10-Year Journey | KarSeva"
-        description="Discover the 10-year success story of India's most trusted online tax platform. From a vision in 2014 to serving 1.5 million Indians today."
-        url="https://karseva.in/#/our-journey"
+        title="Our 10-Year Journey | Best Tax & Compliance Platform India"
+        description="Explore the 10-year success story of KarSeva. Learn how we became India's most trusted online tax consulting and business compliance platform for startups."
+        url="https://karseva.in/our-journey"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Our 10-Year Journey</h1>
+          <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Our 10-Year Journey: Building Financial Trust in India</h1>
           <p className="text-lg text-slate-600">A decade of trust, excellence, and simplifying taxes in India.</p>
         </div>
 

@@ -31,9 +31,9 @@ export default function Home() {
   return (
     <main className="flex-grow">
       <SEO 
-        title="Best Online ITR Filing, GST & Company Registration in India | KarSeva"
-        description="India's leading platform for online ITR filing, GST registration, company incorporation, and CA services. Maximize your tax refund with our expert CAs."
-        url="https://karseva.in/#/"
+        title="Online ITR Filing, GST & Company Registration | KarSeva"
+        description="Online ITR filing, GST registration, and company registration made simple with India's top CA experts. File your taxes easily & get maximum tax refund."
+        url="https://karseva.in"
       />
       {/* ClearTax-like Hero Section */}
       <section className="bg-white relative pb-6 md:pb-8 lg:pb-10 overflow-visible">
@@ -69,9 +69,9 @@ export default function Home() {
                   initial={isDesktop ? { opacity: 0, y: 20 } : false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
-                  className="text-5xl sm:text-6xl lg:text-[4rem] font-bold text-slate-900 leading-[1.1] tracking-tight"
+                  className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tight"
                 >
-                  KarSeva.in
+                  Online ITR Filing & GST Compliance
                 </motion.h1>
                 <motion.p 
                   initial={isDesktop ? { opacity: 0, y: 20 } : false}

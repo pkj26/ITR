@@ -149,9 +149,9 @@ export default function Pricing() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans pb-20">
       <SEO 
-        title="Pricing & Tax Plans - KarSeva" 
-        description="Transparent and affordable pricing for CA-assisted Income Tax Filing, GST Returns, and Business Registration in India." 
-        url="https://karseva.in/#/pricing"
+        title="Affordable Online ITR Filing & GST Pricing | KarSeva" 
+        description="Compare transparent and affordable pricing for CA-assisted Income Tax Return (ITR) filing, GST return filing, and company registration in India." 
+        url="https://karseva.in/pricing"
       />
       
       {/* Hero Section */}
@@ -170,9 +170,8 @@ export default function Pricing() {
             <span className="inline-block bg-[rgba(255,255,255,0.1)] backdrop-blur-md text-[#FFB400] px-4 py-1.5 rounded-full text-sm font-bold tracking-wide uppercase shadow-[0_0_0_1px_rgba(255,180,0,0.3)_inset] mb-6">
               Expert Tax Plans
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4 leading-tight">
-              Simple, transparent pricing. <br className="hidden md:block" />
-              <span className="text-[#FFB400]">Expert tax filing.</span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+              Affordable ITR Filing & GST Pricing Plans
             </h1>
             <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
               No hidden fees. Maximize your refunds with India's most trusted CAs. Choose the plan that fits you best.

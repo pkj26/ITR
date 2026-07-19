@@ -4,9 +4,13 @@ import SEO from '../components/SEO';
 export default function Disclaimer() {
   return (
     <main className="flex-grow bg-white py-16">
-      <SEO title="Disclaimer | KarSeva" url="https://karseva.in/#/disclaimer" />
+      <SEO 
+        title="Disclaimer & Legal Services Terms | KarSeva India" 
+        description="Read the disclaimer and terms of use for KarSeva. Learn how our tax platform operates independently to provide CA services and business registrations."
+        url="https://karseva.in/disclaimer" 
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Disclaimer</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Disclaimer & Legal Information of KarSeva</h1>
         
         <p>
           KarSeva is a private platform connecting taxpayers with chartered accountants and legal professionals. We are <strong>not</strong> an official website of the Income Tax Department of India, nor are we affiliated directly with the Government of India.

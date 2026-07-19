@@ -4,9 +4,13 @@ import SEO from '../components/SEO';
 export default function Terms() {
   return (
     <main className="flex-grow bg-white py-16">
-      <SEO title="Terms & Conditions | KarSeva" url="https://karseva.in/#/terms-conditions" />
+      <SEO 
+        title="Terms and Conditions & Service Agreement | KarSeva India" 
+        description="Read the terms and conditions for using KarSeva's online tax filing, GST registration, company incorporation, and financial advisory services in India."
+        url="https://karseva.in/terms-conditions" 
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Terms & Conditions</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Terms and Conditions of KarSeva Services</h1>
         <p><strong>Last Updated:</strong> May 2026</p>
         <p>Welcome to KarSeva. By accessing and using our website and services, you agree to comply with and be bound by the following terms and conditions.</p>
         

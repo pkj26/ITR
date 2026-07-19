@@ -5,12 +5,12 @@ export default function AboutUs() {
   return (
     <main className="flex-grow bg-white py-16">
       <SEO 
-        title="About Us | KarSeva"
-        description="Learn about KarSeva's mission, vision, and 10+ years of experience providing the best tax, compliance, and legal services to Indians."
-        url="https://karseva.in/#/about-us"
+        title="About KarSeva | Expert CA & Tax Consultation Services"
+        description="Learn about KarSeva's team of expert CAs and tax consultants. Get reliable, secure, and affordable business registration, GST filing, and tax advisory."
+        url="https://karseva.in/about-us"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-8 blur-none">About KarSeva</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-8 blur-none">About KarSeva: Chartered Accountant & Tax Advisory</h1>
         <div className="prose prose-slate max-w-none">
           <p className="text-lg text-slate-600 mb-6">
             KarSeva was founded with a single mission: to provide the best and most affordable tax, compliance, and legal services to Indians. For over a decade, we have been at the forefront of digital taxation, assisting millions of individuals and thousands of businesses in navigating the complex world of Indian taxation.

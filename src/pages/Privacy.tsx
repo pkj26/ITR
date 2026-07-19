@@ -4,9 +4,13 @@ import SEO from '../components/SEO';
 export default function Privacy() {
   return (
     <main className="flex-grow bg-white py-16">
-      <SEO title="Privacy Policy | KarSeva" url="https://karseva.in/#/privacy-policy" />
+      <SEO 
+        title="Privacy Policy and Data Protection Guidelines | KarSeva" 
+        description="Understand our privacy policy and data protection measures. Learn how KarSeva securely stores and processes your financial details like PAN and Aadhaar."
+        url="https://karseva.in/privacy-policy" 
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Privacy Policy</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Privacy Policy and Data Protection</h1>
         <p><strong>Last Updated:</strong> May 2026</p>
         <p>Your privacy is of utmost importance to us. This Privacy Policy outlines how we collect, use, and protect your personal and financial information.</p>
         

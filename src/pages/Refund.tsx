@@ -4,9 +4,13 @@ import SEO from '../components/SEO';
 export default function Refund() {
   return (
     <main className="flex-grow bg-white py-16">
-      <SEO title="Refund Policy | KarSeva" url="https://karseva.in/#/refund-policy" />
+      <SEO 
+        title="Refund Policy and Cancellation Terms Online | KarSeva India" 
+        description="Read the cancellation and refund policy of KarSeva. Learn about eligibility criteria, non-refundable services, and refund processing timeframes in detail."
+        url="https://karseva.in/refund-policy" 
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Refund & Cancellation Policy</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-8">Refund and Cancellation Policy of KarSeva</h1>
         <p><strong>Last Updated:</strong> May 2026</p>
         <p>At KarSeva, we believe in complete transparency. Our refund policy ensures a fair process for all parties.</p>
         
