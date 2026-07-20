@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset, MapPin, Mail, Phone, ExternalLink, Settings, Eye } from 'lucide-react';
 import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
-import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.webp';
+import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.png';
 import SEO from '../components/SEO';
 import KarSevaPromoVideo from '../components/KarSevaPromoVideo';
 
@@ -112,7 +112,7 @@ export default function Home() {
                     decoding="async"
                     width="450"
                     height="550"
-                    className="object-contain h-full w-auto max-w-full mix-blend-darken scale-110 sm:scale-[1.2] md:scale-125 lg:scale-[1.3] origin-bottom absolute left-0 right-0 mx-auto sm:left-auto sm:right-0 sm:mx-0"
+                    className="object-contain h-full w-auto max-w-full scale-110 sm:scale-[1.2] md:scale-125 lg:scale-[1.3] origin-bottom"
                  />
               </motion.div>
             </div>
