@@ -6,6 +6,7 @@ import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from
 import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.png';
 import SEO from '../components/SEO';
 import KarSevaPromoVideo from '../components/KarSevaPromoVideo';
+import GSTLeadHub from '../components/GSTLeadHub';
 
 export default function Home() {
   const [activeCalculator, setActiveCalculator] = useState<string | null>(null);
@@ -532,6 +533,11 @@ export default function Home() {
               </button>
             </div>
 
+          </div>
+
+          {/* Interactive GST Lead & Consultation Generator */}
+          <div className="mt-8">
+            <GSTLeadHub />
           </div>
         </div>
       </section>

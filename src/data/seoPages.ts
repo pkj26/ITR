@@ -1335,5 +1335,170 @@ export const seoPagesData: Record<string, SEOPage> = {
         answer: "Simply upload your Form 16 or tax records, and a CA will be assigned to draft your return in under 5 minutes."
       }
     ]
+  },
+  "gst-registration-services-jaipur": {
+    slug: "gst-registration-services-jaipur",
+    pageTitle: "GST Registration Services in Jaipur | Fast 3-Day Approval",
+    metaTitle: "GST Registration Services in Jaipur | Fast CA Assistance | KarSeva",
+    metaDescription: "Apply for GST Registration in Jaipur with KarSeva. Dedicated CA support, document verification, 100% approval guarantee & transparent pricing.",
+    introduction: "Looking to get a new GST number for your shop, manufacturing unit, startup, or freelance service in Jaipur? KarSeva delivers end-to-end GST registration in Jaipur within 3 to 7 working days with zero hassle.",
+    paragraphs: [
+      "Our team of senior Chartered Accountants and GST Practitioners in Vidyadhar Nagar, Jaipur reviews all your documents beforehand to eliminate any chances of queries (Clarification notices / Form REG-03) from tax officers.",
+      "Whether you are setting up a proprietorship in Mansarovar, a boutique in Malviya Nagar, an e-commerce brand in Vaishali Nagar, or an industrial unit in Sitapura / VKIA, KarSeva provides complete assistance from application to GST certificate delivery."
+    ],
+    bulletTitle: "What is included in our Jaipur GST Registration package:",
+    bullets: [
+      "Preparation and verification of PAN, Aadhaar, electricity bill, and rent agreement",
+      "Application drafting and submission under Form GST REG-01",
+      "Selection of accurate HSN / SAC codes for your business categories",
+      "Handling officer queries and biometric Aadhaar authentication support",
+      "Delivery of GST Identification Number (GSTIN) and Registration Certificate (REG-06)"
+    ],
+    faqs: [
+      {
+        question: "What is the turnover limit for mandatory GST registration in Rajasthan?",
+        answer: "For sale of goods, GST registration is mandatory if annual turnover exceeds ₹40 Lakhs. For service providers, the threshold limit is ₹20 Lakhs."
+      },
+      {
+        question: "Can I get GST registration on a rented commercial property in Jaipur?",
+        answer: "Yes, you just need a valid Rent Agreement, NOC from the landlord, and a recent Electricity / Water bill copy."
+      },
+      {
+        question: "How can I contact KarSeva for GST Registration in Jaipur?",
+        answer: "You can call us directly on +91 9783699635 or walk into our office at F51 Alankar Plaza, Vidyadhar Nagar, Jaipur."
+      }
+    ]
+  },
+  "gst-consultant-near-me-jaipur": {
+    slug: "gst-consultant-near-me-jaipur",
+    pageTitle: "Top GST Consultant Near Me in Jaipur",
+    metaTitle: "Best GST Consultant Near Me in Jaipur | Expert CA & Advocates | KarSeva",
+    metaDescription: "Find the top-rated GST consultant near you in Jaipur. KarSeva provides expert assistance for GST registration, return filing, audits, and notice resolution.",
+    introduction: "Searching for an experienced, reliable GST consultant near you in Jaipur? KarSeva is trusted by 5,000+ local businesses, shopkeepers, wholesalers, and professionals across Jaipur for complete GST compliance.",
+    paragraphs: [
+      "GST laws and portal updates change frequently. Missing a filing deadline or making an error in GSTR-1 vs GSTR-3B matching can result in blocked Input Tax Credit (ITC), interest penalties under Section 50, or account suspension. Our dedicated GST practitioners ensure total peace of mind.",
+      "From monthly return filing and 2B reconciliation to defending audits and handling department notices, our Jaipur team acts as your dedicated in-house tax department."
+    ],
+    bulletTitle: "Why Jaipur businesses choose KarSeva as their GST Consultant:",
+    bullets: [
+      "Experienced Chartered Accountants with 10+ years in indirect taxation",
+      "Timely GSTR-1, GSTR-3B, and CMP-08 filing with zero delay penalties",
+      "Complete ITC reconciliation to ensure you never lose tax credits",
+      "Affordable monthly and annual retention packages starting at ₹499/mo",
+      "Physical office in Vidyadhar Nagar, Jaipur for in-person consultation"
+    ],
+    faqs: [
+      {
+        question: "Do you handle GST notice reply and litigation?",
+        answer: "Yes, our senior tax advocates draft comprehensive replies for GST notices, DRC-01, ASMT-10, and represent you before tax authorities."
+      },
+      {
+        question: "Can you help switch my business to the GST Composition Scheme?",
+        answer: "Yes, we analyze your profit margins and turnover to evaluate whether the Composition Scheme (1% or 5% tax) is beneficial for your business."
+      },
+      {
+        question: "Do you provide accounting software support for GST invoices?",
+        answer: "Yes, we help set up compliant GST invoicing formats and integrate with Tally, Busy, or Zoho Books."
+      }
+    ]
+  },
+  "gst-notice-reply-assistance-india": {
+    slug: "gst-notice-reply-assistance-india",
+    pageTitle: "GST Notice Reply & Legal Consultation in India",
+    metaTitle: "GST Notice Reply Assistance | ASMT-10, DRC-01 Resolution | KarSeva",
+    metaDescription: "Received a GST notice (ASMT-10, DRC-01, SCN)? Get expert legal drafting and CA representation from KarSeva to resolve tax demands quickly.",
+    introduction: "Receiving a GST notice from the tax department can be overwhelming. KarSeva provides expert legal and CA consultation to analyze the notice, calculate the genuine liability, draft a robust legal reply, and represent you before the GST authorities.",
+    paragraphs: [
+      "Common reasons for GST notices include discrepancies between GSTR-1 and GSTR-3B, excess ITC claims not matching GSTR-2B, non-filing of annual return (GSTR-9), or supplier non-compliance under Section 16(2)(c).",
+      "Ignoring a GST notice or submitting an incomplete reply can lead to ex-parte demand orders, bank account attachments, or cancellation of your GSTIN. Our experienced team ensures your rights are protected with factual, case-law backed responses."
+    ],
+    bulletTitle: "Types of GST notices we resolve:",
+    bullets: [
+      "Scrutiny notices under Section 61 (Form GST ASMT-10)",
+      "Show Cause Notices (SCN) under Section 73 & Section 74 (Form GST DRC-01)",
+      "Notice for cancellation of GST registration (Form GST REG-17)",
+      "ITC mismatch notices between GSTR-2A/2B and GSTR-3B",
+      "E-way bill penalty and vehicle interception notices (MOV-07 / MOV-09)"
+    ],
+    faqs: [
+      {
+        question: "What should I do first when I receive a GST notice?",
+        answer: "Do not panic. Check the deadline mentioned in the notice (usually 15-30 days) and contact a qualified GST expert immediately to review the allegations."
+      },
+      {
+        question: "Can KarSeva reply to GST notices online?",
+        answer: "Yes, our team handles the entire process online, including drafting the submission, uploading evidence on the GST portal, and communicating with the officer."
+      },
+      {
+        question: "What are the charges for GST notice consultation?",
+        answer: "Charges vary based on notice complexity and tax demand amount. Contact our helpline on +91 9783699635 for a transparent quote."
+      }
+    ]
+  },
+  "gst-cancellation-and-revocation-consultant": {
+    slug: "gst-cancellation-and-revocation-consultant",
+    pageTitle: "GST Registration Cancellation & Revocation Services",
+    metaTitle: "GST Cancellation & Revocation of Cancelled GST | KarSeva",
+    metaDescription: "GST cancelled by tax department? KarSeva helps restore and revoke cancelled GST numbers quickly through Form REG-21 filing and pending return clearance.",
+    introduction: "Has your GST number been suo-motu cancelled by the tax officer due to non-filing of returns or address mismatch? KarSeva helps you restore and revoke your cancelled GSTIN with fast-track legal procedures.",
+    paragraphs: [
+      "A cancelled GST number stops your business operations, freezes your current bank accounts, and blocks pending customer payments. Under Section 30 of the CGST Act, you have the legal right to apply for revocation of cancellation within the prescribed time limit.",
+      "Our CAs assist you in clearing all pending GSTR-3B returns, calculating accurate late fees and interest, and submitting Form GST REG-21 with proper justification to ensure swift reactivation of your GSTIN."
+    ],
+    bulletTitle: "Our GST Cancellation & Revocation services cover:",
+    bullets: [
+      "Filing application for Revocation of Cancelled GST (Form GST REG-21)",
+      "Clearance of pending monthly/quarterly GST returns with minimal interest",
+      "Voluntary cancellation of GSTIN for closed businesses (Form GST REG-16)",
+      "Filing of final GST return (Form GSTR-10) to avoid future notices",
+      "Condonation of delay appeals if the 30/90-day time limit has expired"
+    ],
+    faqs: [
+      {
+        question: "Can a cancelled GST number be reactivated?",
+        answer: "Yes, by filing an application for revocation in Form REG-21 after clearing all pending tax dues and returns."
+      },
+      {
+        question: "What happens if I don't surrender my GST number after closing my business?",
+        answer: "The department will keep levying late fees for non-filing, and can issue demand notices or cancel the GSTIN with penal consequences."
+      },
+      {
+        question: "How many days does it take to reactivate a cancelled GST number?",
+        answer: "Once pending returns are filed and REG-21 is submitted, officers usually pass an order within 7 to 15 working days."
+      }
+    ]
+  },
+  "gst-lut-filing-for-exporters-india": {
+    slug: "gst-lut-filing-for-exporters-india",
+    pageTitle: "GST LUT (Letter of Undertaking) Filing for Exporters",
+    metaTitle: "GST LUT Filing Online for Exporters & Freelancers | KarSeva",
+    metaDescription: "File GST LUT (Letter of Undertaking) online in Form GST RFD-11 for export of goods and software services without paying IGST. Fast 24-hr turnaround.",
+    introduction: "Export goods or software services outside India? Filing a Letter of Undertaking (LUT) in Form GST RFD-11 allows you to export without paying upfront IGST, freeing up crucial working capital for your business.",
+    paragraphs: [
+      "An LUT is valid for the entire financial year (from 1st April to 31st March) and must be renewed annually. Without a valid LUT ARN, exporters must pay 18% IGST on every foreign remittance invoice and wait months for a tax refund.",
+      "KarSeva prepares and files your annual LUT on the GST portal within 24 working hours, ensuring compliance with Foreign Inward Remittance Certificate (FIRC) requirements."
+    ],
+    bulletTitle: "Who needs to file GST LUT in India:",
+    bullets: [
+      "IT companies, SaaS developers, and digital marketing agencies with foreign clients",
+      "Freelancers receiving payments via PayPal, Stripe, Wise, or Wire Transfer",
+      "Manufacturers and traders exporting physical goods out of India",
+      "SEZ (Special Economic Zone) unit suppliers in India",
+      "Consultants providing remote services to overseas businesses"
+    ],
+    faqs: [
+      {
+        question: "Is LUT mandatory for exporting services?",
+        answer: "Yes, to export services without paying 18% IGST upfront, a valid Letter of Undertaking (LUT) is mandatory."
+      },
+      {
+        question: "What is the validity of an LUT?",
+        answer: "An LUT is valid for one entire financial year (e.g. FY 2026-27) and must be renewed every April."
+      },
+      {
+        question: "How long does KarSeva take to file an LUT?",
+        answer: "Our team generates your LUT ARN within 24 hours of receiving the basic login details."
+      }
+    ]
   }
 };

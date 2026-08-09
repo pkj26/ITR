@@ -75,16 +75,16 @@ export default function SEO({
         "priceRange": "INR ₹499 - ₹7999",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Sector 62, Digital Business Hub",
-          "addressLocality": "Noida",
-          "addressRegion": "Uttar Pradesh",
-          "postalCode": "201301",
+          "streetAddress": "F51 Alankar Plaza, Vidyadhar Nagar",
+          "addressLocality": "Jaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "302039",
           "addressCountry": "IN"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "28.6273",
-          "longitude": "77.3725"
+          "latitude": "26.9602",
+          "longitude": "75.7766"
         },
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
@@ -98,6 +98,44 @@ export default function SEO({
           ],
           "opens": "10:00",
           "closes": "19:00"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "CA & GST Compliance Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "GST Registration in Jaipur & Pan India",
+                "description": "Fast 3-7 day GST registration with dedicated CA support for shops, e-commerce sellers, and companies."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "GST Return Filing (GSTR-1, GSTR-3B, GSTR-9)",
+                "description": "Monthly and quarterly GST return filing with 100% accurate ITC reconciliation."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Online Income Tax Return (ITR) Filing",
+                "description": "Expert CA-assisted ITR filing for salaried individuals, freelancers, businesses, and traders."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Private Limited & LLP Company Registration",
+                "description": "Complete online company incorporation with MCA name approval, DSC, DIN, MOA, and AOA."
+              }
+            }
+          ]
         },
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -176,10 +214,10 @@ export default function SEO({
       <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="rating" content="general" />
       <meta name="distribution" content="global" />
-      <meta name="geo.region" content="IN-UP" />
-      <meta name="geo.placename" content="Noida" />
-      <meta name="geo.position" content="28.6273;77.3725" />
-      <meta name="ICBM" content="28.6273, 77.3725" />
+      <meta name="geo.region" content="IN-RJ" />
+      <meta name="geo.placename" content="Jaipur" />
+      <meta name="geo.position" content="26.9602;75.7766" />
+      <meta name="ICBM" content="26.9602, 75.7766" />
 
       <script type="application/ld+json">
         {schema || defaultSchema}
