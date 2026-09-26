@@ -21,10 +21,53 @@ export default function SEOLandingPage() {
     return <Home />;
   }
 
-  // Generate unified Service and FAQPage schema in Google's preferred @graph format
+  // Generate unified Service, FAQPage, BreadcrumbList, and LocalBusiness schema in Google's preferred @graph format
   const combinedSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://karseva.in/${pageData.slug}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://karseva.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": pageData.pageTitle,
+            "item": `https://karseva.in/${pageData.slug}`
+          }
+        ]
+      },
+      {
+        "@type": "AccountingService",
+        "@id": `https://karseva.in/#local-business`,
+        "name": "KarSeva CA & Tax Services",
+        "telephone": "+91-97836-99635",
+        "url": "https://karseva.in",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "F51 Alankar Plaza, Central Spine, Vidyadhar Nagar",
+          "addressLocality": "Jaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "302039",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 26.9602,
+          "longitude": 75.7766
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1534020"
+        }
+      },
       {
         "@type": "Service",
         "@id": `https://karseva.in/${pageData.slug}#service`,
@@ -32,19 +75,25 @@ export default function SEOLandingPage() {
         "description": pageData.metaDescription,
         "provider": {
           "@type": "Organization",
-          "name": "KarSeva",
+          "name": "KarSeva India",
           "url": "https://karseva.in",
-          "logo": "https://karseva.in/logo.png"
+          "logo": "https://karseva.in/favicon_image_1784640809089.jpg"
         },
-        "areaServed": {
-          "@type": "Country",
-          "name": "India"
-        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Jaipur"
+          },
+          {
+            "@type": "Country",
+            "name": "India"
+          }
+        ],
         "category": pageData.pageTitle.toLowerCase().includes("gst") 
-          ? "Tax Compliance" 
+          ? "Tax Compliance & GST" 
           : pageData.pageTitle.toLowerCase().includes("company") || pageData.pageTitle.toLowerCase().includes("registration")
-          ? "Business Setup" 
-          : "Tax Consultation"
+          ? "Business Incorporation" 
+          : "Tax Consultation & ITR"
       },
       {
         "@type": "FAQPage",
@@ -61,12 +110,12 @@ export default function SEOLandingPage() {
     ]
   });
 
-  // Dynamic organic interlinking: Get 3 other related SEO pages
+  // Dynamic organic interlinking: Get 6 other related SEO pages
   const allKeys = Object.keys(seoPagesData);
   const currentIndex = allKeys.indexOf(pageData.slug);
   const relatedPages: SEOPage[] = [];
   
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 6; i++) {
     const nextIndex = (currentIndex + i) % allKeys.length;
     const key = allKeys[nextIndex];
     if (key && key !== pageData.slug) {
@@ -162,6 +211,24 @@ export default function SEOLandingPage() {
                   </li>
                 ))}
               </ul>
+
+              {/* Local Jaipur & Rajasthan Coverage Area Section for Local SEO */}
+              <div className="mt-8 mb-8 p-5 bg-blue-50/60 rounded-xl border border-blue-100">
+                <h3 className="font-bold text-[#1D3557] text-base mb-2 flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#FFB400]" />
+                  Local Jaipur &amp; Rajasthan Service Coverage Areas:
+                </h3>
+                <p className="text-xs text-slate-600 mb-3 leading-relaxed">
+                  Our Chartered Accountant office in Vidyadhar Nagar, Jaipur provides doorstep pickup, online verification, and instant CA advisory across all Jaipur districts and Rajasthan zones:
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[11px] font-medium text-[#1D3557]">
+                  {["Vidyadhar Nagar (302039)", "VKIA & Sikar Road (302013)", "Murlipura (302039)", "Shastri Nagar (302016)", "Ambabari (302039)", "Vaishali Nagar (302021)", "Mansarovar (302020)", "Malviya Nagar (302017)", "C-Scheme & Civil Lines (302001)", "Raja Park (302004)", "Jhotwara (302012)", "Sitapura Industrial Area (302022)", "Tonk Road & Pratap Nagar (302033)", "Ajmer Road (302026)"].map((area, idx) => (
+                    <span key={idx} className="bg-white px-2.5 py-1 rounded-full border border-blue-200/80 shadow-2xs">
+                      📍 {area}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
               {/* FAQ Section */}
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-10 mb-6 border-l-4 border-[#FFB400] pl-3">

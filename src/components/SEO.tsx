@@ -10,9 +10,9 @@ interface SEOProps {
 }
 
 export default function SEO({ 
-  title = "Best Online ITR Filing, GST & Company Registration in India | KarSeva", 
-  description = "Expert online ITR filing, GST registration, company incorporation, and legal services in India. E-file your income tax returns with India's top CA experts.",
-  keywords = "ITR filing online, online CA services, file ITR India, GST registration online, GST return filing, company incorporation India, legal services India, trademark registration, best CA in India, tax consultant, income tax e-filing, ITR 1 filing, ITR 2 filing, ITR 4 filing, private limited company registration, GST return filing online, CA near me, income tax return online, tax saving advisor, tax experts India, e-file taxes, company registration near me, patent and trademark, Sarv tax platform, KarSeva",
+  title = "Best Online ITR Filing, GST Registration & CA Services in Jaipur & India | KarSeva", 
+  description = "Expert online ITR filing, GST registration, company incorporation, and legal services in Jaipur & Pan-India. E-file your income tax returns with certified CA experts.",
+  keywords = "GST registration Jaipur, GST return filing Jaipur, online ITR filing India, CA in Vidyadhar Nagar Jaipur, best CA in Jaipur, company registration Jaipur, income tax return online, tax consultant near me, GST notice reply CA, trademark registration India, KarSeva, ITR 1 filing, ITR 2 filing, ITR 4 filing, private limited company registration, GST return filing online",
   url = "https://karseva.in",
   schema
 }: SEOProps) {
@@ -29,7 +29,7 @@ export default function SEO({
         "url": "https://karseva.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://karseva.in/logo.png",
+          "url": "https://karseva.in/favicon_image_1784640809089.jpg",
           "caption": "KarSeva Logo"
         },
         "foundingDate": "2014",
@@ -45,8 +45,8 @@ export default function SEO({
           "availableLanguage": ["English", "Hindi"]
         },
         "sameAs": [
-          "https://twitter.com/onlineitrfiling",
-          "https://facebook.com/onlineitrfiling"
+          "https://twitter.com/karsevaindia",
+          "https://facebook.com/karsevaindia"
         ]
       },
       {
@@ -67,15 +67,15 @@ export default function SEO({
       {
         "@type": "AccountingService",
         "@id": "https://karseva.in/#service",
-        "name": "KarSeva CA Services",
-        "image": "https://karseva.in/hero-illustration.png",
-        "description": "India's leading platform for online ITR filing, GST return, and company registration services in India.",
+        "name": "KarSeva CA & GST Tax Services",
+        "image": "https://karseva.in/favicon_image_1784640809089.jpg",
+        "description": "India's leading platform for online ITR filing, GST return, and company registration services in Jaipur and Pan India.",
         "url": "https://karseva.in",
         "telephone": "+91-97836-99635",
         "priceRange": "INR ₹499 - ₹7999",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "F51 Alankar Plaza, Vidyadhar Nagar",
+          "streetAddress": "F51 Alankar Plaza, Central Spine, Vidyadhar Nagar",
           "addressLocality": "Jaipur",
           "addressRegion": "Rajasthan",
           "postalCode": "302039",
@@ -199,14 +199,14 @@ export default function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="KarSeva" />
-      <meta property="og:image" content="https://karseva.in/logo.png" />
+      <meta property="og:image" content="https://karseva.in/favicon_image_1784640809089.jpg" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://karseva.in/logo.png" />
+      <meta name="twitter:image" content="https://karseva.in/favicon_image_1784640809089.jpg" />
 
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />

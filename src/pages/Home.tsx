@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { CheckCircle2, FileText, TrendingUp, Briefcase, ShieldCheck, Building2, Receipt, FileSpreadsheet, Star, Award, Users, ThumbsUp, Calculator, Home as HomeIcon, Percent, PieChart, Landmark, BadgeCheck, Clock, FileCheck, Scissors, Headset, MapPin, Mail, Phone, ExternalLink, Settings, Eye } from 'lucide-react';
-import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator } from '../components/Calculators';
+import { GSTCalculator, SIPCalculator, HRACalculator, IncomeTaxCalculator, CapitalGainsCalculator } from '../components/Calculators';
 import heroImage from '../assets/images/indian_woman_phone_isolated_1779176340460.png';
 import SEO from '../components/SEO';
 import KarSevaPromoVideo from '../components/KarSevaPromoVideo';
 import GSTLeadHub from '../components/GSTLeadHub';
 
 export default function Home() {
-  const [activeCalculator, setActiveCalculator] = useState<string | null>(null);
+  const [activeCalculator, setActiveCalculator] = useState<string>('income-tax');
   const [isDesktop, setIsDesktop] = useState(true);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
@@ -32,8 +32,9 @@ export default function Home() {
   return (
     <main className="flex-grow">
       <SEO 
-        title="Online ITR Filing, GST & Company Registration | KarSeva"
-        description="Online ITR filing, GST registration, and company registration made simple with India's top CA experts. File your taxes easily & get maximum tax refund."
+        title="Fast-Track GST Registration, ITR Filing & CA Services in Jaipur & India | KarSeva"
+        description="India's trusted CA portal for fast GST registration (in 3-7 days), accurate ITR e-filing, monthly GST returns, and private limited company incorporation. Located in Vidyadhar Nagar, Jaipur."
+        keywords="GST registration Jaipur, fast track GST registration, GST return filing Jaipur, online ITR filing India, CA in Vidyadhar Nagar Jaipur, best CA in Jaipur, company registration Jaipur, income tax return online, tax consultant near me, GST notice reply CA, KarSeva"
         url="https://karseva.in"
       />
       {/* ClearTax-like Hero Section */}
@@ -664,68 +665,176 @@ export default function Home() {
       {/* Free Tax & Financial Tools Section */}
       <section id="tax-tools" className="py-12 md:py-16 bg-slate-900 text-white border-t-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-4 md:mb-6">
-            <h2 className="text-3xl font-bold mb-4">Free Financial & Tax Tools</h2>
-            <p className="text-slate-500 text-lg">Smart calculators to help you plan your taxes, investments, and business.</p>
+          <div className="text-center mb-6 md:mb-8">
+            <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/40 text-amber-300 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+              ⭐ 100% Free &amp; Updated for FY 2025-26 &amp; AY 2026-27
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3">
+              Free Financial &amp; Tax Calculation Tools
+            </h2>
+            <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">
+              Accurate Indian Income Tax, HRA Exemption, GST, Capital Gains, and SIP Wealth calculators designed by Chartered Accountants.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Tool Navigation Tabs */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-8">
             
             <button 
-              onClick={() => setActiveCalculator(activeCalculator === 'income-tax' ? null : 'income-tax')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'income-tax' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
+              type="button"
+              onClick={() => setActiveCalculator('income-tax')}
+              className={`text-left p-4 rounded-xl border-2 transition-all group flex flex-col justify-between ${
+                activeCalculator === 'income-tax' 
+                  ? 'bg-slate-800 border-amber-400 ring-2 ring-amber-400/20 shadow-lg' 
+                  : 'bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800'
+              }`}
             >
-              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'income-tax' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
-                <Calculator className="w-6 h-6" />
+              <div className="flex items-center justify-between mb-3">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-transform ${
+                  activeCalculator === 'income-tax' ? 'bg-amber-500 text-slate-950 scale-105' : 'bg-slate-700 text-amber-400 group-hover:scale-105'
+                }`}>
+                  <Calculator className="w-5 h-5" />
+                </div>
+                {activeCalculator === 'income-tax' && (
+                  <span className="text-[10px] bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded-full">
+                    Active
+                  </span>
+                )}
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'income-tax' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>Income Tax Calculator</h3>
-              <p className="text-sm text-slate-500">Compare Old vs New regime and find out which saves you more tax.</p>
+              <h3 className={`font-bold text-sm sm:text-base mb-1 ${activeCalculator === 'income-tax' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-300'}`}>
+                Income Tax (2026)
+              </h3>
+              <p className="text-[11px] text-slate-400 line-clamp-2">
+                New vs Old Regime comparison with ₹12.75L tax-free limit.
+              </p>
             </button>
 
             <button 
-              onClick={() => setActiveCalculator(activeCalculator === 'hra' ? null : 'hra')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'hra' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
+              type="button"
+              onClick={() => setActiveCalculator('hra')}
+              className={`text-left p-4 rounded-xl border-2 transition-all group flex flex-col justify-between ${
+                activeCalculator === 'hra' 
+                  ? 'bg-slate-800 border-amber-400 ring-2 ring-amber-400/20 shadow-lg' 
+                  : 'bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800'
+              }`}
             >
-              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'hra' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
-                <HomeIcon className="w-6 h-6" />
+              <div className="flex items-center justify-between mb-3">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-transform ${
+                  activeCalculator === 'hra' ? 'bg-amber-500 text-slate-950 scale-105' : 'bg-slate-700 text-amber-400 group-hover:scale-105'
+                }`}>
+                  <HomeIcon className="w-5 h-5" />
+                </div>
+                {activeCalculator === 'hra' && (
+                  <span className="text-[10px] bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded-full">
+                    Active
+                  </span>
+                )}
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'hra' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>HRA Calculator</h3>
-              <p className="text-sm text-slate-500">Calculate your House Rent Allowance exemption exactly per IT rules.</p>
+              <h3 className={`font-bold text-sm sm:text-base mb-1 ${activeCalculator === 'hra' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-300'}`}>
+                HRA Exemption
+              </h3>
+              <p className="text-[11px] text-slate-400 line-clamp-2">
+                Section 10(13A) 3-rule formula for Metro &amp; Non-Metro cities.
+              </p>
             </button>
 
             <button 
-              onClick={() => setActiveCalculator(activeCalculator === 'gst' ? null : 'gst')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'gst' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
+              type="button"
+              onClick={() => setActiveCalculator('gst')}
+              className={`text-left p-4 rounded-xl border-2 transition-all group flex flex-col justify-between ${
+                activeCalculator === 'gst' 
+                  ? 'bg-slate-800 border-amber-400 ring-2 ring-amber-400/20 shadow-lg' 
+                  : 'bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800'
+              }`}
             >
-              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'gst' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
-                <Percent className="w-6 h-6" />
+              <div className="flex items-center justify-between mb-3">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-transform ${
+                  activeCalculator === 'gst' ? 'bg-amber-500 text-slate-950 scale-105' : 'bg-slate-700 text-amber-400 group-hover:scale-105'
+                }`}>
+                  <Percent className="w-5 h-5" />
+                </div>
+                {activeCalculator === 'gst' && (
+                  <span className="text-[10px] bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded-full">
+                    Active
+                  </span>
+                )}
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'gst' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>GST Calculator</h3>
-              <p className="text-sm text-slate-500">Easily calculate GST inclusive and exclusive prices for your invoices.</p>
+              <h3 className={`font-bold text-sm sm:text-base mb-1 ${activeCalculator === 'gst' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-300'}`}>
+                GST Calculator
+              </h3>
+              <p className="text-[11px] text-slate-400 line-clamp-2">
+                Calculate GST Inclusive &amp; Exclusive with CGST/SGST/IGST.
+              </p>
             </button>
 
             <button 
-              onClick={() => setActiveCalculator(activeCalculator === 'sip' ? null : 'sip')}
-              className={`text-left bg-slate-800 p-6 rounded-xl border ${activeCalculator === 'sip' ? 'border-green-500 bg-white' : 'border-slate-200'} hover:border-green-500 hover:bg-slate-800/80 transition group block`}
+              type="button"
+              onClick={() => setActiveCalculator('sip')}
+              className={`text-left p-4 rounded-xl border-2 transition-all group flex flex-col justify-between ${
+                activeCalculator === 'sip' 
+                  ? 'bg-slate-800 border-amber-400 ring-2 ring-amber-400/20 shadow-lg' 
+                  : 'bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800'
+              }`}
             >
-              <div className={`w-12 h-12 bg-slate-700 text-slate-100 rounded-lg flex items-center justify-center mb-4 transition-transform ${activeCalculator === 'sip' ? 'text-amber-600 scale-110' : 'text-amber-600 group-hover:scale-110'}`}>
-                <PieChart className="w-6 h-6" />
+              <div className="flex items-center justify-between mb-3">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-transform ${
+                  activeCalculator === 'sip' ? 'bg-amber-500 text-slate-950 scale-105' : 'bg-slate-700 text-amber-400 group-hover:scale-105'
+                }`}>
+                  <TrendingUp className="w-5 h-5" />
+                </div>
+                {activeCalculator === 'sip' && (
+                  <span className="text-[10px] bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded-full">
+                    Active
+                  </span>
+                )}
               </div>
-              <h3 className={`font-bold text-lg mb-2 transition-colors ${activeCalculator === 'sip' ? 'text-amber-700' : 'text-slate-100 group-hover:text-amber-400'}`}>SIP Calculator</h3>
-              <p className="text-sm text-slate-500">Plan your wealth creation through compounding over the long term.</p>
+              <h3 className={`font-bold text-sm sm:text-base mb-1 ${activeCalculator === 'sip' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-300'}`}>
+                SIP &amp; Wealth
+              </h3>
+              <p className="text-[11px] text-slate-400 line-clamp-2">
+                Compound growth calculator with annual Step-up SIP.
+              </p>
+            </button>
+
+            <button 
+              type="button"
+              onClick={() => setActiveCalculator('capital-gains')}
+              className={`text-left p-4 rounded-xl border-2 transition-all group flex flex-col justify-between col-span-2 sm:col-span-1 ${
+                activeCalculator === 'capital-gains' 
+                  ? 'bg-slate-800 border-amber-400 ring-2 ring-amber-400/20 shadow-lg' 
+                  : 'bg-slate-800/60 border-slate-700 hover:border-slate-500 hover:bg-slate-800'
+              }`}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-transform ${
+                  activeCalculator === 'capital-gains' ? 'bg-amber-500 text-slate-950 scale-105' : 'bg-slate-700 text-amber-400 group-hover:scale-105'
+                }`}>
+                  <PieChart className="w-5 h-5" />
+                </div>
+                {activeCalculator === 'capital-gains' && (
+                  <span className="text-[10px] bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded-full">
+                    Active
+                  </span>
+                )}
+              </div>
+              <h3 className={`font-bold text-sm sm:text-base mb-1 ${activeCalculator === 'capital-gains' ? 'text-amber-400' : 'text-slate-100 group-hover:text-amber-300'}`}>
+                Capital Gains
+              </h3>
+              <p className="text-[11px] text-slate-400 line-clamp-2">
+                12.5% LTCG &amp; 20% STCG post-Budget 2024/2025/2026.
+              </p>
             </button>
 
           </div>
 
           {/* Active Calculator Render Area */}
-          {activeCalculator && (
-            <div className="mt-8">
-              {activeCalculator === 'income-tax' && <IncomeTaxCalculator />}
-              {activeCalculator === 'hra' && <HRACalculator />}
-              {activeCalculator === 'gst' && <GSTCalculator />}
-              {activeCalculator === 'sip' && <SIPCalculator />}
-            </div>
-          )}
+          <div className="mt-4">
+            {activeCalculator === 'income-tax' && <IncomeTaxCalculator />}
+            {activeCalculator === 'hra' && <HRACalculator />}
+            {activeCalculator === 'gst' && <GSTCalculator />}
+            {activeCalculator === 'sip' && <SIPCalculator />}
+            {activeCalculator === 'capital-gains' && <CapitalGainsCalculator />}
+          </div>
         </div>
       </section>
 
