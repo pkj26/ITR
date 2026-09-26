@@ -14,6 +14,8 @@ const Disclaimer = lazy(() => import('./pages/Disclaimer'));
 const SEOLandingPage = lazy(() => import('./pages/SEOLandingPage'));
 const BlogListing = lazy(() => import('./pages/BlogListing'));
 const BlogDetail = lazy(() => import('./pages/BlogDetail'));
+const NotificationsList = lazy(() => import('./pages/NotificationsList'));
+const NotificationDetail = lazy(() => import('./pages/NotificationDetail'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 
 import LiveUsers from './components/LiveUsers';
@@ -91,6 +93,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white font-medium transition">Home</a>
               <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white font-medium transition">Pricing</Link>
               <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white font-medium transition">Tax Blog</Link>
+              <Link to="/notifications" onClick={() => setIsMobileMenuOpen(false)} className="text-slate-300 hover:text-white font-medium transition">Notifications</Link>
               <button onClick={() => scrollToSection('tax-tools')} className="text-amber-400 hover:text-amber-300 font-semibold transition cursor-pointer flex items-center gap-1">
                 <span>⚡ Tax Calculators</span>
               </button>
@@ -116,6 +119,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <a href="#" onClick={handleHomeClick} className="text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Home</a>
               <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Pricing</Link>
               <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Tax Blog</Link>
+              <Link to="/notifications" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">Notifications</Link>
               <button onClick={() => scrollToSection('tax-tools')} className="text-left text-amber-400 font-semibold block px-3 py-2 rounded-md">⚡ Tax Calculators</button>
               <button onClick={() => scrollToSection('itr-filing')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">ITR Filing</button>
               <button onClick={() => scrollToSection('gst-services')} className="text-left text-slate-300 hover:text-white block px-3 py-2 rounded-md font-medium">GST Services</button>
@@ -304,6 +308,8 @@ export default function App() {
               <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="/blog" element={<BlogListing />} />
               <Route path="/blog/:slug" element={<BlogDetail />} />
+              <Route path="/notifications" element={<NotificationsList />} />
+              <Route path="/notifications/:slug" element={<NotificationDetail />} />
               <Route path="/:slug" element={<SEOLandingPage />} />
               <Route path="*" element={<Home />} />
             </Routes>
