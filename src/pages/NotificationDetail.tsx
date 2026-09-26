@@ -7,6 +7,10 @@ export default function NotificationDetail() {
   const { slug } = useParams();
   const notification = notifications.find((n) => n.slug === slug);
 
+  if (slug === 'income-tax-updates-july-august-2026') {
+    return <Navigate to="/notifications/income-tax-updates-july-2026" replace />;
+  }
+
   if (!notification) {
     return <Navigate to="/notifications" replace />;
   }
