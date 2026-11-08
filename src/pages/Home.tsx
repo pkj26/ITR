@@ -134,9 +134,9 @@ export default function Home() {
             {/* Trusted */}
             <div className="flex flex-col items-center text-center">
               <img 
-                src="/src/assets/images/why_choose_us_trust_1794135321991.jpg" 
+                src="/src/assets/images/why_choose_us_trust_v2_1794136789915.jpg" 
                 alt="Trusted by 1M+ Users"
-                className="w-32 h-32 rounded-full object-contain bg-slate-50 mb-8 shadow-lg"
+                className="w-32 h-32 rounded-full object-contain bg-white mb-8 shadow-lg"
               />
               <h3 className="text-xl font-bold text-slate-900 mb-3">Trusted by 1M+</h3>
               <p className="text-slate-600 leading-relaxed">
@@ -147,9 +147,9 @@ export default function Home() {
             {/* Experience */}
             <div className="flex flex-col items-center text-center">
               <img 
-                src="/src/assets/images/why_choose_us_expertise_1794135336005.jpg" 
+                src="/src/assets/images/why_choose_us_expertise_v2_1794136790390.jpg" 
                 alt="CA Expertise"
-                className="w-32 h-32 rounded-full object-contain bg-slate-50 mb-8 shadow-lg"
+                className="w-32 h-32 rounded-full object-contain bg-white mb-8 shadow-lg"
               />
               <h3 className="text-xl font-bold text-slate-900 mb-3">CA Expertise</h3>
               <p className="text-slate-600 leading-relaxed">
@@ -160,9 +160,9 @@ export default function Home() {
             {/* Recognition */}
             <div className="flex flex-col items-center text-center">
               <img 
-                src="/src/assets/images/why_choose_us_recognition_1794135349619.jpg" 
+                src="/src/assets/images/why_choose_us_recognition_v2_1794136789699.jpg" 
                 alt="Government Recognition"
-                className="w-32 h-32 rounded-full object-contain bg-slate-50 mb-8 shadow-lg"
+                className="w-32 h-32 rounded-full object-contain bg-white mb-8 shadow-lg"
               />
               <h3 className="text-xl font-bold text-slate-900 mb-3">Recognized</h3>
               <p className="text-slate-600 leading-relaxed">
