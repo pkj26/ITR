@@ -123,62 +123,50 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-slate-50 py-6 md:py-8 relative hidden md:block">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-3 md:mb-4">
-            <h2 className="text-3xl sm:text-4xl font-light text-slate-700 uppercase tracking-widest">
-              Why Choose Us?
-            </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-2">Why Choose Us</h2>
+            <p className="text-4xl font-bold text-slate-900">Professional Tax & Legal Services</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
-            {/* Card 1: Trusted */}
-            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
-              <div className="w-40 h-40 rounded-full bg-[#f2744c] flex flex-col items-center justify-center text-white mb-8 border-4 border-white shadow-[0_0_0_2px_#51cdc4_inset] overflow-hidden relative">
-                <div className="absolute inset-0 bg-[#ffcc00]"></div>
-                <div className="relative z-10 flex flex-col items-center mt-2">
-                  <Users className="w-16 h-16 mb-1 text-black" strokeWidth={1.5} />
-                  <span className="text-2xl font-black text-black">1M+</span>
-                </div>
-              </div>
-              <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Trusted</h3>
-              <div className="w-12 h-1 bg-[#c9eef1] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
-                Over 1 Million customers in India choose KarSeva every year for seamless filing.
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Trusted */}
+            <div className="flex flex-col items-center text-center">
+              <img 
+                src="/src/assets/images/why_choose_us_trust_1794135321991.jpg" 
+                alt="Trusted by 1M+ Users"
+                className="w-32 h-32 rounded-full object-cover mb-8 shadow-lg"
+              />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Trusted by 1M+</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Over 1 million customers in India trust KarSeva for seamless and accurate tax filing.
               </p>
             </div>
 
-            {/* Card 2: Experience */}
-            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
-              <div className="w-40 h-40 rounded-full bg-[#c1ece2] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#51cdc4_inset] overflow-hidden relative">
-                <div className="absolute inset-0 bg-[#fd9b6b]"></div>
-                <div className="relative z-10 flex flex-col items-center mt-2">
-                  <FileText className="w-14 h-14 mb-2 text-black" strokeWidth={1.5} />
-                  <span className="text-2xl font-black text-black">500,000+</span>
-                </div>
-              </div>
-              <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Experience</h3>
-              <div className="w-12 h-1 bg-[#ffd32e] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
-                We've helped users submit more than 500,000 tax returns accurately.
+            {/* Experience */}
+            <div className="flex flex-col items-center text-center">
+              <img 
+                src="/src/assets/images/why_choose_us_expertise_1794135336005.jpg" 
+                alt="CA Expertise"
+                className="w-32 h-32 rounded-full object-cover mb-8 shadow-lg"
+              />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">CA Expertise</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Our certified Chartered Accountants ensure your tax returns and compliance are 100% accurate.
               </p>
             </div>
 
-            {/* Card 3: Recognised */}
-            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-slate-100 flex flex-col items-center">
-              <div className="w-40 h-40 rounded-full bg-[#e4e5e7] flex flex-col items-center justify-center text-black mb-8 border-4 border-white shadow-[0_0_0_2px_#51cdc4_inset] overflow-hidden relative">
-                 <div className="absolute inset-0 bg-[#51cdc4]"></div>
-                 <div className="relative z-10 flex flex-col items-center justify-center h-full">
-                    <div className="flex items-center justify-center bg-transparent mt-2">
-                      <ShieldCheck className="w-8 h-8 mr-1 text-black" fill="black" stroke="white" strokeWidth={1} />
-                      <span className="font-bold text-xl leading-tight text-black">Govt<br />Auth</span>
-                    </div>
-                 </div>
-              </div>
-              <h3 className="text-xl font-light text-slate-800 uppercase tracking-widest mb-4">Recognised</h3>
-              <div className="w-12 h-1 bg-[#f2744c] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm sm:text-base leading-relaxed">
-                Our tax software is fully trusted, guaranteeing a smooth and stress-free experience.
+            {/* Recognition */}
+            <div className="flex flex-col items-center text-center">
+              <img 
+                src="/src/assets/images/why_choose_us_recognition_1794135349619.jpg" 
+                alt="Government Recognition"
+                className="w-32 h-32 rounded-full object-cover mb-8 shadow-lg"
+              />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Recognized</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Authorized platform for secure tax compliance, recognized for excellence, trust, and integrity.
               </p>
             </div>
           </div>
@@ -194,74 +182,38 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-            {/* Card 1 */}
-            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#ffcc00] mb-8 relative">
-                <Clock className="w-16 h-16 text-slate-800" strokeWidth={1} />
-                <div className="absolute bottom-2 right-2 bg-white rounded-full p-1 border-2 border-slate-800 shadow-sm">
-                   <CheckCircle2 className="w-5 h-5 text-slate-800" strokeWidth={2} />
-                </div>
-              </div>
-              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Simple Financial<br/>Management</h3>
-              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
-                Enjoy a real-time view on income and expenses for a more accurate overview of your finances.
-              </p>
-            </div>
+      {/* Services Overview */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-2">Our Services</h2>
+            <p className="text-4xl font-bold text-slate-900">Comprehensive Compliance Solutions</p>
+          </div>
 
-            {/* Card 2 */}
-            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#c9eef1] mb-8 relative">
-                <FileCheck className="w-16 h-16 text-slate-800" strokeWidth={1} />
-                <div className="absolute bottom-2 right-2 bg-white rounded-full p-1 border-2 border-slate-800 shadow-sm">
-                   <CheckCircle2 className="w-5 h-5 text-slate-800" strokeWidth={2} />
-                </div>
-              </div>
-              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Easy Tax<br/>Filing</h3>
-              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
-                Designed for everyone, our tax software simplifies tax returns, saving you time and reducing errors.
-              </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Financial Management</h3>
+              <p className="text-slate-600">Get a clear, real-time view of your income and expenses to better manage your finances.</p>
             </div>
-
-            {/* Card 3 */}
-            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#c1ece2] mb-8">
-                <Calculator className="w-16 h-16 text-slate-800" strokeWidth={1} />
-              </div>
-              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Automatic And<br/>Accurate<br/>Calculations</h3>
-              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
-                The software calculates your tax immediately, meaning you know exactly how much to set aside.
-              </p>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Easy Tax Filing</h3>
+              <p className="text-slate-600">Our platform simplifies tax returns, saving you time and ensuring accuracy.</p>
             </div>
-
-            {/* Card 4 */}
-            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#fd9b6b] mb-8 relative">
-                <Receipt className="w-16 h-16 text-slate-800" strokeWidth={1} />
-                <Scissors className="w-8 h-8 text-slate-800 absolute bottom-4 -right-1 bg-[#ffd32e]" strokeWidth={1.5} />
-              </div>
-              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Maximise<br/>Deductions</h3>
-              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
-                With our tax-saving tips you can reduce your tax liability which is something most software doesn't provide.
-              </p>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Accurate Calculations</h3>
+              <p className="text-slate-600">Automatic tax calculations ensure you know exactly what to set aside for liabilities.</p>
             </div>
-
-            {/* Card 5 */}
-            <div className="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow border border-slate-50 flex flex-col items-center">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center bg-[#e4e5e7] mb-8">
-                <Headset className="w-16 h-16 text-slate-800" strokeWidth={1} />
-              </div>
-              <h3 className="text-lg font-light text-slate-800 uppercase tracking-widest mb-4">Expert<br/>Support</h3>
-              <div className="w-8 h-1 bg-[#f07b5a] mb-6"></div>
-              <p className="text-slate-800 font-semibold text-sm leading-relaxed">
-                Our India-based team of former tax professionals are always on hand to help you.
-              </p>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Maximize Deductions</h3>
+              <p className="text-slate-600">We provide actionable tax-saving tips to reduce your liability significantly.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Expert Support</h3>
+              <p className="text-slate-600">Access our India-based team of tax professionals whenever you need assistance.</p>
             </div>
           </div>
+        </div>
+      </section>
         </div>
       </section>
 
