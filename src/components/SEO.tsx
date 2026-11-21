@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -7,15 +7,21 @@ interface SEOProps {
   keywords?: string;
   url?: string;
   schema?: string;
+  noindex?: boolean;
 }
 
 export default function SEO({ 
-  title = "Best Online ITR Filing, GST Registration & CA Services in Jaipur & India | KarSeva", 
-  description = "Expert online ITR filing, GST registration, company incorporation, and legal services in Jaipur & Pan-India. E-file your income tax returns with certified CA experts.",
-  keywords = "GST registration Jaipur, GST return filing Jaipur, online ITR filing India, CA in Vidyadhar Nagar Jaipur, best CA in Jaipur, company registration Jaipur, income tax return online, tax consultant near me, GST notice reply CA, trademark registration India, KarSeva, ITR 1 filing, ITR 2 filing, ITR 4 filing, private limited company registration, GST return filing online",
-  url = "https://karseva.in",
-  schema
+  title = "Online ITR Filing India & GST Registration Jaipur | KarSeva", 
+  description = "File Income Tax Return (ITR) online across India and get fast-track GST registration in Jaipur with certified CAs. Maximum tax refund & 100% compliance.",
+  keywords = "Online ITR Filing India, GST Registration Jaipur, GST return filing Jaipur, CA in Vidyadhar Nagar Jaipur, best CA in Jaipur, company registration Jaipur, income tax return online, tax consultant near me, GST notice reply CA, trademark registration India, KarSeva",
+  url = "https://karseva.in/",
+  schema,
+  noindex = false
 }: SEOProps) {
+  useLayoutEffect(() => {
+    const staticTags = document.head.querySelectorAll('[data-static-seo="true"]');
+    staticTags.forEach((tag) => tag.remove());
+  }, []);
   
   // High-performance unified Knowledge Graph schema structure favored by Google Search Engine
   const defaultSchema = JSON.stringify({
@@ -29,7 +35,7 @@ export default function SEO({
         "url": "https://karseva.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://karseva.in/favicon_image_1784640809089.jpg",
+          "url": "https://karseva.in/favicon.png",
           "caption": "KarSeva Logo"
         },
         "foundingDate": "2014",
@@ -68,7 +74,7 @@ export default function SEO({
         "@type": "AccountingService",
         "@id": "https://karseva.in/#service",
         "name": "KarSeva CA & GST Tax Services",
-        "image": "https://karseva.in/favicon_image_1784640809089.jpg",
+        "image": "https://karseva.in/favicon.png",
         "description": "India's leading platform for online ITR filing, GST return, and company registration services in Jaipur and Pan India.",
         "url": "https://karseva.in",
         "telephone": "+91-97836-99635",
@@ -199,19 +205,19 @@ export default function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="KarSeva" />
-      <meta property="og:image" content="https://karseva.in/favicon_image_1784640809089.jpg" />
+      <meta property="og:image" content="https://karseva.in/favicon.png" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://karseva.in/favicon_image_1784640809089.jpg" />
+      <meta name="twitter:image" content="https://karseva.in/favicon.png" />
 
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+      <meta name="googlebot" content={noindex ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
+      <meta name="bingbot" content={noindex ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
       <meta name="rating" content="general" />
       <meta name="distribution" content="global" />
       <meta name="geo.region" content="IN-RJ" />

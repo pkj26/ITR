@@ -77,7 +77,7 @@ export default function SEOLandingPage() {
           "@type": "Organization",
           "name": "KarSeva India",
           "url": "https://karseva.in",
-          "logo": "https://karseva.in/favicon_image_1784640809089.jpg"
+          "logo": "https://karseva.in/favicon.png"
         },
         "areaServed": [
           {

@@ -32,10 +32,10 @@ export default function Home() {
   return (
     <main className="flex-grow">
       <SEO 
-        title="Fast-Track GST Registration, ITR Filing & CA Services in Jaipur & India | KarSeva"
-        description="India's trusted CA portal for fast GST registration (in 3-7 days), accurate ITR e-filing, monthly GST returns, and private limited company incorporation. Located in Vidyadhar Nagar, Jaipur."
-        keywords="GST registration Jaipur, fast track GST registration, GST return filing Jaipur, online ITR filing India, CA in Vidyadhar Nagar Jaipur, best CA in Jaipur, company registration Jaipur, income tax return online, tax consultant near me, GST notice reply CA, KarSeva"
-        url="https://karseva.in"
+        title="Online ITR Filing India & GST Registration Jaipur | KarSeva"
+        description="File Income Tax Return (ITR) online across India and get fast-track GST registration in Jaipur with certified CAs. Maximum tax refund & 100% compliance."
+        keywords="Online ITR Filing India, GST Registration Jaipur, fast track GST registration, GST return filing Jaipur, CA in Vidyadhar Nagar Jaipur, best CA in Jaipur, company registration Jaipur, income tax return online, tax consultant near me, GST notice reply CA, KarSeva"
+        url="https://karseva.in/"
       />
       {/* ClearTax-like Hero Section */}
       <section className="bg-white relative pb-6 md:pb-8 lg:pb-10 overflow-visible">
@@ -71,9 +71,9 @@ export default function Home() {
                   initial={isDesktop ? { opacity: 0, y: 20 } : false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tight"
+                  className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-[1.12] tracking-tight"
                 >
-                  Online ITR Filing & GST Compliance
+                  Online ITR Filing India &amp; GST Registration Jaipur
                 </motion.h1>
                 <motion.p 
                   initial={isDesktop ? { opacity: 0, y: 20 } : false}
@@ -173,21 +173,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="bg-white py-6 md:py-8 border-b border-slate-100 hidden md:block">
-        <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-3 md:mb-4">
-            <h2 className="text-3xl sm:text-4xl font-light text-slate-700 uppercase tracking-widest">
-              What We Do
-            </h2>
-          </div>
-
       {/* Services Overview */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-50 border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-2">Our Services</h2>
-            <p className="text-4xl font-bold text-slate-900">Comprehensive Compliance Solutions</p>
+            <p className="text-3xl sm:text-4xl font-bold text-slate-900">Comprehensive Compliance Solutions</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -212,8 +203,6 @@ export default function Home() {
               <p className="text-slate-600">Access our India-based team of tax professionals whenever you need assistance.</p>
             </div>
           </div>
-        </div>
-      </section>
         </div>
       </section>
 

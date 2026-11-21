@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useParams, Navigate, Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { notifications } from '../data/notifications';
 
 export default function NotificationDetail() {
@@ -15,12 +15,35 @@ export default function NotificationDetail() {
     return <Navigate to="/notifications" replace />;
   }
 
+  const notificationSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://karseva.in/notifications/${notification.slug}`
+    },
+    "headline": notification.title,
+    "description": notification.description,
+    "datePublished": notification.date,
+    "publisher": {
+      "@type": "Organization",
+      "name": "KarSeva",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://karseva.in/favicon.png"
+      }
+    }
+  });
+
   return (
-    <div className="min-h-screen bg-slate-50 py-12">
-      <Helmet>
-        <title>{notification.title} | KarSeva</title>
-        <meta name="description" content={notification.description} />
-      </Helmet>
+    <main className="min-h-screen bg-slate-50 py-12">
+      <SEO 
+        title={`${notification.title} | KarSeva`}
+        description={notification.description}
+        keywords={`${notification.title}, CBDT Notification, Income Tax Updates India, Online ITR Filing India, KarSeva`}
+        url={`https://karseva.in/notifications/${notification.slug}`}
+        schema={notificationSchema}
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 rounded-lg shadow-sm border border-slate-200">
         <h1 className="text-3xl font-bold text-[#1D3557] mb-4">{notification.title}</h1>
@@ -46,9 +69,9 @@ export default function NotificationDetail() {
         <div className="mt-12 p-6 bg-slate-100 rounded-lg">
             <h2 className="text-xl font-semibold text-[#1D3557] mb-2">Need Help Filing Your ITR?</h2>
             <p className="text-slate-700 mb-4">Tax rules keep changing. Let KarSeva's experts file your ITR correctly and on time. Plans start at ₹499.</p>
-            <a href="/pricing" className="inline-block bg-[#FFB400] text-[#1D3557] px-6 py-2 rounded-md font-bold hover:bg-[#e6a200] transition shadow-sm">File ITR Now</a>
+            <Link to="/pricing" className="inline-block bg-[#FFB400] text-[#1D3557] px-6 py-2 rounded-md font-bold hover:bg-[#e6a200] transition shadow-sm">File ITR Now</Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

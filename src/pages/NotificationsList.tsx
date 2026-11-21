@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import { notifications } from '../data/notifications';
 
 export default function NotificationsList() {
   return (
-    <div className="min-h-screen bg-slate-50 py-12">
-      <Helmet>
-        <title>Income Tax Updates & Notifications | KarSeva</title>
-        <meta name="description" content="Stay updated with the latest Income Tax Department notifications and circulars for AY 2026-27." />
-      </Helmet>
+    <main className="min-h-screen bg-slate-50 py-12">
+      <SEO 
+        title="Income Tax Updates & CBDT Notifications AY 2026-27 | KarSeva"
+        description="Stay updated with the latest Income Tax Department notifications, CBDT circulars, and ITR utility release dates for AY 2026-27 in India."
+        keywords="Income Tax notifications 2026, CBDT circulars, ITR filing updates India, AY 2026-27 ITR utilities, KarSeva"
+        url="https://karseva.in/notifications"
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-[#1D3557] mb-8">Latest Income Tax Updates</h1>
+        <h1 className="text-3xl font-bold text-[#1D3557] mb-8">Income Tax &amp; CBDT Circular Updates India (AY 2026-27)</h1>
         <div className="space-y-6">
           {notifications.map((n) => (
             <div key={n.slug} className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
@@ -24,6 +26,6 @@ export default function NotificationsList() {
           ))}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

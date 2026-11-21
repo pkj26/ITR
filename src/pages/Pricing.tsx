@@ -206,7 +206,7 @@ export default function Pricing() {
               Expert Tax Plans
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
-              Affordable ITR Filing & GST Pricing Plans
+              Online ITR Filing India &amp; GST Service Pricing Plans
             </h1>
             <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
               No hidden fees. Maximize your refunds with India's most trusted CAs. Choose the plan that fits you best.

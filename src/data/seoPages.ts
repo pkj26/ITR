@@ -1338,8 +1338,8 @@ export const seoPagesData: Record<string, SEOPage> = {
   },
   "gst-registration-services-jaipur": {
     slug: "gst-registration-services-jaipur",
-    pageTitle: "GST Registration Services in Jaipur | Fast 3-Day Approval",
-    metaTitle: "GST Registration Services in Jaipur | Fast CA Assistance | KarSeva",
+    pageTitle: "GST Registration Jaipur: Fast 3-Day Online Approval",
+    metaTitle: "GST Registration Jaipur | Fast CA Approval | KarSeva",
     metaDescription: "Apply for GST Registration in Jaipur with KarSeva. Dedicated CA support, document verification, 100% approval guarantee & transparent pricing.",
     introduction: "Looking to get a new GST number for your shop, manufacturing unit, startup, or freelance service in Jaipur? KarSeva delivers end-to-end GST registration in Jaipur within 3 to 7 working days with zero hassle.",
     paragraphs: [

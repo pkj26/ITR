@@ -15,6 +15,7 @@ export default function BlogDetail() {
           title="Article Not Found | KarSeva"
           description="The requested tax or GST article could not be found. Return to our blog page to read latest tax insights."
           url="https://karseva.in/blog"
+          noindex={true}
         />
         <div className="max-w-md mx-auto px-4">
           <FileText className="w-16 h-16 text-slate-300 mx-auto mb-4" />
@@ -58,7 +59,7 @@ export default function BlogDetail() {
       "name": "KarSeva",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://karseva.in/logo.png"
+        "url": "https://karseva.in/favicon.png"
       }
     }
   });

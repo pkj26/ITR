@@ -16,7 +16,7 @@ export const notifications: Notification[] = [
     slug: "income-tax-updates-september-2026",
     title: "Income Tax Updates September 2026: Foreign Assets Disclosure Scheme Rules, NRI Property TDS Reporting & More",
     date: "24 September 2026",
-    description: "Income Tax Department updates for September 2026 – Notification 114/2026 (Foreign Assets of Small Taxpayers Disclosure Scheme), Notification 121/2026 on NRI property TDS reporting, Notification 120/2026 and Form 98 registration procedure.",
+    description: "Income Tax updates Sep 2026: Notification 114/2026 Foreign Assets Scheme, Notification 121/2026 NRI property TDS & Notification 120/2026 Form 98 rules.",
     intro: "Here is a simple summary of the important updates released by the Income Tax Department in September 2026.",
     sections: [
       {
@@ -53,7 +53,7 @@ export const notifications: Notification[] = [
     slug: "income-tax-updates-august-2026",
     title: "Income Tax Updates August 2026: ITR-5, ITR-6 & ITR-7 Online and Offline Filing Now Available for AY 2026-27",
     date: "20 August 2026",
-    description: "Income Tax Department updates for August 2026 – online filing and offline/Excel utilities of ITR-5, ITR-6 and ITR-7 for AY 2026-27 are now available on the e-Filing portal.",
+    description: "Income Tax updates Aug 2026: Online filing and offline/Excel utilities of ITR-5, ITR-6, and ITR-7 for AY 2026-27 are now live on the e-Filing portal.",
     intro: "In August 2026, the Income Tax Department enabled filing of ITR-5, ITR-6 and ITR-7 for AY 2026-27. Here is the complete timeline.",
     sections: [
       {
@@ -102,7 +102,7 @@ export const notifications: Notification[] = [
     slug: "income-tax-updates-july-2026",
     title: "Income Tax Updates July 2026: New Form ITR-BN, Foreign Assets in AIS, TDS Relief for IFSC Units & More",
     date: "27 July 2026",
-    description: "Income Tax Department updates for July 2026 – Notification 97/2026 (Form ITR-BN), foreign asset information in AIS, TDS exemptions for IFSC Units (Notifications 80/2026 and 74/2026), ITR-5 and ITR-7 Excel utilities and more.",
+    description: "Income Tax updates Jul 2026: Form ITR-BN Notification 97/2026, foreign assets in AIS, IFSC TDS relief (80/2026 & 74/2026), and ITR-5/7 Excel utilities.",
     intro: "Here is a simple summary of the important updates released by the Income Tax Department in July 2026.",
     sections: [
       {
@@ -168,7 +168,7 @@ export const notifications: Notification[] = [
     slug: "income-tax-updates-june-2026",
     title: "Income Tax Updates June 2026: ITR-3 Filing Opens, Updated Return Utilities for AY 2022-23 & New Statutory Forms",
     date: "30 June 2026",
-    description: "Income Tax Department updates for June 2026 – ITR-3 online, Excel and offline utilities for AY 2026-27, updated return (ITR-U) utilities for AY 2022-23 and the second set of statutory forms under Income Tax Rules, 2026.",
+    description: "Income Tax updates Jun 2026: ITR-3 online & Excel utilities for AY 2026-27, ITR-U utilities for AY 2022-23, and new statutory forms under 2026 rules.",
     intro: "Here is a simple summary of the important updates released by the Income Tax Department in June 2026.",
     sections: [
       {
@@ -202,7 +202,7 @@ export const notifications: Notification[] = [
     slug: "income-tax-updates-may-2026",
     title: "Income Tax Updates May 2026: ITR-1, ITR-2 & ITR-4 Filing Now Open for AY 2026-27",
     date: "29 May 2026",
-    description: "Income Tax Department updates for May 2026 – online filing, Excel and offline utilities of ITR-1, ITR-2 and ITR-4 for AY 2026-27 are enabled on the e-Filing portal.",
+    description: "Income Tax updates May 2026: Online filing, Excel, and offline utilities for ITR-1, ITR-2, and ITR-4 (AY 2026-27) are now live on the e-Filing portal.",
     intro: "ITR filing season for AY 2026-27 started in May 2026. Here is when each form became available.",
     sections: [
       {
@@ -239,7 +239,7 @@ export const notifications: Notification[] = [
     slug: "income-tax-updates-april-2026",
     title: "Income Tax Updates April 2026: New ITR Forms Notified for AY 2026-27, Corrigendum, Form 145 & 146 Utility & More",
     date: "24 April 2026",
-    description: "Income Tax Department updates for April 2026 – ITR-1 to ITR-7, ITR-V and ITR-U forms notified for AY 2026-27, corrigendum notifications, offline utility for Form 145 and 146, and CBDT circulars.",
+    description: "Income Tax updates Apr 2026: ITR-1 to ITR-7 and ITR-U forms notified for AY 2026-27, corrigendums, Form 145/146 offline utilities, and CBDT circulars.",
     intro: "April 2026 marked the start of the new Income-tax Act, 2025 and Income-tax Rules, 2026. Here is a simple summary of the important updates.",
     sections: [
       {
