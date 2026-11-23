@@ -44,31 +44,6 @@ export default function SEOLandingPage() {
         ]
       },
       {
-        "@type": "AccountingService",
-        "@id": `https://karseva.in/#local-business`,
-        "name": "KarSeva CA & Tax Services",
-        "telephone": "+91-97836-99635",
-        "url": "https://karseva.in",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "F51 Alankar Plaza, Central Spine, Vidyadhar Nagar",
-          "addressLocality": "Jaipur",
-          "addressRegion": "Rajasthan",
-          "postalCode": "302039",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 26.9602,
-          "longitude": 75.7766
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "1534020"
-        }
-      },
-      {
         "@type": "Service",
         "@id": `https://karseva.in/${pageData.slug}#service`,
         "name": pageData.pageTitle,
@@ -172,10 +147,10 @@ export default function SEOLandingPage() {
                   <MessageSquare className="w-4 h-4" /> Chat on WhatsApp
                 </button>
                 <a 
-                  href="tel:9783699635" 
+                  href="tel:+919783699635" 
                   className="bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2.5 px-4 rounded-lg font-bold transition flex items-center justify-center gap-2 text-sm"
                 >
-                  <Phone className="w-4 h-4" /> Call +91 9783699635
+                  <Phone className="w-4 h-4" /> Call +919783699635
                 </a>
               </div>
             </div>
@@ -275,16 +250,15 @@ export default function SEOLandingPage() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#FFB400] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-slate-900 block font-bold">KarSeva Office</strong>
-                    F51 Alankar Plaza, Vidyadhar Nagar,<br />
-                    Jaipur, Rajasthan 302039
+                    <strong className="text-slate-900 block font-bold">KarSeva</strong>
+                    F51 Alankar Plaza, Central Spine, Vidyadhar Nagar,<br />
+                    Jaipur, Rajasthan 302039, IN
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#FFB400] shrink-0" />
                   <div>
-                    <a href="tel:9783699635" className="hover:text-[#FFB400] transition font-medium text-slate-900 block">+91 9783699635</a>
-                    <a href="tel:9521555557" className="hover:text-[#FFB400] transition font-medium text-slate-900 block">+91 9521555557</a>
+                    <a href="tel:+919783699635" className="hover:text-[#FFB400] transition font-medium text-slate-900 block">+919783699635</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -293,7 +267,7 @@ export default function SEOLandingPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Calendar className="w-5 h-5 text-[#FFB400] shrink-0" />
-                  <span>Mon - Sat, 10 AM - 7 PM</span>
+                  <span>Mo-Sa 10:00-19:00</span>
                 </div>
               </div>
             </div>

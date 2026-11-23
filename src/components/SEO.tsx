@@ -23,6 +23,25 @@ export default function SEO({
     staticTags.forEach((tag) => tag.remove());
   }, []);
   
+  const localBusinessSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "AccountingService"],
+    "name": "KarSeva",
+    "url": "https://karseva.in",
+    "telephone": "+919783699635",
+    "email": "Karsevaa2026@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "F51 Alankar Plaza, Central Spine, Vidyadhar Nagar",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "postalCode": "302039",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Sa 10:00-19:00",
+    "areaServed": "IN"
+  });
+
   // High-performance unified Knowledge Graph schema structure favored by Google Search Engine
   const defaultSchema = JSON.stringify({
     "@context": "https://schema.org",
@@ -31,29 +50,19 @@ export default function SEO({
         "@type": "Organization",
         "@id": "https://karseva.in/#organization",
         "name": "KarSeva",
-        "alternateName": "KarSeva India",
         "url": "https://karseva.in",
         "logo": {
           "@type": "ImageObject",
           "url": "https://karseva.in/favicon.png",
           "caption": "KarSeva Logo"
         },
-        "foundingDate": "2014",
-        "founder": {
-          "@type": "Person",
-          "name": "Tax Experts and Chartered Accountants of India"
-        },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+91-97836-99635",
+          "telephone": "+919783699635",
           "contactType": "customer support",
           "areaServed": "IN",
           "availableLanguage": ["English", "Hindi"]
-        },
-        "sameAs": [
-          "https://twitter.com/karsevaindia",
-          "https://facebook.com/karsevaindia"
-        ]
+        }
       },
       {
         "@type": "WebSite",
@@ -68,87 +77,6 @@ export default function SEO({
           "@type": "SearchAction",
           "target": "https://karseva.in/pricing?q={search_term_string}",
           "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "AccountingService",
-        "@id": "https://karseva.in/#service",
-        "name": "KarSeva CA & GST Tax Services",
-        "image": "https://karseva.in/favicon.png",
-        "description": "India's leading platform for online ITR filing, GST return, and company registration services in Jaipur and Pan India.",
-        "url": "https://karseva.in",
-        "telephone": "+91-97836-99635",
-        "priceRange": "INR ₹499 - ₹7999",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "F51 Alankar Plaza, Central Spine, Vidyadhar Nagar",
-          "addressLocality": "Jaipur",
-          "addressRegion": "Rajasthan",
-          "postalCode": "302039",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "26.9602",
-          "longitude": "75.7766"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "10:00",
-          "closes": "19:00"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "CA & GST Compliance Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "GST Registration in Jaipur & Pan India",
-                "description": "Fast 3-7 day GST registration with dedicated CA support for shops, e-commerce sellers, and companies."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "GST Return Filing (GSTR-1, GSTR-3B, GSTR-9)",
-                "description": "Monthly and quarterly GST return filing with 100% accurate ITC reconciliation."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Online Income Tax Return (ITR) Filing",
-                "description": "Expert CA-assisted ITR filing for salaried individuals, freelancers, businesses, and traders."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Private Limited & LLP Company Registration",
-                "description": "Complete online company incorporation with MCA name approval, DSC, DIN, MOA, and AOA."
-              }
-            }
-          ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "1534020",
-          "bestRating": "5",
-          "worstRating": "1"
         }
       },
       {
@@ -225,6 +153,9 @@ export default function SEO({
       <meta name="geo.position" content="26.9602;75.7766" />
       <meta name="ICBM" content="26.9602, 75.7766" />
 
+      <script type="application/ld+json">
+        {localBusinessSchema}
+      </script>
       <script type="application/ld+json">
         {schema || defaultSchema}
       </script>

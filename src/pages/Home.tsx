@@ -940,23 +940,23 @@ export default function Home() {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 text-sm">Corporate Office Address</h4>
+                    <h4 className="font-bold text-slate-900 text-sm">KarSeva</h4>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                      F51 Alankar Plaza, Vidyadhar Nagar,<br />
-                      Jaipur, Rajasthan, India - 302039
+                      F51 Alankar Plaza, Central Spine, Vidyadhar Nagar,<br />
+                      Jaipur, Rajasthan 302039, IN
                     </p>
                   </div>
                 </div>
 
-                {/* Direct Phone Numbers */}
+                {/* Direct Phone Number */}
                 <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
                   <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Call Support Desk</h4>
-                    <p className="text-xs text-slate-600 mt-1 font-semibold text-slate-700">
-                      +91 9783699635 &nbsp;|&nbsp; +91 9521555557
+                    <p className="text-xs mt-1 font-semibold text-slate-700">
+                      <a href="tel:+919783699635" className="hover:text-[#1D3557] underline">+919783699635</a>
                     </p>
                   </div>
                 </div>
@@ -968,8 +968,8 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Email Inquiries</h4>
-                    <p className="text-xs text-slate-600 mt-1 font-semibold text-slate-700">
-                      Karsevaa2026@gmail.com
+                    <p className="text-xs mt-1 font-semibold text-slate-700">
+                      <a href="mailto:Karsevaa2026@gmail.com" className="hover:text-[#1D3557]">Karsevaa2026@gmail.com</a>
                     </p>
                   </div>
                 </div>
@@ -982,7 +982,7 @@ export default function Home() {
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">Office Timings</h4>
                     <p className="text-xs text-slate-600 mt-1">
-                      Monday to Saturday: 10:00 AM – 07:00 PM (IST)
+                      Mo-Sa 10:00-19:00
                     </p>
                   </div>
                 </div>
@@ -1042,7 +1042,7 @@ export default function Home() {
                 <button onClick={() => handleWhatsAppRedirect('General Enquiry')} className="bg-[#FFB400] text-[#1D3557] font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-[#e6a200] transition transform hover:-translate-y-1">
                   Chat on WhatsApp
                 </button>
-                <a href="tel:9783699635" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg backdrop-blur-sm transition border border-white/20">
+                <a href="tel:+919783699635" className="bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg backdrop-blur-sm transition border border-white/20">
                   Call Us
                 </a>
               </div>

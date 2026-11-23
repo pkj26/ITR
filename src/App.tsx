@@ -149,17 +149,22 @@ function Layout({ children }: { children: React.ReactNode }) {
                 India's premier Chartered Accountant &amp; tax compliance platform. We provide end-to-end online ITR filing, fast-track GST registration, and company incorporation for businesses, startups, and salaried professionals.
               </p>
               <div className="pt-2 text-xs text-slate-300 space-y-1.5">
-                <p className="flex items-center gap-2 font-semibold text-white">
-                  <span>📍 Office:</span> F51 Alankar Plaza, Central Spine, Vidyadhar Nagar, Jaipur 302039
+                <p className="font-bold text-white">KarSeva</p>
+                <p className="flex items-start gap-2 font-semibold text-white">
+                  <span>📍 Address:</span>
+                  <span>F51 Alankar Plaza, Central Spine, Vidyadhar Nagar, Jaipur, Rajasthan 302039, IN</span>
                 </p>
                 <p className="flex items-center gap-2 font-semibold text-white">
-                  <span>📞 CA Helpline:</span> 
-                  <a href="tel:9783699635" className="hover:text-[#FFB400] text-slate-200 underline">+91 9783699635</a> / 
-                  <a href="tel:9521555557" className="hover:text-[#FFB400] text-slate-200 underline ml-1">+91 9521555557</a>
+                  <span>📞 Phone:</span> 
+                  <a href="tel:+919783699635" className="hover:text-[#FFB400] text-slate-200 underline">+919783699635</a>
                 </p>
                 <p className="flex items-center gap-2 font-semibold text-white">
                   <span>✉️ Email:</span> 
                   <a href="mailto:Karsevaa2026@gmail.com" className="hover:text-[#FFB400] text-slate-200">Karsevaa2026@gmail.com</a>
+                </p>
+                <p className="flex items-center gap-2 font-semibold text-white">
+                  <span>🕒 Hours:</span>
+                  <span className="text-slate-200 font-normal">Mo-Sa 10:00-19:00</span>
                 </p>
               </div>
             </div>
@@ -266,7 +271,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       {/* Floating WhatsApp and Call Buttons */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
         <a
-          href="tel:9783699635"
+          href="tel:+919783699635"
           className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 hover:scale-110 transition-transform flex items-center justify-center"
           aria-label="Call Us"
         >

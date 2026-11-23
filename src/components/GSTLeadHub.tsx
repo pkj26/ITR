@@ -383,12 +383,12 @@ export default function GSTLeadHub() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-slate-900 text-sm">Jaipur Registered Office</h5>
+                  <h5 className="font-bold text-slate-900 text-sm">KarSeva</h5>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    F51 Alankar Plaza, Central Spine, Vidyadhar Nagar, Jaipur, Rajasthan 302039.
+                    F51 Alankar Plaza, Central Spine, Vidyadhar Nagar, Jaipur, Rajasthan 302039, IN
                   </p>
                   <p className="text-[11px] text-[#E86D24] font-semibold mt-1 flex items-center gap-1">
-                    <Clock className="w-3 h-3" /> Mon - Sat: 10:00 AM to 07:00 PM
+                    <Clock className="w-3 h-3" /> Mo-Sa 10:00-19:00
                   </p>
                 </div>
               </div>
@@ -420,7 +420,7 @@ export default function GSTLeadHub() {
               <div>
                 <p className="text-xs uppercase tracking-wider text-orange-100 font-semibold">Immediate Assistance?</p>
                 <p className="text-sm font-extrabold mt-0.5">Talk to Senior Tax Advocate</p>
-                <p className="text-xs text-orange-100 mt-0.5 font-medium">+91 9783699635 | +91 9521555557</p>
+                <p className="text-xs text-orange-100 mt-0.5 font-medium">+919783699635</p>
               </div>
               <a
                 href="tel:+919783699635"
